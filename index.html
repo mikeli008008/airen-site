@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Airen Sites</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A website and a brand video for any local business, anywhere in the world, built in five business days and kept fresh every month.">
+<meta property="og:title" content="Airen Sites">
+<meta property="og:description" content="Website plus brand video, built in five business days. Free preview before you pay.">
+<meta property="og:image" content="media/hero-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23000'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23FFB547'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23FFB547' stroke-opacity='.5' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: the signal. A night field of a few thousand lights (your customers) drifts toward one beacon; as you scroll, the lights reassemble into what Airen builds: a website, a video, a five day promise. One amber accent, the colour of the beacon, marks everything you can act on. Single dark world by design. */
+:root{
+  --bg:#000000;
+  --surface:#131209;
+  --surface-2:#1F1F1F;
+  --raised:#272727;
+  --line:rgba(255,244,224,.12);
+  --text:#F6F1E7;
+  --muted:#9B9B9B;
+  --amber:#FFB547;
+  --amber-ink:#1E1300;
+  --amber-soft:rgba(255,181,71,.12);
+  --error:#FF8A7A;
+  --font:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:150;background:var(--bg)}
+img,video{max-width:100%;display:block}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance;font-weight:600;letter-spacing:-.02em}
+p,li{text-wrap:pretty}
+a{color:inherit}
+button{font:inherit;color:inherit}
+::selection{background:var(--amber);color:var(--amber-ink)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:8px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+@media (max-width:640px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+.skip{position:fixed;left:16px;top:-80px;z-index:200;background:var(--amber);color:var(--amber-ink);padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none;transition:transform .3s var(--ease)}
+.skip:focus{transform:translateY(96px)}
+.eyebrow{font-family:var(--mono);font-size:12px;line-height:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.grad{background:linear-gradient(90deg,#FFFFFF,#9B9B9B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h2{font-size:48px;line-height:1;margin-top:16px;max-width:680px}
+@media (max-width:640px){.h2{font-size:36px;line-height:40px}}
+.lead{color:var(--muted);font-size:18px;line-height:28px;margin-top:24px;max-width:600px}
+section.pad{padding-block:96px}
+@media (max-width:640px){section.pad{padding-block:64px}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .5s var(--ease),background-color .3s var(--ease),border-color .3s var(--ease),box-shadow .5s var(--ease)}
+.btn-lg{padding:12px 24px;border-radius:16px}
+.btn-sm{font-size:14px;line-height:20px;white-space:nowrap}
+/* Primary button: adapted from ThreeUI Community "LumenCta" (MIT, Meng To; see showroom/LICENSE-threeui.txt), recoloured to amber */
+.btn-amber{position:relative;color:#FFF8EC;background:linear-gradient(90deg,#140B00,#2A1800,#5A3500 40%,#9A5C00 65%,#C97F12 82%,#E39A2E);outline:1px solid rgba(255,244,224,.14);outline-offset:-1px;box-shadow:0 4px 22px rgba(255,181,71,.22),inset 0 1px rgba(255,255,255,.16);text-shadow:0 1px 2px rgba(20,11,0,.45);transition:transform .5s var(--ease),filter .25s ease,box-shadow .5s var(--ease)}
+.btn-amber:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 8px 32px rgba(255,181,71,.38),inset 0 1px rgba(255,255,255,.2)}
+.btn-amber:not(:has(.arrow))::after{content:"";width:7px;height:7px;border-radius:50%;border:1.3px solid rgba(255,248,236,.9);flex:none}
+.btn-ghost{border-color:var(--line);background:rgba(19,18,9,.55)}
+.btn-ghost:hover{background:rgba(255,244,224,.1);transform:translateY(-2px)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn .arrow{transition:transform .5s var(--ease)}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn[disabled]{opacity:.6;cursor:default}
+
+/* nav */
+.nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 16px);left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:8px;padding:8px;border-radius:24px;background:rgba(19,18,9,.88);border:1px solid var(--line);max-width:calc(100vw - 32px);transition:transform .5s var(--ease)}
+.nav.hide{transform:translate(-50%,-96px)}
+.brand{display:flex;align-items:center;gap:8px;padding:4px 12px 4px 4px;text-decoration:none;font-weight:600;font-size:14px;line-height:20px;white-space:nowrap}
+.brand-mark{width:32px;height:32px;border-radius:16px;display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line)}
+.brand-mark i{width:8px;height:8px;border-radius:8px;background:var(--amber);box-shadow:0 0 12px var(--amber)}
+.nav-links{display:flex;gap:4px}
+.nav-links a{padding:8px 12px;border-radius:16px;font-size:14px;line-height:20px;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .3s var(--ease),background-color .3s var(--ease)}
+.nav-links a:hover{color:var(--text)}
+.nav-links a[aria-current="true"]{color:var(--text);background:var(--raised)}
+.menu-btn{display:none;width:40px;height:40px;border-radius:16px;border:1px solid var(--line);background:transparent;cursor:pointer;position:relative}
+.menu-btn i{position:absolute;left:12px;width:16px;height:2px;border-radius:2px;background:var(--text);transition:transform .5s var(--ease)}
+.menu-btn i:first-child{top:15px}.menu-btn i:last-child{top:23px}
+.menu-open .menu-btn i:first-child{transform:translateY(4px) rotate(45deg)}
+.menu-open .menu-btn i:last-child{transform:translateY(-4px) rotate(-45deg)}
+@media (max-width:900px){.nav-links{display:none}.menu-btn{display:block}.nav .btn-sm{display:none}}
+.panel{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:calc(env(safe-area-inset-top,0px) + 96px) max(24px,env(safe-area-inset-right,0px)) 32px max(24px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:8px;opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.menu-open .panel{opacity:1;pointer-events:auto}
+.panel a{font-size:36px;line-height:40px;font-weight:600;text-decoration:none;padding:8px 0;opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.menu-open .panel a{opacity:1;transform:none}
+.menu-open .panel a:nth-child(2){transition-delay:60ms}.menu-open .panel a:nth-child(3){transition-delay:120ms}.menu-open .panel a:nth-child(4){transition-delay:180ms}.menu-open .panel a:nth-child(5){transition-delay:240ms}
+
+/* story: pinned canvas, scroll drives the particles */
+.story{position:relative;height:900vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#field{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 50%;max-width:none}
+@media (max-width:640px){.hero-video{object-position:76% 50%}.hero-video.fly{object-position:50% 50%}}
+.reduced .hero-video.fly{display:none}
+.lite-frames{position:absolute;inset:0;display:none}
+.lite-frames img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:60% 50%;opacity:0;will-change:transform,opacity}
+.lite .lite-frames{display:block}
+.lite .hero-video.fly{display:none}
+.scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,0) 70%)}
+@media (max-width:640px){.scrim{background:linear-gradient(180deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,.2) 100%)}}
+.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 30% 50%,transparent 40%,rgba(0,0,0,.65) 100%)}
+.captions{position:absolute;inset:0;display:flex;align-items:center;pointer-events:none}
+.cap{position:absolute;max-width:600px;opacity:0;transform:translateY(24px);transition:none}
+.cap.live{pointer-events:auto}
+.cap h1{font-size:72px;line-height:1;margin-top:24px}
+.cap h2{font-size:60px;line-height:1;margin-top:16px}
+@media (max-width:900px){.cap h1{font-size:48px;line-height:1}.cap h2{font-size:40px;line-height:44px}}
+@media (max-width:640px){.cap{top:112px}.cap h1{font-size:40px;line-height:44px}.cap h2{font-size:36px;line-height:40px}}
+.cap p.sub{color:var(--muted);font-size:18px;line-height:28px;margin-top:24px;max-width:520px}
+@media (max-width:640px){.cap p.sub{font-size:16px;line-height:24px}.cap h1,.cap h2,.cap p.sub{text-shadow:0 0 16px #000,0 0 32px #000}}
+.cap .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.status{display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 8px;border-radius:16px;border:1px solid var(--line);background:rgba(19,18,9,.6);font-size:14px;line-height:20px;color:var(--muted)}
+.status b{color:var(--text);font-weight:500}
+.pulse{width:8px;height:8px;border-radius:8px;background:var(--amber);animation:pulse 2.4s var(--ease) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,181,71,.6)}70%{box-shadow:0 0 0 8px rgba(255,181,71,0)}100%{box-shadow:0 0 0 0 rgba(255,181,71,0)}}
+.progress{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted)}
+.progress span{width:24px;height:2px;border-radius:2px;background:var(--line);overflow:hidden;position:relative}
+.progress span i{position:absolute;inset:0;background:var(--amber);transform-origin:left;transform:scaleX(0)}
+.hint{position:absolute;right:max(24px,env(safe-area-inset-right,0px));bottom:32px;font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.hint i{width:1px;height:24px;background:var(--muted);animation:drip 1.8s var(--ease) infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@media (max-width:640px){.hint{display:none}}
+
+/* horizontal work gallery */
+.work{position:relative}
+.work-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:40px}
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.work-count{font-family:var(--mono);font-size:14px;line-height:20px;color:var(--muted)}
+.work-count b{color:var(--amber);font-weight:500}
+.track{display:flex;gap:24px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));will-change:transform;width:max-content}
+.slide{flex:none;width:min(720px,82vw);border-radius:24px;background:var(--surface);border:1px solid var(--line);padding:8px;display:flex;flex-direction:column}
+.slide.narrow{width:min(360px,72vw)}
+.browser{border-radius:16px;overflow:hidden;background:var(--surface-2);border:1px solid var(--line)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line)}
+.browser-bar i{width:8px;height:8px;border-radius:8px;background:rgba(255,244,224,.25)}
+.browser-bar .url{margin-left:8px;font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted);padding:2px 8px;border-radius:8px;background:var(--raised);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.browser .shot{overflow:hidden;aspect-ratio:16/10}
+.browser .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transform:scale(1.04);transition:transform .9s var(--ease)}
+.slide:hover .browser .shot img{transform:scale(1)}
+.slide-body{padding:16px 16px 8px;display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap}
+.slide-body h3{font-size:24px;line-height:32px}
+.slide-body p{color:var(--muted);font-size:14px;line-height:20px;margin-top:4px;max-width:420px}
+.link{display:inline-flex;align-items:center;gap:8px;color:var(--amber);font-weight:600;text-decoration:none;font-size:14px;line-height:20px;white-space:nowrap}
+.link svg{width:16px;height:16px;transition:transform .5s var(--ease)}
+.link:hover svg{transform:translate(2px,-2px)}
+.phone-card{border-radius:16px;overflow:hidden;background:#0B0B0B;aspect-ratio:9/16;position:relative}
+.phone-card video{width:100%;height:100%;object-fit:cover}
+.sound{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:20px;border:1px solid var(--line);background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.sound svg{width:16px;height:16px}
+.slide.next{justify-content:center;align-items:flex-start;padding:40px;gap:24px;background:var(--amber-soft);border-color:rgba(255,181,71,.35)}
+.slide.next h3{font-size:36px;line-height:40px}
+.slide.next p{color:var(--muted)}
+
+/* tagline */
+.tagline{padding-block:160px}
+.tagline p{font-size:60px;line-height:1;font-weight:600;letter-spacing:-.02em;max-width:900px}
+@media (max-width:900px){.tagline p{font-size:48px;line-height:1}}
+@media (max-width:640px){.tagline{padding-block:96px}.tagline p{font-size:36px;line-height:40px}}
+.tagline .w{opacity:.28;transition:opacity .6s var(--ease),color .6s var(--ease)}
+.tagline .w.on{opacity:1}
+.tagline .w.hot{color:var(--amber)}
+
+/* build log with scroll progress line */
+.log{position:relative;margin-top:64px;padding-left:48px}
+.log-line{position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.log-line i{position:absolute;inset:0;background:var(--amber);transform-origin:top;transform:scaleY(0)}
+.log-row{position:relative;padding-block:24px;display:grid;grid-template-columns:140px minmax(0,1fr) 140px;gap:24px;align-items:baseline;border-top:1px solid var(--line);opacity:.4;transition:opacity .6s var(--ease)}
+.log-row:first-of-type{border-top:0}
+.log-row.on{opacity:1}
+.log-row::before{content:"";position:absolute;left:-42px;top:32px;width:12px;height:12px;border-radius:12px;background:var(--bg);border:2px solid var(--line);transition:background-color .5s var(--ease),border-color .5s var(--ease),box-shadow .5s var(--ease)}
+.log-row.on::before{background:var(--amber);border-color:var(--amber);box-shadow:0 0 16px rgba(255,181,71,.6)}
+.log-row .day{font-family:var(--mono);font-size:14px;line-height:20px;color:var(--amber)}
+.log-row h3{font-size:24px;line-height:32px}
+.log-row p{color:var(--muted);margin-top:8px}
+.log-row .who{font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted);text-align:right}
+@media (max-width:720px){.log{padding-left:40px}.log-row{grid-template-columns:minmax(0,1fr);gap:4px}.log-row::before{left:-34px}.log-row .who{text-align:left}}
+
+/* what you get */
+.gets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:64px}
+@media (max-width:980px){.gets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.gets{grid-template-columns:minmax(0,1fr)}}
+.get{position:relative;border-radius:24px;border:1px solid var(--line);background:var(--surface);padding:24px;overflow:hidden;display:grid;gap:12px;align-content:start;min-height:240px}
+.get::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s var(--ease);background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(255,181,71,.16),transparent 70%)}
+.get:hover::after{opacity:1}
+.get .big{font-size:48px;line-height:1;font-weight:600;letter-spacing:-.02em;color:var(--amber)}
+.get h3{font-size:18px;line-height:28px;margin-top:auto}
+.get p{color:var(--muted);font-size:14px;line-height:20px}
+
+/* pricing: one offer */
+.offer{position:relative;margin-top:64px;border:1px solid rgba(255,181,71,.6);border-radius:32px;background:#17140A;padding:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px;transition:transform .5s var(--ease)}
+@media (max-width:900px){.offer{grid-template-columns:minmax(0,1fr);padding:32px 24px;gap:32px}}
+.offer .tag,.addons .tag{font-family:var(--mono);font-size:12px;line-height:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.offer-main{display:flex;flex-direction:column;gap:24px}
+.price{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px}
+.price b{font-size:72px;line-height:1;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+@media (max-width:640px){.price b{font-size:60px}}
+.price span{color:var(--muted);font-size:14px;line-height:20px}
+.founding{display:grid;grid-template-columns:8px minmax(0,1fr);gap:12px;align-items:start;padding:12px 16px;border-radius:16px;background:var(--amber-soft);border:1px solid rgba(255,181,71,.3);font-size:14px;line-height:20px;color:var(--muted)}
+.founding .pulse{margin-top:6px}
+.founding b{color:var(--text);font-weight:600}
+.monthly{font-family:var(--mono);font-size:14px;line-height:20px;padding:8px 12px;border-radius:12px;background:var(--surface-2);width:max-content;max-width:100%}
+.monthly b{color:var(--amber);font-weight:500}
+.offer-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
+.offer-lists{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-content:start}
+@media (max-width:560px){.offer-lists{grid-template-columns:minmax(0,1fr)}}
+.offer-lists h3{font-size:18px;line-height:28px;margin-bottom:16px}
+.offer-lists ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;font-size:14px;line-height:20px;color:var(--muted)}
+.offer-lists li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px}
+.offer-lists li svg{width:16px;height:16px;margin-top:2px;color:var(--amber)}
+.addons{margin-top:24px;border:1px solid var(--line);border-radius:24px;background:var(--surface);padding:24px;display:grid;gap:16px}
+.addon-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:640px){.addon-row{grid-template-columns:minmax(0,1fr)}}
+.addon-row div{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:baseline}
+.addon-row b{font-size:18px;line-height:28px;color:var(--text);font-weight:500}
+.addon-row span{color:var(--muted);font-size:14px;line-height:20px}
+.fine{color:var(--muted);font-size:14px;line-height:20px;margin-top:32px;max-width:680px}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start}
+@media (max-width:900px){.faq-grid{grid-template-columns:minmax(0,1fr);gap:32px}}
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:24px 0;font-weight:600;font-size:18px;line-height:28px;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:24px;height:24px;position:relative;margin-top:2px}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:5px;right:5px;top:11px;height:2px;border-radius:2px;background:var(--muted);transition:transform .5s var(--ease),background-color .3s var(--ease)}
+.faq summary .pm::after{transform:rotate(90deg)}
+.faq details[open] .pm::after{transform:rotate(0)}
+.faq details[open] .pm::before{background:var(--amber)}
+.faq .a{padding:0 0 24px;color:var(--muted);max-width:62ch}
+
+/* request */
+.request-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:32px;background:var(--surface);padding:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}
+@media (max-width:900px){.request-card{grid-template-columns:minmax(0,1fr);padding:32px 24px;gap:40px}}
+#mini{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.55}
+.request-card > div{position:relative}
+.form{display:grid;gap:16px;margin-top:32px}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:560px){.row2{grid-template-columns:minmax(0,1fr)}}
+.field{display:grid;gap:8px}
+.field label{font-size:14px;line-height:20px;font-weight:500}
+.field input,.field select{font:inherit;color:var(--text);background:rgba(0,0,0,.6);border:1px solid var(--line);border-radius:12px;padding:8px 12px;width:100%;min-width:0;transition:border-color .3s var(--ease)}
+.field input:focus,.field select:focus{border-color:var(--amber);outline:none}
+.field [aria-invalid="true"]{border-color:var(--error)}
+.err{color:var(--error);font-size:12px;line-height:16px}
+.ok{padding:16px;border-radius:12px;background:var(--amber-soft);border:1px solid rgba(255,181,71,.35)}
+.assure{display:grid;gap:24px;align-content:center}
+.assure div{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px}
+.assure .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--raised);color:var(--amber)}
+.assure .ic svg{width:20px;height:20px}
+.assure b{display:block;font-weight:600}
+.assure span{color:var(--muted);font-size:14px;line-height:20px}
+
+footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);font-size:14px;line-height:20px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--text)}
+.legal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-top:40px}
+@media (max-width:720px){.legal{grid-template-columns:minmax(0,1fr)}}
+.legal h3{font-size:14px;line-height:20px;color:var(--text);margin-bottom:8px}
+
+.rv{transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.pre{opacity:0;transform:translateY(32px)}
+
+/* reduced motion: static composition, no pinning */
+.reduced .story{height:auto}
+.reduced .stage{position:relative;height:auto;min-height:100vh}
+.reduced .cap{position:relative;opacity:1;transform:none;pointer-events:auto;padding-block:160px 64px}
+.reduced .cap:not(:first-child){display:none}
+.reduced .work{height:auto!important}
+.reduced .work-stage{position:relative;height:auto;padding-block:96px}
+.reduced .track{flex-wrap:wrap;width:auto;transform:none!important}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
+
+/* Showroom: tap to load one live ThreeUI effect at a time */
+.shows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px}
+@media (max-width:960px){.shows{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.shows{grid-template-columns:minmax(0,1fr);gap:16px}}
+.show{background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.show-stage{position:relative;aspect-ratio:16/10;background:#000;overflow:hidden}
+.show-stage img,.show-stage iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
+.show-play{position:absolute;inset:0;width:100%;border:0;padding:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-start;padding:16px;color:var(--text)}
+.show-play span{display:inline-flex;align-items:center;gap:8px;background:rgba(19,18,9,.88);border:1px solid var(--line);border-radius:12px;padding:6px 12px;font-size:14px;line-height:20px;font-weight:600;transition:transform .5s var(--ease),background-color .3s var(--ease)}
+.show-play span i{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
+.show-play:hover span{transform:translateY(-2px);background:rgba(39,39,39,.95)}
+.show-play:focus-visible{outline:2px solid var(--amber);outline-offset:-4px;border-radius:24px 24px 0 0}
+.show-stop{position:absolute;top:12px;right:12px;z-index:2;border:1px solid var(--line);background:rgba(19,18,9,.88);color:var(--text);border-radius:12px;padding:4px 10px;font:600 13px/20px var(--font);cursor:pointer}
+.show-body{padding:16px 24px 24px}
+.show-body h3{font-size:18px;line-height:28px;font-weight:600;margin:0}
+.show-body p{color:var(--muted);font-size:14px;line-height:20px;margin:4px 0 0}
+.show-note{color:var(--muted);font-size:14px;line-height:20px;margin-top:24px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Airen home"><span class="brand-mark"><i></i></span>Airen</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#work">Work</a>
+    <a href="#how">How it works</a>
+    <a href="#showroom">Showroom</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-amber btn-sm" href="#request">Free preview</a>
+  <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="panel"><i></i><i></i></button>
+</header>
+<div class="panel" id="panel" aria-label="Menu">
+  <a href="#work">Work</a>
+  <a href="#how">How it works</a>
+    <a href="#showroom">Showroom</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+  <a href="#request">Get a free preview</a>
+</div>
+
+<main id="main">
+<section class="story" id="top" aria-label="Introduction">
+  <div class="stage">
+    <video id="hero-video" class="hero-video" src="media/hero.mp4" poster="media/hero-poster.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
+    <video id="fly-video" class="hero-video fly" src="media/flyin.mp4" muted playsinline preload="auto" aria-hidden="true" style="opacity:0"></video>
+    <video id="v-sky" class="hero-video fly" src="media/beam-sky.mp4" muted playsinline preload="none" aria-hidden="true" style="opacity:0"></video>
+    <video id="v-ocean" class="hero-video fly" src="media/beam-ocean.mp4" muted playsinline preload="none" aria-hidden="true" style="opacity:0"></video>
+    <video id="v-forest" class="hero-video fly" src="media/beam-forest.mp4" muted playsinline preload="none" aria-hidden="true" style="opacity:0"></video>
+    <video id="h-sky" class="hero-video fly" src="media/hold-sky.mp4" muted loop playsinline preload="none" aria-hidden="true" style="opacity:0;display:none"></video>
+    <video id="h-ocean" class="hero-video fly" src="media/hold-ocean.mp4" muted loop playsinline preload="none" aria-hidden="true" style="opacity:0;display:none"></video>
+    <video id="h-forest" class="hero-video fly" src="media/hold-forest.mp4" muted loop playsinline preload="none" aria-hidden="true" style="opacity:0;display:none"></video>
+        <div class="scrim" aria-hidden="true"></div>
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="captions wrap">
+      <div class="cap" data-at="0">
+        <span class="status"><span class="pulse" aria-hidden="true"></span>Founding price: <b class="mono">10 of 10</b> spots open</span>
+        <h1 class="grad">Your customers<br>are out there<br>looking for a light</h1>
+        <p class="sub">Airen builds a website and a brand video that bring them to your door. Trades, restaurants, clinics, shops, studios, agents: any local business, anywhere in the world. Built remotely, live in five business days, preview free.</p>
+        <div class="ctas">
+          <a class="btn btn-amber btn-lg" href="#request">Get my free preview <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-ghost btn-lg" href="#work">See the work</a>
+        </div>
+      </div>
+      <div class="cap" data-at="1">
+        <p class="eyebrow">01 · The website</p>
+        <h2 class="grad">A site that proves<br>your work in<br>ten seconds</h2>
+        <p class="sub">Your photos, your services, your reviews, one clear button. Fast on a phone, in English, Chinese or both.</p>
+      </div>
+      <div class="cap" data-at="2">
+        <p class="eyebrow">02 · The video</p>
+        <h2 class="grad">A video that<br>stops the scroll</h2>
+        <p class="sub">A captioned brand film for your site, Instagram, TikTok and WeChat. Then a new short every month.</p>
+      </div>
+      <div class="cap" data-at="3">
+        <p class="eyebrow">03 · The promise</p>
+        <h2 class="grad">Live in five<br>business days</h2>
+        <p class="sub">Fixed price, two revision rounds, and a care plan that keeps it all fresh. You see it before you pay.</p>
+      </div>
+    </div>
+    <div class="progress" aria-hidden="true"><span><i id="pg0"></i></span><span><i id="pg1"></i></span><span><i id="pg2"></i></span><span><i id="pg3"></i></span></div>
+    <div class="hint" aria-hidden="true"><i></i>Scroll</div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-label="Finished work">
+  <div class="work-stage">
+    <div class="wrap work-head">
+      <div>
+        <p class="eyebrow">Finished work</p>
+        <h2 class="h2 grad">Real businesses, live today</h2>
+      </div>
+      <p class="work-count"><b id="wc">01</b> / 04</p>
+    </div>
+    <div class="track" id="track">
+      <article class="slide">
+        <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url">archlinehaojiang.com</span></div><div class="shot"><img src="media/archline.jpg" alt="ArchLine Haojiang Renovation homepage: a sunlit living room beside the headline Renovation as a craft"></div></div>
+        <div class="slide-body"><div><h3>ArchLine Haojiang Renovation</h3><p>Renovation and design build. Project gallery, services through permits, one consultation button.</p></div><a class="link" href="https://archlinehaojiang.com/" target="_blank" rel="noopener">Open live site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </article>
+      <article class="slide">
+        <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url">mikeli008008.github.io/daniels-kitchen</span></div><div class="shot"><img src="media/kitchen.jpg" alt="Daniel's Kitchen homepage with plated dishes and an order countdown"></div></div>
+        <div class="slide-body"><div><h3>Daniel's Kitchen</h3><p>Friday dinners from a Bocuse d'Or Team Canada chef. Weekly menu, order countdown, the chef's story.</p></div><a class="link" href="https://mikeli008008.github.io/daniels-kitchen/" target="_blank" rel="noopener">Open live site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </article>
+      <article class="slide narrow">
+        <div class="phone-card">
+          <video id="promo" src="media/kitchen-promo.mp4" poster="media/kitchen-poster.jpg" muted loop playsinline preload="metadata" aria-label="Daniel's Kitchen 35 second promo video"></video>
+          <button class="sound" id="sound" aria-label="Turn sound on" aria-pressed="false"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 6h2.5L8 3v10L4.5 10H2z" fill="currentColor"/><path id="sound-x" d="m11 6 3 4m0-4-3 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="slide-body"><div><h3>The promo</h3><p>35 seconds, vertical, cut for every feed.</p></div></div>
+      </article>
+      <article class="slide narrow next">
+        <p class="eyebrow">Next</p>
+        <h3>Your business,<br>in this row</h3>
+        <p>Send a link or a few photos. Your free preview arrives within 2 business days.</p>
+        <a class="btn btn-amber" href="#request">Start my preview <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tagline wrap" aria-label="What we believe">
+  <p id="tagline-words">Your work is already good. Your website should prove it in ten seconds, on a phone, before anyone calls.</p>
+</section>
+
+<section class="wrap pad" id="how">
+  <p class="eyebrow">How it works</p>
+  <h2 class="h2 grad">The five day build log</h2>
+  <p class="lead">Every Airen build runs the same week. You spend about fifteen minutes of it.</p>
+  <div class="log" id="log">
+    <div class="log-line" aria-hidden="true"><i id="log-fill"></i></div>
+    <div class="log-row"><span class="day">Before day 1</span><div><h3>Send a few photos or a link</h3><p>Your Google listing, Instagram or 5 to 15 photos. A free homepage preview and a rough video cut arrive within 2 business days.</p></div><span class="who">You · 5 min</span></div>
+    <div class="log-row"><span class="day">Day 1</span><div><h3>Approve, pay, fill the intake</h3><p>Pick a package and pay once. An 8 minute form covers services, hours, tone and language.</p></div><span class="who">You · 10 min</span></div>
+    <div class="log-row"><span class="day">Day 2 to 3</span><div><h3>Site and video built</h3><p>Pages written in your words, photos cleaned and sized, brand video cut and captioned.</p></div><span class="who">Airen</span></div>
+    <div class="log-row"><span class="day">Day 4</span><div><h3>Checked, then revised</h3><p>Mobile layout, speed above 90, form test, spelling in every language. Then your two revision rounds.</p></div><span class="who">Airen and you</span></div>
+    <div class="log-row"><span class="day">Day 5</span><div><h3>Live on your domain</h3><p>Secure link, Google Business Profile connected, video cut for each platform. The care plan starts here.</p></div><span class="who">Airen</span></div>
+  </div>
+</section>
+
+<section class="wrap pad rv" id="gets">
+  <p class="eyebrow">What you get</p>
+  <h2 class="h2 grad">Built to bring in work</h2>
+  <div class="gets">
+    <div class="get"><span class="big mono">90+</span><h3>Fast on a phone</h3><p>Every page passes a 90 or higher mobile speed score before you see it.</p></div>
+    <div class="get"><span class="big mono">1/mo</span><h3>A new video monthly</h3><p>A brand film at launch, then a fresh short each month on the care plan.</p></div>
+    <div class="get"><span class="big mono">4/mo</span><h3>Google Maps posts</h3><p>Your Business Profile set up, cleaned up and posted to every week.</p></div>
+    <div class="get"><span class="big mono">EN 中 +</span><h3>Your customers' language</h3><p>English, Chinese or another major language at no extra cost, written for local readers.</p></div>
+  </div>
+</section>
+
+<section class="wrap pad rv" id="showroom">
+  <p class="eyebrow">What we can build</p>
+  <h2 class="h2 grad">Effects your competitors do not have</h2>
+  <p class="lead">Each site gets one signature moment matched to its trade. Tap any card to run it live on your device.</p>
+  <div class="shows" id="shows">
+    <article class="show" data-key="liquid">
+      <div class="show-stage"><img src="showroom/poster-liquid.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for jewellers, watchmakers and beauty brands"><span><i></i>Tap to try it live</span></button></div>
+      <div class="show-body"><h3>Jewellers, watchmakers and beauty brands</h3><p>Liquid metal that follows your cursor</p></div>
+    </article>
+    <article class="show" data-key="tree">
+      <div class="show-stage"><img src="showroom/poster-tree.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for arborists, tree care and garden centres"><span><i></i>Tap to try it live</span></button></div>
+      <div class="show-body"><h3>Arborists, tree care and garden centres</h3><p>A tree that grows as you watch</p></div>
+    </article>
+    <article class="show" data-key="green">
+      <div class="show-stage"><img src="showroom/poster-green.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for florists, spas and wellness"><span><i></i>Tap to try it live</span></button></div>
+      <div class="show-body"><h3>Florists, spas and wellness</h3><p>A living green world to drift through</p></div>
+    </article>
+    <article class="show" data-key="network">
+      <div class="show-stage"><img src="showroom/poster-network.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for it, consulting and tech services"><span><i></i>Tap to try it live</span></button></div>
+      <div class="show-body"><h3>IT, consulting and tech services</h3><p>A network that reacts to every move</p></div>
+    </article>
+    <article class="show" data-key="gauge">
+      <div class="show-stage"><img src="showroom/poster-gauge.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for auto repair, detailing and dealers"><span><i></i>Tap to try it live</span></button></div>
+      <div class="show-body"><h3>Auto repair, detailing and dealers</h3><p>A live gauge for your real numbers</p></div>
+    </article>
+    <article class="show" data-key="gallery">
+      <div class="show-stage"><img src="showroom/poster-gallery.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for photographers, studios and galleries"><span><i></i>Tap to try it live</span></button></div>
+      <div class="show-body"><h3>Photographers, studios and galleries</h3><p>Your work orbiting your headline</p></div>
+    </article>
+  </div>
+  <p class="show-note">One effect runs at a time and stops when you scroll past, so your phone stays cool. Effects built with ThreeUI Community (MIT).</p>
+</section>
+
+<section class="wrap pad rv" id="pricing">
+  <p class="eyebrow">Pricing · CAD, local taxes where they apply</p>
+  <h2 class="h2 grad">One package. One price. Nothing hourly.</h2>
+  <p class="lead">Every business gets the same complete package. The care plan starts the day you go live and cancels in one click.</p>
+  <article class="offer tilt">
+    <div class="offer-main">
+      <p class="tag">Website + Video</p>
+      <div class="price"><b>$1,950</b><span>setup, once</span></div>
+      <div class="founding"><span class="pulse" aria-hidden="true"></span><p><b>Founding price $1,450</b> for the first 10 businesses, in exchange for a testimonial and a short case study.</p></div>
+      <p class="monthly">then <b>$129</b>/month care plan</p>
+      <div class="offer-ctas"><a class="btn btn-amber btn-lg" href="#request" data-plan="Founding price">Claim a founding spot <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost btn-lg" href="#request" data-plan="Standard price">Start with a free preview</a></div>
+    </div>
+    <div class="offer-lists">
+      <div><h3>Setup includes</h3><ul><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Up to five page website, domain and hosting</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Brand video, 30 to 60 seconds, captioned and cut for every feed</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Google Business Profile setup</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>English, Chinese or both</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Two revision rounds, live in five business days</li></ul></div>
+      <div><h3>Care plan includes</h3><ul><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Hosting, plus unlimited small edits, one at a time, live in 2 business days</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>A new short video every month</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Four Google Business posts a month</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancel any time, keep your site</li></ul></div>
+    </div>
+  </article>
+  <div class="addons">
+    <p class="tag">Add when you need it</p>
+    <div class="addon-row">
+      <div><b class="mono">$199</b><span>Extra video: a listing, a menu, a product, a finished project</span></div>
+      <div><b class="mono">$149</b><span>Extra page beyond five</span></div>
+    </div>
+  </div>
+  <p class="fine">Not offered: online stores, custom web apps, booking systems beyond an embedded widget, logo redesigns and hourly work. If you need one of those we will tell you and point you to someone good.</p>
+</section>
+
+<section class="wrap pad rv" id="faq">
+  <div class="faq-grid">
+    <div>
+      <p class="eyebrow">Questions</p>
+      <h2 class="h2 grad">What owners ask before they say yes</h2>
+      <p class="lead">Anything else, ask in the preview request. A person replies within one business day.</p>
+    </div>
+    <div class="faq">
+      <details><summary>Do you work with my kind of business?<span class="pm" aria-hidden="true"></span></summary><p class="a">If you serve local customers, yes: trades and renovators, restaurants and home kitchens, clinics, salons, studios, shops, tutors, agents and professional offices. The package is the same for everyone; the design and the video are built around your business.</p></details>
+      <details><summary>What is in the free preview?<span class="pm" aria-hidden="true"></span></summary><p class="a">A real homepage built with your name, photos and services at a private link, plus a rough cut of your video. If you do not go ahead, nothing is owed and the preview comes down.</p></details>
+      <details><summary>Why is this so much less than an agency?<span class="pm" aria-hidden="true"></span></summary><p class="a">Airen is a one person studio that runs on its own automation. The build, the video edit and the monthly updates are produced by AI tools and checked by a person, so there is no team to pay for.</p></details>
+      <details><summary>What happens after I pay?<span class="pm" aria-hidden="true"></span></summary><p class="a">You fill an 8 minute intake form. The five business days start when it is complete, with two rounds of revisions included.</p></details>
+      <details><summary>Do I own the website?<span class="pm" aria-hidden="true"></span></summary><p class="a">Yes. On full payment the site content and design are yours. If you leave the care plan we send your files within 10 business days.</p></details>
+      <details><summary>What counts as an edit on the care plan?<span class="pm" aria-hidden="true"></span></summary><p class="a">Any small change to your existing pages: text, photos, hours, prices, menu or service items, team members, a promo banner. Send as many as you like by email, WhatsApp or WeChat; we work on one at a time and each goes live within 2 business days, usually sooner. New pages, new sections and redesigns are quoted separately or added for $149 a page.</p></details>
+      <details><summary>Can I cancel the care plan?<span class="pm" aria-hidden="true"></span></summary><p class="a">Any time, from your billing portal. Service runs to the end of the paid month and you keep the site.</p></details>
+      <details><summary>Can the site be in another language?<span class="pm" aria-hidden="true"></span></summary><p class="a">Yes, at no extra cost: English, Chinese or another major language, or two of them side by side. Copy is written for your local customers, not just translated word for word.</p></details>
+      <details><summary>I already have a website. Is this for me?<span class="pm" aria-hidden="true"></span></summary><p class="a">Send the link. We check it on mobile and for speed and tell you the two or three gaps that matter. If the fix is small we will say so.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap pad" id="request">
+  <div class="request-card rv">
+    <canvas id="mini" aria-hidden="true"></canvas>
+    <div>
+      <p class="eyebrow">Free preview</p>
+      <h2 class="h2 grad">See your site before you spend anything</h2>
+      <p class="lead">Tell us who you are and where your photos live. Your preview arrives within 2 business days.</p>
+      <form class="form" id="preview-form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name" hidden>Enter your name.</span></div>
+          <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization" required><span class="err" id="e-biz" hidden>Enter your business name.</span></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" id="e-email" hidden>Enter an email like name@business.ca.</span></div>
+          <div class="field"><label for="f-plan">Price</label><select id="f-plan" name="plan"><option>Founding price</option><option>Standard price</option><option>Not sure yet</option></select></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-link">Google listing, Instagram or site</label><input id="f-link" name="link" type="url" placeholder="https://"></div>
+          <div class="field"><label for="f-lang">Site language</label><select id="f-lang" name="language"><option>English</option><option>Chinese</option><option>English and Chinese</option><option>Another language (tell us in the link field)</option></select></div>
+        </div>
+        <button class="btn btn-amber btn-lg" type="submit" id="submit-btn" style="justify-content:center">Request my free preview</button>
+        <div class="ok" id="form-ok" role="status" hidden></div>
+      </form>
+    </div>
+    <div class="assure">
+      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6Z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span><p><b>Preview before payment</b><span>A real homepage and a rough video cut, before any money changes hands.</span></p></div>
+      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10a6 6 0 1 1 1.8 4.3M4 15v-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p><b>Full refund if we cannot deliver</b><span>If the package cannot be delivered as described, the setup fee comes back in full.</span></p></div>
+      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="5" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/></svg></span><p><b>Cancel in one click</b><span>The care plan stops from your billing portal, any time. You keep the site and your files.</span></p></div>
+      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 17c1-3 3.5-4.5 6-4.5s5 1.5 6 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><p><b>A person reads every request</b><span>Replies within one business day from Han or the Airen assistant.</span></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span><b style="color:var(--text)">Airen</b> · Based in Toronto, building for businesses worldwide · <span class="mono">airen.sites@gmail.com</span></span>
+      <nav aria-label="Footer"><a href="terms.html">Terms and refunds</a><a href="privacy.html">Privacy</a><a href="#top">Back to top</a></nav>
+    </div>
+    <div class="legal">
+      <div id="terms"><h3>Terms in brief</h3><p>Packages are delivered in five business days from a complete intake, with two revision rounds. Setup fees are non refundable once the build starts; if we cannot deliver as described, the fee is refunded in full. The care plan bills monthly from go live and cancels any time. It includes unlimited small edits to existing pages, handled one request at a time within 2 business days; new pages, new sections and redesigns are extra. On full payment you own your site content and design; Airen keeps its templates and tools. Liability is limited to fees paid in the prior 12 months. <a href="terms.html">Full terms and refund policy</a>.</p></div>
+      <div id="privacy"><h3>Privacy</h3><p>We collect only what you send in the preview request and intake form, use it to build and run your site, and never sell or share it. Ask for a copy or deletion at airen.sites@gmail.com. <a href="privacy.html">Full privacy policy</a>.</p></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) document.documentElement.classList.add('reduced');
+  var clamp = function(v,a,b){ return v<a?a:v>b?b:v; };
+  var smooth = function(t){ t=clamp(t,0,1); return t*t*(3-2*t); };
+  var vh = function(){ return window.innerHeight; };
+
+  /* ---------- the field: particles that morph with scroll ---------- */
+  var cv = document.getElementById('field'), ctx = cv.getContext('2d');
+  var story = document.querySelector('.story');
+  var W=0, H=0, DPR=1, N=0, P=[], shapes=[], mouse={x:-9999,y:-9999,on:false}, beacon={x:0,y:0};
+  var AMBER=[255,181,71], CREAM=[246,241,231];
+  var hv=document.getElementById('hero-video'), hasVideo=!!hv;
+  if(hv && reduce){ hv.removeAttribute('autoplay'); hv.pause(); }
+  var fv=document.getElementById('fly-video'), heroPlaying=true;
+  // phones and touch devices: same camera flights, from small portrait encodes that track the lantern
+  var phone = window.matchMedia('(max-width: 760px), (pointer: coarse) and (max-width: 1100px)').matches;
+  var lite = false;
+  if(phone){ [['fly-video','flyin'],['v-sky','beam-sky'],['v-ocean','beam-ocean'],['v-forest','beam-forest'],['h-sky','hold-sky'],['h-ocean','hold-ocean'],['h-forest','hold-forest']].forEach(function(x){ var el=document.getElementById(x[0]); if(el){ el.src='media/'+x[1]+'-m.mp4'; } }); }
+  var LF={}; [].forEach.call(document.querySelectorAll('.lite-frames img'),function(im){ LF[im.dataset.k]=im; });
+  var LITE_PAIR={fly:['start','tower'], sky:['tower','sky'], ocean:['tower','ocean'], forest:['tower','forest']};
+  var holdPlaying=null, canvasClear=false;
+  var VID={fly:fv, sky:document.getElementById('v-sky'), ocean:document.getElementById('v-ocean'), forest:document.getElementById('v-forest')};
+  var vT={fly:-1,sky:-1,ocean:-1,forest:-1}, loaded={fly:true};
+  // the camera: fly to the lantern, then follow the beam to the sky (page 2), back to the tower, to the ocean (page 3), back, to the forest (page 4)
+  var SEG=[
+    {v:'fly',a:0.00,b:0.18,dir:1},
+    {v:'sky',a:0.18,b:0.28,dir:1},
+    {v:'sky',a:0.28,b:0.42,hold:1},
+    {v:'sky',a:0.42,b:0.47,dir:-1},
+    {v:'ocean',a:0.47,b:0.57,dir:1},
+    {v:'ocean',a:0.57,b:0.70,hold:2},
+    {v:'ocean',a:0.70,b:0.75,dir:-1},
+    {v:'forest',a:0.75,b:0.85,dir:1},
+    {v:'forest',a:0.85,b:1.01,hold:3}
+  ];
+  function segAt(p){ for(var i=0;i<SEG.length;i++){ if(p<SEG[i].b) return SEG[i]; } return SEG[SEG.length-1]; }
+  var HOLD={sky:document.getElementById('h-sky'), ocean:document.getElementById('h-ocean'), forest:document.getElementById('h-forest')};
+  function ensure(name){ if(!loaded[name] && VID[name]){ VID[name].preload='auto'; VID[name].load(); if(HOLD[name]){ HOLD[name].preload='auto'; HOLD[name].load(); } loaded[name]=true; } }
+
+  function rand(a,b){ return a+Math.random()*(b-a); }
+  function sampleSegments(segs, n){
+    var total=0, i; for(i=0;i<segs.length;i++){ var s=segs[i]; s.len=Math.hypot(s[2]-s[0],s[3]-s[1]); total+=s.len; }
+    var out=[]; for(i=0;i<n;i++){ var r=Math.random()*total, k=0; while(r>segs[k].len && k<segs.length-1){ r-=segs[k].len; k++; } var s2=segs[k], t=s2.len?r/s2.len:0; out.push([s2[0]+(s2[2]-s2[0])*t+rand(-1,1), s2[1]+(s2[3]-s2[1])*t+rand(-1,1)]); }
+    return out;
+  }
+  function rectSegs(x,y,w,h,r){
+    var s=[], steps=6, a, k;
+    s.push([x+r,y,x+w-r,y],[x+w,y+r,x+w,y+h-r],[x+w-r,y+h,x+r,y+h],[x,y+h-r,x,y+r]);
+    var corners=[[x+w-r,y+r,-Math.PI/2],[x+w-r,y+h-r,0],[x+r,y+h-r,Math.PI/2],[x+r,y+r,Math.PI]];
+    corners.forEach(function(c){ for(k=0;k<steps;k++){ var a0=c[2]+k*(Math.PI/2)/steps, a1=c[2]+(k+1)*(Math.PI/2)/steps; s.push([c[0]+r*Math.cos(a0),c[1]+r*Math.sin(a0),c[0]+r*Math.cos(a1),c[1]+r*Math.sin(a1)]); } });
+    return s;
+  }
+  function browserShape(n,cx,cy,sc){
+    var w=560*sc, h=380*sc, x=cx-w/2, y=cy-h/2, s=rectSegs(x,y,w,h,18*sc);
+    s.push([x,y+44*sc,x+w,y+44*sc]);
+    for(var d=0;d<3;d++){ var dx=x+26*sc+d*20*sc, dy=y+22*sc; s=s.concat(rectSegs(dx-4*sc,dy-4*sc,8*sc,8*sc,4*sc)); }
+    s=s.concat(rectSegs(x+32*sc,y+80*sc,w*0.46,150*sc,10*sc));
+    s.push([x+w*0.56,y+96*sc,x+w-32*sc,y+96*sc],[x+w*0.56,y+124*sc,x+w-60*sc,y+124*sc],[x+w*0.56,y+152*sc,x+w-96*sc,y+152*sc]);
+    s=s.concat(rectSegs(x+w*0.56,y+188*sc,120*sc,36*sc,12*sc));
+    for(var c=0;c<3;c++){ s=s.concat(rectSegs(x+32*sc+c*(w-64*sc)/3+ (c?8*sc:0), y+260*sc, (w-64*sc)/3-8*sc, 88*sc, 10*sc)); }
+    return sampleSegments(s,n);
+  }
+  function phoneShape(n,cx,cy,sc){
+    var w=230*sc, h=460*sc, x=cx-w/2, y=cy-h/2, s=rectSegs(x,y,w,h,36*sc);
+    s=s.concat(rectSegs(x+12*sc,y+12*sc,w-24*sc,h-24*sc,26*sc));
+    s.push([cx-24*sc,y+30*sc,cx+24*sc,y+30*sc]);
+    var tx=cx-22*sc, ty=cy-30*sc; s.push([tx,ty,tx,ty+60*sc],[tx,ty+60*sc,tx+52*sc,ty+30*sc],[tx+52*sc,ty+30*sc,tx,ty]);
+    s.push([x+36*sc,y+h-80*sc,x+w-36*sc,y+h-80*sc],[x+36*sc,y+h-56*sc,x+w-90*sc,y+h-56*sc]);
+    return sampleSegments(s,n);
+  }
+  function textShape(n,cx,cy,str,size){
+    var oc=document.createElement('canvas'), ox=oc.getContext('2d');
+    ox.font='700 '+size+'px Geist, system-ui, sans-serif';
+    var tw=Math.ceil(ox.measureText(str).width)+20, th=Math.ceil(size*1.2);
+    oc.width=tw; oc.height=th; ox.font='700 '+size+'px Geist, system-ui, sans-serif'; ox.fillStyle='#fff'; ox.textBaseline='middle'; ox.fillText(str,10,th/2);
+    var d=ox.getImageData(0,0,tw,th).data, pts=[], step=Math.max(2,Math.round(size/48));
+    for(var yy=0;yy<th;yy+=step) for(var xx=0;xx<tw;xx+=step) if(d[(yy*tw+xx)*4+3]>140) pts.push([cx-tw/2+xx,cy-th/2+yy]);
+    var out=[]; if(!pts.length){ for(var i=0;i<n;i++) out.push([cx,cy]); return out; }
+    for(var j=0;j<n;j++){ var p=pts[(Math.random()*pts.length)|0]; out.push([p[0]+rand(-1,1),p[1]+rand(-1,1)]); }
+    return out;
+  }
+  function crowdHomes(n){
+    var out=[];
+    for(var i=0;i<n;i++){
+      var r=Math.random();
+      if(r<0.72){ // the crowd on the ground, denser near the horizon
+        var t=Math.pow(Math.random(),1.6), y=H*0.6+t*H*0.42, spread=0.25+t*0.9;
+        out.push([beacon.x+(Math.random()-0.5)*W*spread*1.6, y]);
+      } else { // stars
+        out.push([Math.random()*W, Math.random()*H*0.55]);
+      }
+    }
+    return out;
+  }
+  function layout(){
+    DPR=Math.min(window.devicePixelRatio||1,1.5);
+    W=cv.clientWidth; H=cv.clientHeight;
+    cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+    var mobile=W<760;
+    N = mobile ? 800 : 1600;
+    var cx = mobile ? W*0.5 : W*0.7, cy = mobile ? H*0.68 : H*0.52;
+    var sc = mobile ? Math.min(W/640,H/1500) : Math.min(W/1500,H/900)*1.25;
+    beacon.x = mobile ? W*0.72 : W*0.74; beacon.y = mobile ? H*0.58 : H*0.5;
+    shapes=[crowdHomes(N), browserShape(N,cx,cy,sc), phoneShape(N,cx,cy,sc*1.1), textShape(N,cx,cy,'5 DAYS', mobile?Math.min(W*0.26,120):Math.min(W*0.13,190))];
+    if(P.length!==N){
+      P=[]; for(var i=0;i<N;i++){ var h=shapes[0][i]; P.push({x:h[0],y:h[1],vx:0,vy:0,ph:Math.random()*6.283,sp:rand(.3,1),s:Math.random()<0.12?2.2:1.4,c:Math.random()<0.2?1:0,star:h[1]<H*0.55}); }
+    } else { for(var k=0;k<N;k++) P[k].star = shapes[0][k][1]<H*0.55; }
+  }
+
+  function storyProgress(){
+    var r=story.getBoundingClientRect(), total=r.height-vh();
+    return total>0 ? clamp(-r.top/total,0,1) : 0;
+  }
+  var caps=[].slice.call(document.querySelectorAll('.cap'));
+  var pgs=[0,1,2,3].map(function(i){ return document.getElementById('pg'+i); });
+  var stops=[0,0.18,0.42,0.70];
+  // p 0 to 0.27: fly from the wide hero up to the lantern; particles form the browser after landing
+
+  function stageWeights(p){
+    // returns [indexA,indexB,t]
+    for(var i=0;i<stops.length-1;i++){ if(p<stops[i+1]){ var span=stops[i+1]-stops[i], local=(p-stops[i])/span; var t = (i===0 && fv) ? smooth((p-0.27)/0.09) : smooth((local-0.35)/0.5); return [i,i+1,t]; } }
+    return [3,3,0];
+  }
+
+  var last=0, time=0, running=true;
+  function frame(now){
+    if(!running){ requestAnimationFrame(frame); return; }
+    var dt=Math.min((now-last)/16.67,3); last=now; time+=dt*0.016;
+    var p=reduce?0:storyProgress();
+    var sg=segAt(p), hold=sg.hold||0, isLast=(hold===3);
+    var page = p<0.42?1 : p<0.70?2 : 3;
+    var A=shapes[0], B=shapes[page], t = hold ? 1 : 0;
+    var vis = hold ? Math.min(smooth((p-sg.a)/0.05), isLast?1:smooth((sg.b-p)/0.03)) : 0;
+    var crowdness = 0;
+
+    if(hasVideo && vis>=0.01){ ctx.globalCompositeOperation='destination-out'; ctx.fillStyle='rgba(0,0,0,0.35)'; ctx.fillRect(0,0,W,H); }
+    if(hasVideo && fv && !reduce){
+      var enter=smooth(p/0.03);
+      hv.style.opacity=String(1-enter);
+      if(enter>0.99 && heroPlaying){ hv.pause(); heroPlaying=false; } else if(enter<0.99 && !heroPlaying){ hv.play().catch(function(){}); heroPlaying=true; }
+      var dim = hold ? 1-0.55*Math.min(smooth((p-sg.a)/0.03), isLast?1:smooth((sg.b-p)/0.03)) : 1;
+      var f=clamp((p-sg.a)/(sg.b-sg.a),0,1);
+      if(lite){
+        // phones: crossfade still frames with a slow push, no video seeking
+        var pair=LITE_PAIR[sg.v], from=pair[0], to=pair[1], mix;
+        if(hold) mix=1; else mix = sg.dir>0 ? smooth(f) : 1-smooth(f);
+        for(var k in LF){
+          var o=0, sc=1;
+          if(k===to){ o=mix; sc=1.12-0.12*mix + (hold?0.03*Math.sin(time*0.5):0); }
+          else if(k===from){ o=1-mix; sc=1+0.15*mix; }
+          if(sg.v==='fly' && k==='start') o*=enter;
+          if(sg.v==='fly' && k==='tower') o*=enter;
+          LF[k].style.opacity=String(o*dim); LF[k].style.transform='scale('+sc.toFixed(4)+')';
+        }
+      } else {
+        if(p>0.02) ensure('sky'); if(p>0.3) ensure('ocean'); if(p>0.58) ensure('forest');
+        for(var nm in VID){
+          var el=VID[nm]; if(!el) continue;
+          var on = nm===sg.v;
+          var holdReady = hold && HOLD[nm] && HOLD[nm].readyState>=2;
+          var vis2 = (on && !holdReady) ? '' : 'none';
+          if(el.style.display!==vis2) el.style.display=vis2;
+          if(!on){ if(!el.paused) el.pause(); if(HOLD[nm] && HOLD[nm].style.display!=='none'){ HOLD[nm].pause(); HOLD[nm].style.display='none'; } continue; }
+          el.style.opacity = String((nm==='fly'? enter : 1)*dim);
+          if(el.readyState<1 || !el.duration) continue;
+          var end=el.duration-0.05;
+          var hv2=HOLD[nm];
+          if(hold && hv2 && hv2.readyState>=2){
+            // a page holds: the scrub video parks on its last frame and a seamless back and forth loop takes over (same frame, no jump)
+            if(Math.abs(end-vT[nm])>1/48 && !el.seeking){ el.currentTime=end; vT[nm]=end; }
+            if(hv2.style.display!==''){ hv2.currentTime=0; hv2.style.display=''; hv2.play().catch(function(){}); }
+            hv2.style.opacity=String(dim);
+            continue;
+          }
+          if(hv2 && hv2.style.display!=='none'){ hv2.pause(); hv2.style.display='none'; }
+          if(hold){
+            if(!el.seeking && Math.abs(end-vT[nm])>1/48){ el.currentTime=end; vT[nm]=end; }
+          } else {
+            if(holdPlaying===nm){ el.pause(); holdPlaying=null; }
+            var tg=(sg.dir>0? f : 1-f)*end;
+            if(!el.seeking && Math.abs(tg-vT[nm])>1/30){ el.currentTime=tg; vT[nm]=tg; }
+          }
+        }
+      }
+    }
+
+    // beacon and sweeping beam, fades as the crowd becomes the product
+    if(!hasVideo && crowdness>0.01){
+      var ang=Math.sin(time*0.6)*0.55-Math.PI*0.5+0.25, len=Math.max(W,H)*1.1, spread=0.16;
+      ctx.globalCompositeOperation='lighter';
+      var g=ctx.createRadialGradient(beacon.x,beacon.y,0,beacon.x,beacon.y,len);
+      g.addColorStop(0,'rgba(255,190,90,'+(0.22*crowdness)+')'); g.addColorStop(1,'rgba(255,190,90,0)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.moveTo(beacon.x,beacon.y);
+      ctx.lineTo(beacon.x+Math.cos(ang-spread)*len,beacon.y+Math.sin(ang-spread)*len);
+      ctx.lineTo(beacon.x+Math.cos(ang+spread)*len,beacon.y+Math.sin(ang+spread)*len); ctx.closePath(); ctx.fill();
+      var g2=ctx.createRadialGradient(beacon.x,beacon.y,0,beacon.x,beacon.y,60);
+      g2.addColorStop(0,'rgba(255,220,150,'+(0.9*crowdness)+')'); g2.addColorStop(1,'rgba(255,181,71,0)');
+      ctx.fillStyle=g2; ctx.beginPath(); ctx.arc(beacon.x,beacon.y,60,0,6.283); ctx.fill();
+      // tower
+      ctx.globalCompositeOperation='source-over';
+      ctx.fillStyle='rgba(19,18,9,'+crowdness+')';
+      ctx.beginPath(); ctx.moveTo(beacon.x-7,beacon.y+10); ctx.lineTo(beacon.x+7,beacon.y+10); ctx.lineTo(beacon.x+16,H*0.66); ctx.lineTo(beacon.x-16,H*0.66); ctx.closePath(); ctx.fill();
+      ctx.strokeStyle='rgba(255,181,71,'+(0.35*crowdness)+')'; ctx.lineWidth=1; ctx.stroke();
+    } else { beamSet=false; }
+
+    ctx.globalCompositeOperation='lighter';
+    var k=0.045, damp=0.84, mr=110;
+    var skip = hasVideo && vis<0.01;
+    if(skip){ if(!canvasClear){ ctx.globalCompositeOperation='source-over'; ctx.clearRect(0,0,W,H); canvasClear=true; } }
+    else canvasClear=false;
+    for(var i=0;i<(skip?0:N);i++){
+      var q=P[i], a=A[i], b=B[i];
+      var tx=t? b[0] : a[0], ty=t? b[1] : a[1];
+      if(crowdness>0){
+        // the crowd breathes and leans toward the beacon; stars twinkle in place
+        var wob=Math.sin(time*q.sp+q.ph);
+        if(!q.star){ tx+= (beacon.x-tx)*0.02*crowdness + wob*3; ty+= Math.cos(time*q.sp*1.3+q.ph)*1.5; }
+      } else { tx+=Math.sin(time*2+q.ph)*0.6; ty+=Math.cos(time*2+q.ph)*0.6; }
+      q.vx+=(tx-q.x)*k; q.vy+=(ty-q.y)*k;
+      if(mouse.on){ var dx=q.x-mouse.x, dy=q.y-mouse.y, d2=dx*dx+dy*dy; if(d2<mr*mr){ var d=Math.sqrt(d2)||1, f=(1-d/mr)*2.6; q.vx+=dx/d*f; q.vy+=dy/d*f; } }
+      q.vx*=damp; q.vy*=damp; q.x+=q.vx*dt; q.y+=q.vy*dt;
+      var tw = q.star&&crowdness>0 ? 0.45+0.55*Math.abs(Math.sin(time*q.sp*2+q.ph)) : 1;
+      var col = q.c ? CREAM : AMBER, al = (q.c?0.55:0.8)*tw*(hasVideo ? vis : 1);
+      ctx.fillStyle='rgba('+col[0]+','+col[1]+','+col[2]+','+al+')';
+      ctx.fillRect(q.x,q.y,q.s,q.s);
+    }
+
+    // captions follow progress
+    caps.forEach(function(c,i){
+      var o;
+      if(reduce) o = i===0?1:0;
+      else if(i===0) o = 1-smooth(p/0.08);
+      else o = (hold===i) ? Math.min(smooth((p-sg.a-0.02)/0.04), isLast?1:smooth((sg.b-p)/0.03)) : 0;
+      c.style.opacity=o; c.style.transform='translateY('+((1-o)*24)+'px)';
+      c.classList.toggle('live',o>0.6); c.setAttribute('aria-hidden', o<0.05?'true':'false');
+      c.style.visibility = o<0.01 ? 'hidden' : 'visible';
+    });
+    pgs.forEach(function(el,i){ var a=stops[i], b=i<3?stops[i+1]:1; el.style.transform='scaleX('+clamp((p-a)/(b-a),0,1)+')'; });
+
+    requestAnimationFrame(frame);
+  }
+  var beamSet=false;
+  function initField(){ layout(); if(reduce){ /* settle once */ for(var s=0;s<1;s++){} } requestAnimationFrame(function(n){ last=n; frame(n); }); }
+  var rz; window.addEventListener('resize',function(){ clearTimeout(rz); rz=setTimeout(function(){ layout(); sizeWork(); },150); });
+  cv.parentElement.addEventListener('pointermove',function(e){ var r=cv.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top; mouse.on=true; });
+  cv.parentElement.addEventListener('pointerleave',function(){ mouse.on=false; });
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ running=es[0].isIntersecting; },{}).observe(story); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ layout(); }); }
+  initField();
+
+  /* ---------- horizontal work gallery ---------- */
+  var work=document.getElementById('work'), track=document.getElementById('track'), wc=document.getElementById('wc');
+  function sizeWork(){ if(reduce) return; var over=Math.max(0,track.scrollWidth-window.innerWidth); work.style.height=(over+vh()*1.2)+'px'; work.dataset.over=over; }
+  sizeWork(); window.addEventListener('load',sizeWork);
+
+  /* ---------- tagline words ---------- */
+  var tl=document.getElementById('tagline-words'), spans=[];
+  if(tl){ var words=tl.textContent.trim().split(/\s+/); tl.innerHTML=words.map(function(w){ var hot=/^(good\.|ten|seconds,|phone,)$/.test(w); return '<span class="w'+(hot?' hotw':'')+'">'+w+'</span>'; }).join(' '); spans=[].slice.call(tl.querySelectorAll('.w')); if(reduce) spans.forEach(function(s){ s.classList.add('on'); if(s.classList.contains('hotw')) s.classList.add('hot'); }); }
+
+  /* ---------- build log ---------- */
+  var log=document.getElementById('log'), fill=document.getElementById('log-fill'), rows=[].slice.call(log.querySelectorAll('.log-row'));
+
+  /* ---------- one scroll driven loop for everything below the story ---------- */
+  var nav=document.getElementById('nav'), lastY=window.scrollY;
+  function tick(){
+    var y=window.scrollY;
+    // hide nav on fast downward scroll, show on up
+    if(!document.body.classList.contains('menu-open')){ if(y>lastY+6 && y>200) nav.classList.add('hide'); else if(y<lastY-6) nav.classList.remove('hide'); }
+    lastY=y;
+    if(!reduce){
+      var r=work.getBoundingClientRect(), over=+work.dataset.over||0, total=r.height-vh();
+      var wp = total>0 ? clamp(-r.top/total,0,1) : 0;
+      track.style.transform='translate3d('+(-wp*over)+'px,0,0)';
+      wc.textContent='0'+Math.min(4,1+Math.floor(wp*3.999));
+      var line=vh()*0.65;
+      spans.forEach(function(s){ var on=s.getBoundingClientRect().top<line; s.classList.toggle('on',on); if(s.classList.contains('hotw')) s.classList.toggle('hot',on); });
+      var lr=log.getBoundingClientRect(), lp=clamp((vh()*0.6-lr.top)/lr.height,0,1);
+      fill.style.transform='scaleY('+lp+')';
+      rows.forEach(function(row){ row.classList.toggle('on', row.getBoundingClientRect().top < vh()*0.6); });
+    }
+    requestAnimationFrame(tick);
+  }
+  if(reduce) rows.forEach(function(r){ r.classList.add('on'); });
+  requestAnimationFrame(tick);
+
+  /* ---------- reveals ---------- */
+  if('IntersectionObserver' in window && !reduce){
+    var obs=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove('pre'); obs.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){ if(el.getBoundingClientRect().top>vh()) el.classList.add('pre'); obs.observe(el); });
+  }
+
+  /* ---------- spotlight cards and tilt ---------- */
+  document.querySelectorAll('.get').forEach(function(el){ el.addEventListener('pointermove',function(e){ var r=el.getBoundingClientRect(); el.style.setProperty('--mx',(e.clientX-r.left)+'px'); el.style.setProperty('--my',(e.clientY-r.top)+'px'); }); });
+  if(!reduce && window.matchMedia('(hover: hover)').matches){
+    document.querySelectorAll('.tilt').forEach(function(el){
+      el.addEventListener('pointermove',function(e){ var r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-0.5, y=(e.clientY-r.top)/r.height-0.5; el.style.transform='rotateY('+(x*3)+'deg) rotateX('+(-y*3)+'deg) translateY(-4px)'; });
+      el.addEventListener('pointerleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  /* ---------- mini field behind the form ---------- */
+  (function(){
+    var c=document.getElementById('mini'), x=c.getContext('2d'), pts=[], w, h, on=false;
+    function sz(){ var d=Math.min(window.devicePixelRatio||1,2); w=c.clientWidth; h=c.clientHeight; c.width=w*d; c.height=h*d; x.setTransform(d,0,0,d,0,0); pts=[]; for(var i=0;i<160;i++) pts.push({x:Math.random()*w,y:Math.random()*h,v:rand(.1,.4),p:Math.random()*6}); }
+    sz(); window.addEventListener('resize',sz);
+    if('IntersectionObserver' in window) new IntersectionObserver(function(es){ on=es[0].isIntersecting; }).observe(c);
+    (function loop(n){ if(on && !reduce){ x.clearRect(0,0,w,h); pts.forEach(function(q){ q.y-=q.v; if(q.y<0){ q.y=h; q.x=Math.random()*w; } var a=0.3+0.5*Math.abs(Math.sin(n/900+q.p)); x.fillStyle='rgba(255,181,71,'+a+')'; x.fillRect(q.x,q.y,1.6,1.6); }); } requestAnimationFrame(loop); })(0);
+  })();
+
+  /* ---------- nav current section ---------- */
+  var links=[].slice.call(document.querySelectorAll('.nav-links a'));
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) links.forEach(function(a){ a.setAttribute('aria-current', a.getAttribute('href')==='#'+e.target.id?'true':'false'); }); }); },{rootMargin:'-45% 0px -50% 0px'});
+    ['work','how','pricing','faq'].forEach(function(id){ so.observe(document.getElementById(id)); });
+  }
+
+  /* ---------- mobile menu ---------- */
+  var mb=document.getElementById('menu-btn');
+  function setMenu(o){ document.body.classList.toggle('menu-open',o); mb.setAttribute('aria-expanded',o); mb.setAttribute('aria-label',o?'Close menu':'Open menu'); if(o) nav.classList.remove('hide'); }
+  mb.addEventListener('click',function(){ setMenu(!document.body.classList.contains('menu-open')); });
+  document.querySelectorAll('#panel a').forEach(function(a){ a.addEventListener('click',function(){ setMenu(false); }); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') setMenu(false); });
+
+  /* ---------- promo video ---------- */
+  var v=document.getElementById('promo'), sb=document.getElementById('sound'), sx=document.getElementById('sound-x');
+  if('IntersectionObserver' in window && !reduce){ new IntersectionObserver(function(es){ if(es[0].isIntersecting) v.play().catch(function(){}); else v.pause(); },{threshold:0.3}).observe(v); } else { v.controls=true; }
+  sb.addEventListener('click',function(){ v.muted=!v.muted; if(!v.muted) v.play().catch(function(){}); sx.style.display=v.muted?'':'none'; sb.setAttribute('aria-pressed',String(!v.muted)); sb.setAttribute('aria-label',v.muted?'Turn sound on':'Turn sound off'); });
+
+  /* ---------- form ---------- */
+  document.querySelectorAll('[data-plan]').forEach(function(a){ a.addEventListener('click',function(){ document.getElementById('f-plan').value=a.getAttribute('data-plan'); }); });
+  var form=document.getElementById('preview-form');
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault(); var ok=true;
+    function check(i,e,bad){ var el=document.getElementById(i); document.getElementById(e).hidden=!bad; el.setAttribute('aria-invalid',bad?'true':'false'); if(bad&&ok) el.focus(); if(bad) ok=false; }
+    check('f-name','e-name',!document.getElementById('f-name').value.trim());
+    check('f-biz','e-biz',!document.getElementById('f-biz').value.trim());
+    check('f-email','e-email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('f-email').value.trim()));
+    if(!ok) return;
+    /* Until the form posts to the CRM, the request opens the visitor's email app addressed to Airen. */
+    var v=function(i){ var el=document.getElementById(i); return el? el.value.trim() : ''; };
+    var lines=[]; [].forEach.call(form.querySelectorAll('input,select,textarea'),function(el){ if(!el.id||el.type==='submit'||el.type==='hidden') return; var lab=form.querySelector('label[for="'+el.id+'"]'); if(el.value.trim()) lines.push((lab?lab.textContent.trim():el.id)+': '+el.value.trim()); });
+    var to=form.getAttribute('data-to')||'airen.sites@gmail.com';
+    location.href='mailto:'+to+'?subject='+encodeURIComponent('Free preview request: '+v('f-biz'))+'&body='+encodeURIComponent(lines.join('\n'));
+    var out=document.getElementById('form-ok'); out.innerHTML='Your email app should open with the request filled in. Press send and we reply within 2 business days. If nothing opened, email <a href="mailto:'+to+'">'+to+'</a>.'; out.hidden=false;
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var grid=document.getElementById('shows'); if(!grid) return;
+  var live=null;
+  function stop(card){ if(!card) return; var f=card.querySelector('iframe'), x=card.querySelector('.show-stop'); if(f){ f.src='about:blank'; f.remove(); } if(x) x.remove(); card.querySelector('.show-play').hidden=false; if(live===card) live=null; }
+  function start(card){
+    if(live && live!==card) stop(live);
+    var st=card.querySelector('.show-stage'), k=card.dataset.key;
+    var f=document.createElement('iframe'); f.src='showroom/sr-'+k+'.html'; f.title=card.querySelector('h3').textContent+' live effect'; f.setAttribute('allow','autoplay');
+    st.appendChild(f); card.querySelector('.show-play').hidden=true;
+    var x=document.createElement('button'); x.type='button'; x.className='show-stop'; x.textContent='Stop'; x.onclick=function(){ stop(card); card.querySelector('.show-play').focus(); };
+    st.appendChild(x); live=card;
+  }
+  [].forEach.call(grid.querySelectorAll('.show'),function(c){ c.querySelector('.show-play').addEventListener('click',function(){ start(c); }); });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting && e.target===live) stop(e.target); }); },{threshold:0.15});
+    [].forEach.call(grid.querySelectorAll('.show'),function(c){ io.observe(c); });
+  }
+  document.addEventListener('visibilitychange',function(){ if(document.hidden && live) stop(live); });
+})();
+</script>
+</body>
+</html>
