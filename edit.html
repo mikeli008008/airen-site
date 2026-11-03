@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Request an edit · Airen</title>
+<meta name="description" content="Send a care plan edit request to Airen.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23000'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23FFB547'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23FFB547' stroke-opacity='.5' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><i></i>Airen</a><a class="back" href="./">Back to the site</a></header>
+<main>
+<p class="eyebrow">Care plan · edit request</p>
+<h1>What should we change?</h1>
+<p class="lead">One change per request. Small edits go live within 2 business days. If you already have one in progress, a new request waits in line behind it.</p>
+<div class="box"><h2>Small edits are included</h2><p>Text, photos, hours, prices, menu or service items, team members and promotional banners. New pages, new sections and redesigns are quoted first, and nothing is charged without your yes.</p></div>
+<form id="edit" novalidate>
+<div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+<fieldset><legend>Your request</legend>
+<div class="row2"><div class="field"><label for="f-email" class="req">Email on your account</label><input id="f-email" name="email" type="email" required autocomplete="email"><span class="err" id="e-email" hidden>This one is needed.</span></div><div class="field"><label for="f-business" class="req">Business name</label><input id="f-business" name="business" type="text" required autocomplete="organization"><span class="err" id="e-business" hidden>This one is needed.</span></div></div>
+<div class="field"><label for="f-page" class="">Which page, or paste the link</label><span class="hint" id="h-page">For example: the menu page, or yourbusiness.ca/services</span><input id="f-page" name="page" type="text" aria-describedby="h-page"><span class="err" id="e-page" hidden>This one is needed.</span></div>
+<div class="field"><label for="f-request" class="req">What to change</label><span class="hint" id="h-request">Exactly as it should read. For example: change Saturday hours to 9 to 3.</span><textarea id="f-request" name="request" rows="6" required aria-describedby="h-request"></textarea><span class="err" id="e-request" hidden>This one is needed.</span></div>
+<div class="field"><span class="q">Photos for this change</span>
+<label class="drop" for="f-files"><b>Choose photos</b><span>Up to 5. Optional.</span><input id="f-files" type="file" accept="image/*,application/pdf" multiple></label>
+<ul class="files" id="l-files"></ul></div>
+</fieldset>
+<div class="actions"><button class="btn btn-amber" type="submit" id="submit">Send my request</button></div>
+<div class="status" id="done" role="status" hidden></div>
+</form>
+</main>
+<footer><span>Airen · Toronto, Ontario, Canada · <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></span><span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="edit.html">Request an edit</a></span></footer>
+</div>
+<script src="js/config.js"></script>
+<script src="js/forms.js"></script>
+<script>
+(function(){
+  var form = document.getElementById('edit'), draft = 'e' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  var keep = Airen.keepDraft(form, 'edit'), files = Airen.uploader(document.getElementById('f-files'), document.getElementById('l-files'), { draft: draft, slot: 'edit' });
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var v = Airen.values(form), first = null;
+    [['email', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)], ['business', !v.business], ['request', !v.request]].forEach(function (p) {
+      var el = document.getElementById('f-' + p[0]); document.getElementById('e-' + p[0]).hidden = !p[1]; el.setAttribute('aria-invalid', p[1] ? 'true' : 'false'); if (p[1] && !first) first = el;
+    });
+    if (first) { first.focus(); return; }
+    if (files.busy) { show('Photos are still uploading. Try again in a moment.', true); return; }
+    if (files.done) v.draft = draft;
+    var btn = document.getElementById('submit'); btn.disabled = true; btn.textContent = 'Sending';
+    Airen.post('edit', v).then(function (r) {
+      keep.clear(); form.querySelectorAll('fieldset,.actions').forEach(function (el) { el.hidden = true; });
+      show('Request ' + r.ticket + ' received. ' + (r.queued ? 'It is queued behind the request you already have in progress.' : 'It will be live within 2 business days.') + ' We sent a confirmation to ' + v.email + '.');
+    }, function (e) {
+      btn.disabled = false; btn.textContent = 'Send my request';
+      if (e.message === 'offline') { Airen.mailto('Edit request: ' + v.business, v); show('Your email app should open with the request. Press send.'); }
+      else show('That did not go through: ' + e.message + ' Try again or email ' + Airen.contact + '.', true);
+    });
+  });
+  function show(t, bad) { var d = document.getElementById('done'); d.hidden = false; d.className = 'status' + (bad ? ' bad' : ''); d.textContent = t; }
+})();
+</script>
+</body>
+</html>

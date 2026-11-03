@@ -538,6 +538,7 @@ footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);fo
           <div class="field"><label for="f-link">Google listing, Instagram or site</label><input id="f-link" name="link" type="url" placeholder="https://"></div>
           <div class="field"><label for="f-lang">Site language</label><select id="f-lang" name="language"><option>English</option><option>Chinese</option><option>English and Chinese</option><option>Another language (tell us in the link field)</option></select></div>
         </div>
+        <div class="hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
         <button class="btn btn-amber btn-lg" type="submit" id="submit-btn" style="justify-content:center">Request my free preview</button>
         <div class="ok" id="form-ok" role="status" hidden></div>
       </form>
@@ -556,7 +557,7 @@ footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);fo
   <div class="wrap">
     <div class="foot">
       <span><b style="color:var(--text)">Airen</b> · Based in Toronto, building for businesses worldwide · <span class="mono">airen.sites@gmail.com</span></span>
-      <nav aria-label="Footer"><a href="terms.html">Terms and refunds</a><a href="privacy.html">Privacy</a><a href="https://billing.stripe.com/p/login/fZufZa18gfnh35ycJ75os00" data-stripe="portal">Manage your care plan</a><a href="#top">Back to top</a></nav>
+      <nav aria-label="Footer"><a href="terms.html">Terms and refunds</a><a href="privacy.html">Privacy</a><a href="edit.html">Request an edit</a><a href="https://billing.stripe.com/p/login/fZufZa18gfnh35ycJ75os00" data-stripe="portal">Manage your care plan</a><a href="#top">Back to top</a></nav>
     </div>
     <div class="legal">
       <div id="terms"><h3>Terms in brief</h3><p>Packages are delivered in five business days from a complete intake, with two revision rounds. Setup fees are non refundable once the build starts; if we cannot deliver as described, the fee is refunded in full. The care plan bills monthly from go live and cancels any time. It includes unlimited small edits to existing pages, handled one request at a time within 2 business days; new pages, new sections and redesigns are extra. On full payment you own your site content and design; Airen keeps its templates and tools. Liability is limited to fees paid in the prior 12 months. <a href="terms.html">Full terms and refund policy</a>.</p></div>
@@ -564,6 +565,8 @@ footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);fo
     </div>
   </div>
 </footer>
+<script src="js/config.js"></script>
+<script src="js/forms.js"></script>
 
 <script>
 (function(){
@@ -905,12 +908,14 @@ footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);fo
     check('f-biz','e-biz',!document.getElementById('f-biz').value.trim());
     check('f-email','e-email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('f-email').value.trim()));
     if(!ok) return;
-    /* Until the form posts to the CRM, the request opens the visitor's email app addressed to Airen. */
     var v=function(i){ var el=document.getElementById(i); return el? el.value.trim() : ''; };
-    var lines=[]; [].forEach.call(form.querySelectorAll('input,select,textarea'),function(el){ if(!el.id||el.type==='submit'||el.type==='hidden') return; var lab=form.querySelector('label[for="'+el.id+'"]'); if(el.value.trim()) lines.push((lab?lab.textContent.trim():el.id)+': '+el.value.trim()); });
-    var to=form.getAttribute('data-to')||'airen.sites@gmail.com';
-    location.href='mailto:'+to+'?subject='+encodeURIComponent('Free preview request: '+v('f-biz'))+'&body='+encodeURIComponent(lines.join('\n'));
-    var out=document.getElementById('form-ok'); out.innerHTML='Your email app should open with the request filled in. Press send and we reply within 2 business days. If nothing opened, email <a href="mailto:'+to+'">'+to+'</a>.'; out.hidden=false;
+    var data={name:v('f-name'),business:v('f-biz'),email:v('f-email'),plan:v('f-plan'),link:v('f-link'),language:v('f-lang'),website:(form.elements.website||{}).value||''};
+    var out=document.getElementById('form-ok'), b=document.getElementById('submit-btn');
+    var mail=function(){ var to=(window.Airen&&Airen.contact)||'airen.sites@gmail.com'; location.href='mailto:'+to+'?subject='+encodeURIComponent('Free preview request: '+data.business)+'&body='+encodeURIComponent(['Name: '+data.name,'Business: '+data.business,'Email: '+data.email,'Price: '+data.plan,'Link: '+data.link,'Language: '+data.language].join('\n')); out.innerHTML='Your email app should open with the request filled in. Press send and we reply within 2 business days. If nothing opened, email <a href="mailto:'+to+'">'+to+'</a>.'; out.hidden=false; };
+    if(!(window.Airen&&Airen.live)){ mail(); return; }
+    b.disabled=true; b.textContent='Sending';
+    Airen.post('preview',data).then(function(){ out.textContent='Request received for '+data.business+'. Your private preview link goes to '+data.email+' within 2 business days.'; out.hidden=false; b.textContent='Request sent'; },
+      function(){ b.disabled=false; b.textContent='Request my free preview'; mail(); });
   });
 })();
 </script>

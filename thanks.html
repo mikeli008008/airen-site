@@ -2,54 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Thank you · Airen</title>
-<meta name="robots" content="noindex">
 <meta name="description" content="Payment received. What happens next with your Airen build.">
+<meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23000'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23FFB547'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23FFB547' stroke-opacity='.5' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono&display=swap">
-<style>
-:root{--bg:#000;--surface:#131209;--line:rgba(255,244,224,.12);--text:#F6F1E7;--muted:#9B9B9B;--amber:#FFB547;color-scheme:dark}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Geist",system-ui,-apple-system,sans-serif;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
-.wrap{max-width:720px;margin:0 auto;padding:32px max(16px,env(safe-area-inset-left,0px)) 64px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:32px;border-bottom:1px solid var(--line)}
-.brand{display:inline-flex;align-items:center;gap:8px;color:var(--text);text-decoration:none;font-weight:600}
-.brand i{width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
-.top a.back{color:var(--muted);font-size:14px;line-height:20px;text-decoration:none}
-.top a.back:hover{color:var(--text)}
-.eyebrow{font-family:"Geist Mono",monospace;font-size:12px;line-height:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:48px 0 0}
-h1{font-size:48px;line-height:1;margin:16px 0 0;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
-@media (max-width:640px){h1{font-size:36px;line-height:40px}}
-.lead{color:var(--muted);font-size:18px;line-height:28px;margin:24px 0 0}
-h2{font-size:20px;line-height:28px;font-weight:600;margin:40px 0 0;letter-spacing:-.01em}
-p,li{color:#D9D3C7}
-p{margin:8px 0 0}
-ul{margin:8px 0 0;padding-left:20px}li{margin-top:4px}
-a{color:var(--amber)}a:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:4px}
-.box{margin-top:40px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
-.box h2{margin-top:0}
-footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;line-height:20px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
-footer a{color:var(--muted)}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
 <div class="wrap">
 <header class="top"><a class="brand" href="./"><i></i>Airen</a><a class="back" href="./">Back to the site</a></header>
 <main>
 <p class="eyebrow">Payment received</p>
-<h1>Thank you. Your build is booked.</h1>
-<p class="lead">Stripe has emailed your receipt. Next, we email you a short intake form that takes about 8 minutes. Your site and video are delivered 5 business days after we have the form and your photos.</p>
+<h1 id="t-title">Thank you. Your build is booked.</h1>
+<p class="lead" id="t-lead">Stripe has emailed your receipt. One step left: tell us about your business so we can start. It takes about 8 minutes and you can stop and come back.</p>
+<div class="actions" id="t-actions"><a class="btn btn-amber" id="t-intake" href="intake.html">Start my intake</a></div>
+<div class="box">
 <h2>What happens next</h2>
-<ul>
-<li>Today: the intake form arrives in your inbox.</li>
-<li>Within 5 business days of a complete intake: your site and video, ready for your review.</li>
-<li>Two rounds of changes, then your site goes live.</li>
-<li>Your care plan billing starts after go live. Cancel any time.</li>
-</ul>
-<p style="margin-top:24px">Questions: <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></p>
-</main>
-<footer><span>Airen · Toronto, Ontario, Canada · <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></span><span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="./">Home</a></span></footer>
+<ol class="steps">
+<li><b>1</b><span>You fill in the intake and upload 5 to 15 photos of your work, your place and your team.</span></li>
+<li><b>2</b><span>Within 5 business days of a complete intake, your site and video are ready for your review.</span></li>
+<li><b>3</b><span>Two rounds of changes, then your site goes live on your domain.</span></li>
+<li><b>4</b><span>Your care plan starts 7 days after checkout. Cancel any time from the link in the footer of our site.</span></li>
+</ol>
 </div>
+<p class="note">Keep this page's link: it opens your intake with your payment already attached. Questions: <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></p>
+</main>
+<footer><span>Airen · Toronto, Ontario, Canada · <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></span><span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="edit.html">Request an edit</a></span></footer>
+</div>
+<script src="js/config.js"></script>
+<script src="js/forms.js"></script>
+<script>
+(function(){
+  var sid = Airen.param('session_id'), kind = Airen.param('kind');
+  var a = document.getElementById('t-intake');
+  if (sid) a.href = 'intake.html?session_id=' + encodeURIComponent(sid);
+  if (kind === 'addon') {
+    document.getElementById('t-title').textContent = 'Thank you. Your add on is booked.';
+    document.getElementById('t-lead').textContent = 'Stripe has emailed your receipt and invoice. Tell us what you need with an edit request and we will start within 2 business days.';
+    a.textContent = 'Describe what you need'; a.href = 'edit.html' + (sid ? '?session_id=' + encodeURIComponent(sid) : '');
+    document.querySelector('.box').hidden = true;
+  }
+})();
+</script>
 </body>
 </html>
