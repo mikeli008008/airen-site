@@ -138,6 +138,7 @@ section.pad{padding-block:96px}
 .work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
 .work-count{font-family:var(--mono);font-size:14px;line-height:20px;color:var(--muted)}
 .work-count b{color:var(--amber);font-weight:500}
+.work-side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
 .track{display:flex;gap:24px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));will-change:transform;width:max-content}
 .slide{flex:none;width:min(720px,82vw);border-radius:24px;background:var(--surface);border:1px solid var(--line);padding:8px;display:flex;flex-direction:column}
 .slide.narrow{width:min(360px,72vw)}
@@ -379,7 +380,7 @@ footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);fo
         <p class="eyebrow">Finished work</p>
         <h2 class="h2 grad">Real businesses, live today</h2>
       </div>
-      <p class="work-count"><b id="wc">01</b> / 04</p>
+      <div class="work-side"><p class="work-count"><b id="wc">01</b> / 04</p><a class="link" href="work.html">See all work <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
     <div class="track" id="track">
       <article class="slide">

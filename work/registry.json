@@ -1,0 +1,20 @@
+[
+ {
+  "slug": "landscaper",
+  "title": "Larkhollow Landscape Studio",
+  "industry": "Landscaping",
+  "kind": "industry",
+  "date": "2026-11-06",
+  "status": "live",
+  "concept": true,
+  "summary": "Landscape design and build in west Toronto. A golden hour garden loop, then a dissection scroll: the garden lifts out of the ground and comes apart into its six layers, then builds back up with the lights on.",
+  "poster": "work/landscaper/media/poster.jpg",
+  "skills": [
+   "landing-page-design",
+   "grok-hero-art",
+   "scroll-world",
+   "showroom",
+   "threeui"
+  ]
+ }
+]
