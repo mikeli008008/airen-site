@@ -16,5 +16,23 @@
    "showroom",
    "threeui"
   ]
+ },
+ {
+  "slug": "landscaper-zh",
+  "title": "Larkhollow Landscape Studio, EN / 中文",
+  "industry": "Landscaping",
+  "kind": "format",
+  "date": "2026-11-07",
+  "status": "approved",
+  "concept": true,
+  "summary": "The landscaper concept as one bilingual page: an EN / 中文 switch swaps every word in place, Chinese copy written for Chinese readers, a layer legend in both languages, and a booking form with language and WeChat fields.",
+  "poster": "work/landscaper/media/poster.jpg",
+  "skills": [
+   "landing-page-design",
+   "scroll-world",
+   "showroom",
+   "threeui",
+   "bilingual-switch"
+  ]
  }
 ]

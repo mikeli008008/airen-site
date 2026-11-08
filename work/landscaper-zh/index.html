@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Larkhollow Landscape Studio · EN / 中文 · Concept by Airen</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Bilingual design concept by Airen for a fictional landscape design and build studio in west Toronto, in English and Simplified Chinese.">
+<meta property="og:title" content="Larkhollow Landscape Studio · EN / 中文 · Concept by Airen">
+<meta property="og:description" content="A bilingual English and Chinese design concept for landscapers, built by Airen. Fictional business.">
+<meta property="og:image" content="../landscaper/media/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131209'/%3E%3Cpath d='M32 50V24M32 34l-9-8M32 30l8-7' stroke='%23E9B872' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap">
+<link rel="preload" as="image" href="../landscaper/media/poster.jpg">
+<script>
+/* language before first paint: ?lang= wins, then the saved choice, then the browser language */
+(function(){var l='en';try{var q=new URLSearchParams(location.search).get('lang');var s=localStorage.getItem('lh-lang');
+l=q==='zh'||q==='en'?q:s==='zh'||s==='en'?s:/^zh/i.test(navigator.language||'')?'zh':'en'}catch(e){}
+document.documentElement.dataset.lang=l;document.documentElement.lang=l==='zh'?'zh-Hans':'en'})();
+</script>
+<style>
+/* Concept: golden hour. The finished garden at the moment its lights come on; scrolling walks back through the plan and the build. Single dark world by design. */
+:root{
+  --bg:#131209;--surface:#1F1F1F;--raised:#272727;--line:rgba(244,238,223,.12);
+  --text:#F4EEDF;--muted:#A7A08F;--gold:#E9B872;--gold-ink:#1E1606;--sage:#8FAE7E;
+  --font:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video,svg{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance;font-weight:600;letter-spacing:-.02em}
+p,li,dd{text-wrap:pretty}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:8px}
+::selection{background:var(--gold);color:var(--gold-ink)}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-inline:max(24px,env(safe-area-inset-left,0px))}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+.skip{position:fixed;left:16px;top:-80px;z-index:200;background:var(--gold);color:var(--gold-ink);padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none;transition:transform .3s var(--ease)}
+.skip:focus{transform:translateY(96px)}
+.eyebrow{font-size:12px;line-height:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.grad{background:linear-gradient(90deg,#FFFFFF,#9B9B9B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h2{font-size:48px;line-height:1;margin-top:16px;max-width:680px}
+@media (max-width:640px){.h2{font-size:36px;line-height:40px}}
+.lead{color:var(--muted);font-size:18px;line-height:28px;margin-top:24px;max-width:600px}
+section.pad{padding-block:96px}
+@media (max-width:640px){section.pad{padding-block:64px}}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;line-height:16px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 12px;white-space:nowrap}
+.hero .phone-tag{display:none;align-self:flex-start;margin-bottom:16px;background:rgba(19,18,9,.7)}
+.tag i{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .5s var(--ease),background-color .3s var(--ease),box-shadow .5s var(--ease)}
+.btn-lg{padding:12px 24px;border-radius:16px}
+.btn-sm{font-size:14px;line-height:20px;white-space:nowrap}
+.btn-gold{background:var(--gold);color:var(--gold-ink);box-shadow:0 4px 24px rgba(233,184,114,.25)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(233,184,114,.4)}
+.btn-ghost{border-color:var(--line);background:rgba(19,18,9,.6)}
+.btn-ghost:hover{background:rgba(244,238,223,.1);transform:translateY(-2px)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:20px;height:20px;flex:none;transition:transform .5s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+
+/* nav */
+.nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 16px);left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:8px;padding:8px;border-radius:24px;background:rgba(19,18,9,.9);border:1px solid var(--line);max-width:calc(100vw - 32px);transition:transform .5s var(--ease)}
+.nav.hide{transform:translate(-50%,-96px)}
+.brand{display:flex;align-items:center;gap:8px;padding:4px 12px 4px 4px;text-decoration:none;font-weight:600;font-size:14px;line-height:20px;white-space:nowrap}
+.brand svg{width:32px;height:32px;flex:none;max-width:none}
+.links{display:flex;gap:4px}
+.links a{padding:8px 12px;border-radius:16px;font-size:14px;line-height:20px;text-decoration:none;color:var(--muted);transition:color .3s var(--ease),background-color .3s var(--ease)}
+.links a:hover,.links a.on{color:var(--text);background:rgba(244,238,223,.08)}
+.menu-btn{display:none;width:40px;height:40px;border:0;background:transparent;border-radius:16px;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:12px;width:16px;height:2px;background:var(--text);border-radius:2px;transition:transform .5s var(--ease)}
+.menu-btn span:first-child{top:15px}.menu-btn span:last-child{top:23px}
+.menu-open .menu-btn span:first-child{transform:translateY(4px) rotate(45deg)}
+.menu-open .menu-btn span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:90;background:rgba(19,18,9,.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:112px 24px 32px;display:flex;flex-direction:column;gap:8px;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.menu-open .sheet{opacity:1;pointer-events:auto}
+.sheet a{font-size:30px;line-height:36px;font-weight:600;text-decoration:none;padding:8px 0;opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.menu-open .sheet a{opacity:1;transform:none}
+.menu-open .sheet a:nth-child(2){transition-delay:60ms}.menu-open .sheet a:nth-child(3){transition-delay:120ms}.menu-open .sheet a:nth-child(4){transition-delay:180ms}.menu-open .sheet a:nth-child(5){transition-delay:240ms}
+@media (max-width:860px){.links,.nav .concept{display:none}.hero .phone-tag{display:inline-flex}.menu-btn{display:block}}
+
+/* hero */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,18,9,.86) 0%,rgba(19,18,9,.55) 40%,rgba(19,18,9,0) 70%),linear-gradient(0deg,rgba(19,18,9,.9) 0%,rgba(19,18,9,0) 40%)}
+.hero .copy{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:96px}
+.hero h1{font-size:72px;line-height:1;max-width:680px;margin-top:16px}
+.hero .sub{color:#D9D2C0;font-size:18px;line-height:28px;max-width:600px;margin-top:24px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .proof{display:flex;align-items:center;gap:8px;margin-top:24px;color:var(--muted);font-size:14px;line-height:20px}
+.hero .proof svg{width:20px;height:20px;color:var(--sage)}
+@media (max-width:860px){.hero h1{font-size:48px}}
+@media (max-width:640px){
+  .hero .scrim{background:linear-gradient(0deg,rgba(19,18,9,.96) 0%,rgba(19,18,9,.8) 45%,rgba(19,18,9,0) 75%)}
+  .hero h1{font-size:36px;line-height:40px}.hero .sub{font-size:16px;line-height:24px;margin-top:16px}
+  .hero .copy{padding-bottom:48px}.hero .ctas{margin-top:24px}
+}
+
+/* dissection scroll: one continuous take, scrubbed by scroll */
+.story{position:relative;height:820svh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--bg)}
+.stage video,.stage .tposter{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.stage .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,18,9,.84) 0%,rgba(19,18,9,.35) 38%,rgba(19,18,9,0) 60%);pointer-events:none}
+@media (max-width:640px){
+  .stage video,.stage .tposter{top:calc(env(safe-area-inset-top,0px) + 80px);bottom:auto;height:auto;aspect-ratio:1/1}
+  .stage .shade{background:linear-gradient(0deg,var(--bg) 0%,var(--bg) 38%,rgba(19,18,9,0) 52%)}
+}
+.layers{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:8px}
+.layers li{display:flex;align-items:center;gap:12px;font-size:14px;line-height:20px;color:var(--muted);opacity:.45;transform:translateX(-8px);transition:opacity .5s var(--ease),transform .5s var(--ease),color .5s var(--ease)}
+.layers li i{width:24px;height:8px;border-radius:2px;flex:none}
+.layers li.lit{opacity:1;transform:none;color:var(--text)}
+@media (max-width:640px){.layers{grid-template-columns:1fr 1fr;gap:4px 12px;margin-top:12px}.layers li{font-size:12px;line-height:16px}}
+.clock{position:absolute;left:max(24px,calc((100vw - 1200px)/2 + 24px));top:calc(env(safe-area-inset-top,0px) + 112px);font-size:12px;line-height:16px;letter-spacing:.14em;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (max-width:640px){.clock{display:none}}
+.caps{position:absolute;inset:0;pointer-events:none}
+.cap{position:absolute;left:max(24px,calc((100vw - 1200px)/2 + 24px));top:50%;max-width:440px;opacity:0;transform:translateY(calc(-50% + 32px));transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.cap.on{opacity:1;transform:translateY(-50%)}
+.cap .n{font-size:12px;line-height:16px;letter-spacing:.14em;color:var(--gold);font-weight:600}
+.cap h2{font-size:48px;line-height:1;margin-top:12px}
+.cap p{color:#D9D2C0;font-size:18px;line-height:28px;margin-top:16px}
+@media (max-width:640px){.cap{left:16px;right:16px;top:auto;bottom:96px;transform:translateY(32px)}.cap.on{transform:none}.cap h2{font-size:30px;line-height:36px}.cap p{font-size:16px;line-height:24px;margin-top:12px}}
+.prog{position:absolute;right:max(24px,calc((100vw - 1200px)/2 + 24px));top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}
+.prog i{width:4px;height:32px;border-radius:2px;background:rgba(244,238,223,.2);overflow:hidden;position:relative}
+.prog i b{position:absolute;inset:0;background:var(--gold);transform-origin:top;transform:scaleY(0)}
+@media (max-width:640px){.prog{flex-direction:row;top:auto;bottom:48px;left:16px;right:auto;transform:none}.prog i{width:32px;height:4px}.prog i b{transform-origin:left;transform:scaleX(0)}}
+
+/* tagline */
+.tagline p{font-size:60px;line-height:1;font-weight:600;letter-spacing:-.02em;max-width:900px}
+.tagline .w{opacity:.3;transition:opacity .6s var(--ease),color .6s var(--ease)}
+.tagline .w.lit{opacity:1}.tagline .w.gold.lit{color:var(--gold)}
+@media (max-width:640px){.tagline p{font-size:36px;line-height:40px}}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;overflow:hidden;transition:transform .5s var(--ease)}
+.card:hover{transform:translateY(-4px)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--x,50%) var(--y,50%),rgba(233,184,114,.12),transparent 60%);opacity:0;transition:opacity .3s var(--ease);pointer-events:none}
+.card:hover::before{opacity:1}
+.card svg{width:32px;height:32px;color:var(--gold)}
+.card h3{font-size:20px;line-height:28px;margin-top:24px}
+.card p{color:var(--muted);margin-top:8px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;counter-reset:s;list-style:none;padding:0}
+@media (max-width:800px){.steps{grid-template-columns:1fr}}
+.steps li{border:1px solid var(--line);border-radius:24px;padding:24px;background:var(--bg)}
+.steps .k{font-size:14px;line-height:20px;color:var(--gold);font-weight:600}
+.steps h3{font-size:24px;line-height:32px;margin-top:12px}
+.steps p{color:var(--muted);margin-top:8px}
+
+/* live tree */
+.live{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
+@media (max-width:860px){.live{grid-template-columns:1fr;gap:32px}}
+.tree{position:relative;aspect-ratio:16/10;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#000}
+.tree img,.tree iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.tree button{position:absolute;inset:0;display:grid;place-items:center;border:0;background:rgba(19,18,9,.35);cursor:pointer;transition:background-color .3s var(--ease)}
+.tree button:hover{background:rgba(19,18,9,.15)}
+.tree button span{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;background:var(--gold);color:var(--gold-ink);font-weight:600;transition:transform .5s var(--ease)}
+.tree button:hover span{transform:scale(1.04)}
+.tree .stop{position:absolute;right:12px;top:12px;inset:auto 12px auto auto;display:none;padding:4px 12px;border-radius:12px;background:rgba(19,18,9,.88);border:1px solid var(--line);font-size:14px;line-height:20px;cursor:pointer}
+.tree.on .stop{display:block}
+
+/* reviews placeholder */
+.reviews{border:1px dashed rgba(244,238,223,.25);border-radius:24px;padding:48px 24px;text-align:center;color:var(--muted)}
+.reviews h3{color:var(--text);font-size:24px;line-height:32px}
+.reviews p{margin:12px auto 0;max-width:520px}
+
+/* faq */
+.faq{margin-top:48px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:24px 0;font-size:18px;line-height:28px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:24px;height:24px;position:relative}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:4px;top:11px;width:16px;height:2px;background:var(--gold);transition:transform .5s var(--ease)}
+.faq summary i::after{transform:rotate(90deg)}
+.faq details[open] summary i::after{transform:rotate(0)}
+.faq dd{margin:0;padding:0 0 24px;color:var(--muted);max-width:720px}
+
+/* form */
+.book{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+@media (max-width:860px){.book{grid-template-columns:1fr;gap:32px}}
+form{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;gap:16px}
+label{display:grid;gap:8px;font-size:14px;line-height:20px;font-weight:600}
+input,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:16px;line-height:24px;transition:border-color .3s var(--ease)}
+input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:96px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 12px;font-size:14px;line-height:20px;cursor:pointer;transition:background-color .3s var(--ease),border-color .3s var(--ease),transform .5s var(--ease)}
+.chips button:active{transform:scale(.98)}
+.chips button[aria-pressed=true]{background:rgba(233,184,114,.16);border-color:var(--gold);color:var(--gold)}
+.err{color:#FF9C8A;font-size:14px;line-height:20px;font-weight:500;min-height:20px}
+.done{display:none;padding:16px;border-radius:12px;background:rgba(143,174,126,.14);border:1px solid rgba(143,174,126,.4)}
+.sent .done{display:block}
+.risk{display:flex;gap:8px;color:var(--muted);font-size:14px;line-height:20px;margin-top:24px}
+
+footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);font-size:14px;line-height:20px}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:16px}
+footer a{text-decoration:none}footer a:hover{color:var(--text)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .story{height:auto}
+  .stage{position:relative;height:auto}
+  .stage video{display:none}
+  .stage .tposter{position:relative;height:auto;aspect-ratio:16/9}
+  .stage .shade,.prog,.clock{display:none}
+  .layers li{opacity:1;transform:none;color:var(--text)}
+  .caps{position:relative;padding:48px max(16px,calc((100vw - 1200px)/2 + 24px));display:grid;gap:32px;background:var(--bg)}
+  .cap{position:static;opacity:1;transform:none;max-width:600px}
+  .tagline .w{opacity:1;transition:none}
+  .nav,.sheet,.sheet a,.card,.btn{transition:opacity .3s}
+}
+/* bilingual layer */
+:root{--zh:"Manrope","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+html[data-lang=zh] body{font-family:var(--zh)}
+html[data-lang=en] .zh,html[data-lang=zh] .en{display:none!important}
+html[data-lang=zh] h1,html[data-lang=zh] h2,html[data-lang=zh] h3,html[data-lang=zh] .tagline p{letter-spacing:0}
+html[data-lang=zh] .eyebrow{letter-spacing:.08em}
+html[data-lang=zh] .hero h1{font-size:60px;line-height:1.15}
+@media (max-width:860px){html[data-lang=zh] .hero h1{font-size:48px;line-height:1.15}}
+@media (max-width:640px){html[data-lang=zh] .hero h1{font-size:36px;line-height:44px}}
+html[data-lang=zh] .h2,html[data-lang=zh] .cap h2{line-height:1.2}
+html[data-lang=zh] .tagline p{line-height:1.2;word-break:keep-all}
+@media (max-width:640px){html[data-lang=zh] .layers li>.zh{display:block}.layers li .alt{display:block;margin-left:0}}
+.links a{white-space:nowrap}
+.lang{display:inline-flex;position:relative;padding:4px;border-radius:16px;background:rgba(244,238,223,.06);border:1px solid var(--line)}
+.lang button{white-space:nowrap;position:relative;z-index:1;border:0;background:transparent;padding:4px 12px;border-radius:12px;font-size:14px;line-height:20px;font-weight:600;color:var(--muted);cursor:pointer;transition:color .3s var(--ease)}
+.lang button[aria-pressed=true]{color:var(--gold-ink)}
+.lang button:active{transform:scale(.98)}
+.lang .pill{position:absolute;top:4px;bottom:4px;left:4px;border-radius:12px;background:var(--gold);transition:transform .5s var(--ease),width .5s var(--ease)}
+.lang button:not([aria-pressed=true]):hover{color:var(--text)}
+.sheet .lang{align-self:flex-start;margin-top:16px}
+.sheet .lang button{font-size:16px;line-height:24px;padding:8px 16px}
+main{transition:opacity .3s var(--ease)}
+.swapping main{opacity:.2}
+.layers li .alt{color:var(--muted);font-size:12px;line-height:16px;margin-left:4px}
+.dual{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.dual .tag{font-size:12px}
+select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;font-size:16px;line-height:24px;color:inherit;appearance:none;-webkit-appearance:none;transition:border-color .3s var(--ease)}
+select:focus{outline:none;border-color:var(--gold)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+.opt{font-weight:500;color:var(--muted)}
+.both{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+@media (max-width:760px){.both{grid-template-columns:1fr}}
+.both article{border:1px solid var(--line);border-radius:24px;padding:24px;background:var(--surface)}
+.both .k{font-size:12px;line-height:16px;letter-spacing:.14em;color:var(--gold);font-weight:600}
+.both h3{font-size:24px;line-height:32px;margin-top:12px}
+.both p{color:var(--muted);margin-top:8px}
+@media (max-width:860px){.nav .lang{display:none}}
+@media (prefers-reduced-motion:reduce){main,.lang .pill{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main"><span class="en">Skip to content</span><span class="zh">跳到正文</span></a>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <a class="brand" href="#top" data-al-en="Larkhollow Landscape Studio, back to top" data-al-zh="云雀谷庭园，回到顶部">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="16" fill="#1F1F1F"/><path d="M16 25V12M16 17l-5-4M16 15l4-4" stroke="#E9B872" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    <span class="en">Larkhollow</span><span class="zh">云雀谷庭园</span>
+  </a>
+  <span class="tag concept"><i></i><span class="en">Concept by Airen · fictional business</span><span class="zh">Airen 设计概念 · 虚构商家</span></span>
+  <div class="links">
+    <a href="#story"><span class="en">Process</span><span class="zh">怎么建</span></a><a href="#services"><span class="en">Services</span><span class="zh">服务</span></a><a href="#faq"><span class="en">Questions</span><span class="zh">常见问题</span></a>
+  </div>
+  <div class="lang" role="group" aria-label="Language / 语言"><span class="pill" aria-hidden="true"></span><button type="button" data-set="en" lang="en">EN</button><button type="button" data-set="zh" lang="zh-Hans">中文</button></div>
+  <a class="btn btn-gold btn-sm" href="#book"><span class="en">Book a yard walk</span><span class="zh">预约看院子</span></a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+</nav>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <a href="#story"><span class="en">Process</span><span class="zh">怎么建</span></a><a href="#services"><span class="en">Services</span><span class="zh">服务</span></a><a href="#faq"><span class="en">Questions</span><span class="zh">常见问题</span></a><a href="#book"><span class="en">Book a yard walk</span><span class="zh">预约上门看院子</span></a>
+  <div class="lang" role="group" aria-label="Language / 语言"><span class="pill" aria-hidden="true"></span><button type="button" data-set="en" lang="en">English</button><button type="button" data-set="zh" lang="zh-Hans">中文</button></div>
+  <span class="tag" style="margin-top:24px;align-self:flex-start"><i></i><span class="en">Concept by Airen · fictional business</span><span class="zh">Airen 设计概念 · 虚构商家</span></span>
+</div>
+
+<main id="main">
+<header class="hero" id="top">
+  <picture><source media="(max-width: 760px)" srcset="../landscaper/media/poster-phone.jpg"><img class="poster" src="../landscaper/media/poster.jpg" alt="" fetchpriority="high"></picture>
+  <video id="heroVid" muted loop playsinline autoplay preload="auto" poster="../landscaper/media/poster.jpg" aria-hidden="true">
+    <source data-phone="../landscaper/media/hero-phone.mp4" src="../landscaper/media/hero.mp4" type="video/mp4">
+  </video>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap copy">
+    <span class="tag phone-tag"><i></i><span class="en">Concept by Airen · fictional business</span><span class="zh">Airen 设计概念 · 虚构商家</span></span>
+    <p class="eyebrow"><span class="en">Landscape design and build · west Toronto</span><span class="zh">庭院设计与施工 · 多伦多西区</span></p>
+    <h1 class="grad"><span class="en">A back garden<br>you will actually use</span><span class="zh">后院，<br>是用来住的</span></h1>
+    <p class="sub"><span class="en">Stone patios, planting and cedar structures for homes in Etobicoke, Mississauga and Oakville. It starts with a walk around your yard, in English or Mandarin.</span><span class="zh">天然石铺地、花木种植、雪松木花架，服务 Etobicoke、密西沙加和奥克维尔的住宅。第一步，我们上门陪您走一圈院子，普通话、英语都行。</span></p>
+    <div class="ctas">
+      <a class="btn btn-gold btn-lg" href="#book"><span class="en">Book a yard walk</span><span class="zh">预约上门看院子</span> <svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z"/></svg></a>
+      <a class="btn btn-ghost btn-lg" href="#story"><span class="en">See how a garden gets built</span><span class="zh">看一个院子怎么建成</span></a>
+    </div>
+    <p class="proof"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M229.66 77.66l-128 128a8 8 0 0 1-11.32 0l-56-56a8 8 0 0 1 11.32-11.32L96 188.69 218.34 66.34a8 8 0 0 1 11.32 11.32Z"/></svg><span class="en">You see the whole garden drawn on paper before anyone digs.</span><span class="zh">动工之前，整个院子先画在图纸上给您看。</span></p>
+  </div>
+</header>
+
+<section class="story" id="story" data-al-en="A Larkhollow garden, taken apart layer by layer" data-al-zh="一个院子，一层一层拆开看">
+  <div class="stage">
+    <img class="tposter" src="../landscaper/media/take-poster.jpg" data-alt-en="A finished Larkhollow garden lifted out of the ground as a cutaway block, showing the layers under the lawn and patio." data-alt-zh="一个建好的院子被整块抬出地面，剖面露出草坪和石地下面的每一层。" alt="">
+    <video id="take" muted playsinline preload="none" poster="../landscaper/media/take-poster.jpg" aria-hidden="true"><source data-phone="../landscaper/media/take-phone.mp4" src="../landscaper/media/take.mp4" type="video/mp4"></video>
+    <div class="shade" aria-hidden="true"></div>
+    <p class="clock" id="clock" aria-hidden="true">LAYER 00 / 06</p>
+    <div class="caps">
+      <div class="cap"><p class="n"><span class="en">01 · Lift it out</span><span class="zh">01 · 整块抬起</span></p><h2 class="grad"><span class="en">Every garden starts below the lawn</span><span class="zh">好院子，从草坪下面开始</span></h2><p><span class="en">To show you how we build, we lift a finished garden out of the ground and take it apart.</span><span class="zh">我们把一个建好的院子整块抬出地面，拆开给您看，每一层是怎么做的。</span></p></div>
+      <div class="cap"><p class="n"><span class="en">02 · Pergola and plants</span><span class="zh">02 · 花架和植物</span></p><h2 class="grad"><span class="en">What you see comes off first</span><span class="zh">先拿走看得见的部分</span></h2><p><span class="en">The cedar pergola is built as one frame. Every plant goes in with its full root ball, so it settles in fast.</span><span class="zh">雪松木花架是一整个框架。每棵植物都带着完整的土球种下去，扎根更快。</span></p></div>
+      <div class="cap"><p class="n"><span class="en">03 · Under the stone</span><span class="zh">03 · 石头下面</span></p><h2 class="grad"><span class="en">The part nobody sees</span><span class="zh">看不见的，才最要紧</span></h2><p><span class="en">Under the stone sits bedding sand, and under that a compacted gravel base. It is what keeps a patio level through freeze and thaw.</span><span class="zh">石板下面是找平砂层，再下面是压实的碎石基层。冬天冻、春天化，石地还能平平整整，靠的就是这两层。</span></p></div>
+      <div class="cap"><p class="n"><span class="en">04 · Every layer</span><span class="zh">04 · 全部六层</span></p><h2 class="grad"><span class="en">Six layers, in order</span><span class="zh">六层，按顺序</span></h2>
+        <ol class="layers" id="layers">
+          <li><i style="background:#6B4A2F"></i><span class="en">Compacted subsoil</span><span class="zh">压实底土<span class="alt" lang="en">subsoil</span></span></li>
+          <li><i style="background:#2E2E2A"></i><span class="en">Landscape fabric</span><span class="zh">园艺土工布<span class="alt" lang="en">landscape fabric</span></span></li>
+          <li><i style="background:#8D9196"></i><span class="en">Crushed gravel base</span><span class="zh">碎石基层<span class="alt" lang="en">gravel base</span></span></li>
+          <li><i style="background:#D9C7A3"></i><span class="en">Bedding sand</span><span class="zh">找平砂层<span class="alt" lang="en">bedding sand</span></span></li>
+          <li><i style="background:#B7A78C"></i><span class="en">Natural stone</span><span class="zh">天然石板<span class="alt" lang="en">natural stone</span></span></li>
+          <li><i style="background:#A0643A"></i><span class="en">Cedar pergola</span><span class="zh">雪松木花架<span class="alt" lang="en">cedar pergola</span></span></li>
+        </ol></div>
+      <div class="cap"><p class="n"><span class="en">05 · Built back up</span><span class="zh">05 · 再装回去</span></p><h2 class="grad"><span class="en">Then it all goes back, lights on</span><span class="zh">一层层装回去，灯亮了</span></h2><p><span class="en">Base, stone, lawn, plants and pergola, in that order. You see the garden. The layers are why it lasts.</span><span class="zh">基层、石板、草坪、植物、花架，按这个顺序。您看到的是院子，让它用得久的是这几层。</span></p></div>
+    </div>
+    <div class="prog" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+  </div>
+</section>
+
+<section class="wrap pad tagline" aria-label="Our approach">
+  <p id="tagline"><span class="en" data-words>A garden is built in a few weeks. It is lived in for decades. We plan for the decades.</span><span class="zh" data-words="zh">院子几周就建好，却要住上几十年。我们按几十年来规划。</span></p>
+</section>
+
+<section class="wrap pad" id="services">
+  <p class="eyebrow rv"><span class="en">Services</span><span class="zh">服务</span></p>
+  <h2 class="h2 grad rv"><span class="en">Everything between the back door and the fence</span><span class="zh">从后门到围栏，都交给我们</span></h2>
+  <div class="cards">
+    <article class="card rv"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M216 56H40a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V72a16 16 0 0 0-16-16Zm0 56h-56V72h56ZM144 72v40H40V72ZM40 128h56v56H40Zm72 56v-56h104v56Z"/></svg><h3><span class="en">Stone patios and walkways</span><span class="zh">石材平台与步道</span></h3><p><span class="en">Natural stone laid on a proper base, with steps and edges that stay level through freeze and thaw.</span><span class="zh">天然石铺在扎实的基层上，台阶和边缘经得起冬冻春化，不翘不陷。</span></p></article>
+    <article class="card rv"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224 48H32a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h192a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8Zm-8 144H40V64h176ZM72 96h112a8 8 0 0 1 0 16H72a8 8 0 0 1 0-16Zm0 32h112a8 8 0 0 1 0 16H72a8 8 0 0 1 0-16Zm0 32h64a8 8 0 0 1 0 16H72a8 8 0 0 1 0-16Z"/></svg><h3><span class="en">Design and planting plans</span><span class="zh">设计图与种植方案</span></h3><p><span class="en">A drawn plan of the whole yard, with every plant named, so you can build it in one go or in stages.</span><span class="zh">整个院子画成一张图，每棵植物都写明名字。可以一次建完，也可以分几年慢慢做。</span></p></article>
+    <article class="card rv"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M205.41 159.07a60.9 60.9 0 0 1-31.83 8.86 71.71 71.71 0 0 1-27.36-5.66A55.55 55.55 0 0 0 136 194.51V224a8 8 0 0 1-16 0v-14.6l-38.6-38.61a52 52 0 0 1-49.6-33.4C21.56 109.11 37 61.94 37.71 59.94a8 8 0 0 1 5.71-5.42c2.14-.52 50-11.86 78.25 18.33a63.57 63.57 0 0 1 9.27 13.18c11.45-20.65 38.46-39.65 88.86-36.75a8 8 0 0 1 7.55 7.55c3.15 54.47-19.73 87.2-21.94 102.24Z"/></svg><h3><span class="en">Planting beds</span><span class="zh">花境种植</span></h3><p><span class="en">Layered beds of native perennials and grasses that look full in the first summer and fill in from there.</span><span class="zh">本地多年生花卉和观赏草分层种植，第一个夏天就有样子，之后一年比一年满。</span></p></article>
+    <article class="card rv"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M232 64h-16V48a8 8 0 0 0-16 0v16H56V48a8 8 0 0 0-16 0v16H24a8 8 0 0 0 0 16h16v128a8 8 0 0 0 16 0V80h144v128a8 8 0 0 0 16 0V80h16a8 8 0 0 0 0-16Z"/></svg><h3><span class="en">Cedar pergolas and structures</span><span class="zh">雪松木花架与构筑</span></h3><p><span class="en">Pergolas, privacy screens and planters built from cedar, sized to the plan and finished to weather well.</span><span class="zh">花架、隐私屏风和种植箱，用雪松木按图纸尺寸打造，表面处理耐风耐雨。</span></p></article>
+    <article class="card rv"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M176 232a8 8 0 0 1-8 8H88a8 8 0 0 1 0-16h80a8 8 0 0 1 8 8Zm40-128a87.55 87.55 0 0 1-33.64 69.21A16.24 16.24 0 0 0 176 186v6a16 16 0 0 1-16 16H96a16 16 0 0 1-16-16v-6a16 16 0 0 0-6.23-12.66A87.59 87.59 0 0 1 40 104.49C39.74 56.83 78.26 17.14 125.88 16A88 88 0 0 1 216 104Z"/></svg><h3><span class="en">Landscape lighting</span><span class="zh">庭院照明</span></h3><p><span class="en">Low voltage path, step and tree lights, so the garden is still yours after the sun goes down.</span><span class="zh">低压步道灯、台阶灯和树灯，太阳下山后，院子照样能用。</span></p></article>
+    <article class="card rv"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M208 32h-24v-8a8 8 0 0 0-16 0v8H88v-8a8 8 0 0 0-16 0v8H48a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16Zm0 176H48V96h160Z"/></svg><h3><span class="en">Seasonal care</span><span class="zh">季节养护</span></h3><p><span class="en">Spring clean up and fall cut back for the gardens we build, so the plan keeps looking like the plan.</span><span class="zh">我们建的院子，春季清理、秋季修剪都可以接着做，让院子一直是图纸上的样子。</span></p></article>
+  </div>
+</section>
+
+<section class="wrap pad" aria-labelledby="langTitle">
+  <p class="eyebrow rv"><span class="en">In your language</span><span class="zh">用您习惯的语言</span></p>
+  <h2 class="h2 grad rv" id="langTitle"><span class="en">Plans and quotes you can read at home</span><span class="zh">图纸和报价，回家能看懂</span></h2>
+  <div class="both">
+    <article class="rv"><p class="k"><span class="en">Yard walk</span><span class="zh">上门看院子</span></p><h3><span class="en">English or Mandarin</span><span class="zh">普通话或英语</span></h3><p><span class="en">Tell us which language suits your family. Cantonese on request.</span><span class="zh">告诉我们家里人习惯哪种语言。需要粤语也可以提前说。</span></p></article>
+    <article class="rv"><p class="k"><span class="en">Plan and quote</span><span class="zh">图纸和报价</span></p><h3><span class="en">Both languages, side by side</span><span class="zh">中英对照</span></h3><p><span class="en">Every item on the quote is named in English and Chinese, so the whole family and the crew use the same words.</span><span class="zh">报价单每一项都中英对照写明，家里人和施工队说的是同一件东西。</span></p></article>
+  </div>
+</section>
+
+<section class="wrap pad" aria-labelledby="howTitle">
+  <p class="eyebrow rv"><span class="en">How it works</span><span class="zh">流程</span></p>
+  <h2 class="h2 grad rv" id="howTitle"><span class="en">Three steps, one person to call</span><span class="zh">三步，全程一位负责人</span></h2>
+  <ol class="steps">
+    <li class="rv"><p class="k"><span class="en">Step 1</span><span class="zh">第一步</span></p><h3><span class="en">Book a yard walk</span><span class="zh">预约上门</span></h3><p><span class="en">Pick a time. We come to you, measure, take photos and listen.</span><span class="zh">您定时间。我们上门量尺寸、拍照片，先听您想怎么用这个院子。</span></p></li>
+    <li class="rv"><p class="k"><span class="en">Step 2</span><span class="zh">第二步</span></p><h3><span class="en">Approve the plan</span><span class="zh">确认图纸</span></h3><p><span class="en">You get a drawn plan and a written quote. Ask for changes until it feels right.</span><span class="zh">您会收到设计图和书面报价。哪里不满意就改，改到满意为止。</span></p></li>
+    <li class="rv"><p class="k"><span class="en">Step 3</span><span class="zh">第三步</span></p><h3><span class="en">We build, you move outside</span><span class="zh">施工交付</span></h3><p><span class="en">The crew builds to the plan and hands it over clean, with care notes for the first season.</span><span class="zh">施工队照图施工，收拾干净再交给您，附上第一年的养护说明。</span></p></li>
+  </ol>
+</section>
+
+<section class="wrap pad" aria-labelledby="treeTitle">
+  <div class="live">
+    <div>
+      <p class="eyebrow rv"><span class="en">Grow in</span><span class="zh">慢慢长成</span></p>
+      <h2 class="h2 grad rv" id="treeTitle"><span class="en">Good gardens get better every year</span><span class="zh">好院子，一年比一年好看</span></h2>
+      <p class="lead rv"><span class="en">We choose plants for where they will be in five summers, not just on handover day. Tap to watch one grow.</span><span class="zh">选植物，我们看的是五年后的样子，不只是交付那天。点一下，看一棵树长起来。</span></p>
+    </div>
+    <div class="tree rv" id="tree">
+      <img src="../landscaper/media/tree-poster.jpg" alt="" loading="lazy" width="720" height="450">
+      <button type="button" id="treePlay" data-al-en="Play the live growing tree effect" data-al-zh="播放树木生长动画"><span><span class="en">Tap to grow a tree</span><span class="zh">点一下，种棵树</span></span></button>
+      <button type="button" class="stop" id="treeStop"><span class="en">Stop</span><span class="zh">停止</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="wrap pad" aria-label="Reviews">
+  <div class="reviews rv">
+    <p class="eyebrow"><span class="en">Reviews</span><span class="zh">客户评价</span></p>
+    <h3 style="margin-top:12px"><span class="en">Your Google reviews appear here</span><span class="zh">这里显示您的 Google 评价</span></h3>
+    <p><span class="en">On a real client's site this block shows their own Google reviews, in the language each customer wrote them. This concept is for a fictional business, so it shows none.</span><span class="zh">真实客户的网站上，这里会显示他们自己的 Google 评价，保留客人原本写的语言。这是虚构商家的设计概念，所以这里没有评价。</span></p>
+  </div>
+</section>
+
+<section class="wrap pad" id="faq" aria-labelledby="faqTitle">
+  <p class="eyebrow rv"><span class="en">Questions</span><span class="zh">常见问题</span></p>
+  <h2 class="h2 grad rv" id="faqTitle"><span class="en">What people ask before the yard walk</span><span class="zh">上门之前，大家常问的</span></h2>
+  <dl class="faq rv en">
+    <details><summary>I don't really know what I want. Is that a problem?<i aria-hidden="true"></i></summary><dd>No. Most people start with a feeling, not a plan. The yard walk and the drawn plan exist to turn "somewhere to sit in the evening" into stone, plants and light you can see before you commit.</dd></details>
+    <details><summary>Who will be on site during the build?<i aria-hidden="true"></i></summary><dd>The project lead who walked your yard runs the build. You get their number and a written schedule before work starts.</dd></details>
+    <details><summary>Will the plants survive our winters?<i aria-hidden="true"></i></summary><dd>We plant natives and hardy grasses chosen for Ontario, and come back after the first season to check how everything settled in.</dd></details>
+    <details><summary>Can the yard walk be in Mandarin?<i aria-hidden="true"></i></summary><dd>Yes. Pick the language when you book. The plan and quote come in English and Chinese side by side.</dd></details>
+    <details><summary>Can you work around the trees we already have?<i aria-hidden="true"></i></summary><dd>Yes. Mature trees are the hardest thing to replace, so the plan is drawn around them and their roots.</dd></details>
+    <details><summary>Can we build the plan in stages?<i aria-hidden="true"></i></summary><dd>Yes. The plan shows the whole garden, so a patio this year and planting next spring still end up as one design.</dd></details>
+  </dl>
+  <dl class="faq rv zh">
+    <details><summary>我还没想好院子要做成什么样，可以吗？<i aria-hidden="true"></i></summary><dd>可以。大多数人一开始只有个感觉，比如“傍晚想在外面坐坐”。上门看院子和画设计图，就是把这个感觉变成看得见的石头、植物和灯光，您看过再决定。</dd></details>
+    <details><summary>上门和施工，能用中文沟通吗？<i aria-hidden="true"></i></summary><dd>能。预约时选普通话或英语，需要粤语请在留言里写明。设计图和报价单都是中英对照。</dd></details>
+    <details><summary>施工期间谁在现场？<i aria-hidden="true"></i></summary><dd>上门看院子的那位项目负责人，从头管到尾。开工前您会拿到他的电话和一份书面工期安排。</dd></details>
+    <details><summary>报价是怎么写的？<i aria-hidden="true"></i></summary><dd>按项目逐项列出：石材、基层、植物、花架、灯光分开写，每一项中英对照。改了设计，报价跟着改，您看得清楚钱花在哪里。</dd></details>
+    <details><summary>多伦多冬天这么冷，植物能活吗？<i aria-hidden="true"></i></summary><dd>我们选的是适合安大略气候的本地植物和耐寒观赏草。第一个冬天过后，我们会回来看看长得怎么样。</dd></details>
+    <details><summary>院子里原来的大树能保留吗？<i aria-hidden="true"></i></summary><dd>能。大树最难替代，设计图会绕着树和树根来画。</dd></details>
+    <details><summary>可以分几年慢慢做吗？<i aria-hidden="true"></i></summary><dd>可以。设计图画的是整个院子，今年先做石地，明年春天再种植，最后还是一个完整的设计。</dd></details>
+  </dl>
+</section>
+
+<section class="wrap pad" id="book" aria-labelledby="bookTitle">
+  <div class="book">
+    <div>
+      <p class="eyebrow rv"><span class="en">Book a yard walk</span><span class="zh">预约上门看院子</span></p>
+      <h2 class="h2 grad rv" id="bookTitle"><span class="en">Let's walk your yard</span><span class="zh">约个时间，<br>来看看您的院子</span></h2>
+      <p class="lead rv"><span class="en">Tell us a little about the space. We reply to set a time that suits you.</span><span class="zh">简单说说您的院子，我们回复您约一个方便的时间。</span></p>
+      <p class="risk rv"><svg width="20" height="20" viewBox="0 0 256 256" aria-hidden="true" style="color:var(--sage);flex:none"><path fill="currentColor" d="M229.66 77.66l-128 128a8 8 0 0 1-11.32 0l-56-56a8 8 0 0 1 11.32-11.32L96 188.69 218.34 66.34a8 8 0 0 1 11.32 11.32Z"/></svg><span><span class="en">No commitment: you decide after you have seen the plan.</span><span class="zh">不用先做决定：看过设计图再说。</span></span></p>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <div class="row2">
+        <label><span><span class="en">Your name</span><span class="zh">您的称呼</span></span><input name="name" autocomplete="name" required></label>
+        <label><span><span class="en">Email</span><span class="zh">邮箱</span></span><input name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <div class="row2">
+        <label><span><span class="en">Yard walk in</span><span class="zh">上门沟通语言</span></span>
+          <select name="lang"><option value="en" data-en="English" data-zh="英语">English</option><option value="zh" data-en="Mandarin (普通话)" data-zh="普通话">Mandarin (普通话)</option><option value="yue" data-en="Cantonese (粤语)" data-zh="粤语">Cantonese (粤语)</option></select></label>
+        <label><span><span class="en">WeChat ID</span><span class="zh">微信号</span> <span class="opt"><span class="en">optional</span><span class="zh">选填</span></span></span><input name="wechat" autocomplete="off"></label>
+      </div>
+      <label><span><span class="en">Neighbourhood or town</span><span class="zh">所在社区或城市</span></span><input name="area" autocomplete="address-level2" data-ph-en="e.g. Etobicoke" data-ph-zh="例如：密西沙加"></label>
+      <div><p style="font-size:14px;line-height:20px;font-weight:600;margin-bottom:8px"><span class="en">What are you thinking about?</span><span class="zh">想做哪些？</span></p>
+        <div class="chips" id="chips"><button type="button" aria-pressed="false"><span class="en">Patio</span><span class="zh">石地平台</span></button><button type="button" aria-pressed="false"><span class="en">Planting</span><span class="zh">种植</span></button><button type="button" aria-pressed="false"><span class="en">Pergola</span><span class="zh">花架</span></button><button type="button" aria-pressed="false"><span class="en">Lighting</span><span class="zh">照明</span></button><button type="button" aria-pressed="false"><span class="en">Not sure yet</span><span class="zh">还没想好</span></button></div></div>
+      <label><span><span class="en">Anything else</span><span class="zh">其他想法</span></span><textarea name="msg" data-ph-en="How you'd like to use the yard" data-ph-zh="您想怎么用这个院子"></textarea></label>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn btn-gold btn-lg" type="submit" style="justify-self:start"><span class="en">Book a yard walk</span><span class="zh">提交预约</span></button>
+      <p class="done" role="status"><span class="en">This is a concept. Nothing was sent: on a real site this request would go straight to the business.</span><span class="zh">这是设计概念，没有发送任何信息。真实网站上，这份预约会直接发给商家。</span></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <p><span class="en">Larkhollow Landscape Studio</span><span class="zh">云雀谷庭园 Larkhollow Landscape Studio</span> · <span class="tag"><i></i><span class="en">Concept by Airen · fictional business</span><span class="zh">Airen 设计概念 · 虚构商家</span></span></p>
+    <nav aria-label="Footer"><a href="../landscaper/"><span class="en">English only version</span><span class="zh">纯英文版</span></a><a href="../../"><span class="en">Built by Airen</span><span class="zh">Airen 制作</span></a><a href="../../privacy.html"><span class="en">Privacy</span><span class="zh">隐私</span></a><a href="../../terms.html"><span class="en">Terms</span><span class="zh">条款</span></a><a href="../landscaper/media/LICENSE-threeui.txt"><span class="en">ThreeUI licence</span><span class="zh">ThreeUI 许可</span></a></nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var PHONE=matchMedia('(max-width: 760px), (pointer: coarse) and (max-width: 1100px)').matches;
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var M='../landscaper/media/';
+var root=document.documentElement;
+
+/* language: swap in place, keep scroll, remember the choice */
+var T={en:{title:'Larkhollow Landscape Studio · EN / 中文 · Concept by Airen',open:'Open menu',close:'Close menu',name:'Add your name so we know who to reply to.',mail:'That email looks incomplete. Check it and try again.',layer:'LAYER'},
+       zh:{title:'云雀谷庭园 Larkhollow · 中英双语 · Airen 设计概念',open:'打开菜单',close:'关闭菜单',name:'请填写称呼，方便我们回复您。',mail:'邮箱地址好像不完整，请检查后再试。',layer:'第 层'}};
+function L(){return root.dataset.lang==='zh'?'zh':'en'}
+function applyLang(l){
+  root.dataset.lang=l;root.lang=l==='zh'?'zh-Hans':'en';document.title=T[l].title;
+  $$('[data-al-en]').forEach(function(e){e.setAttribute('aria-label',e.dataset['al'+(l==='zh'?'Zh':'En')])});
+  $$('[data-alt-en]').forEach(function(e){e.alt=e.dataset['alt'+(l==='zh'?'Zh':'En')]});
+  $$('[data-ph-en]').forEach(function(e){e.placeholder=e.dataset['ph'+(l==='zh'?'Zh':'En')]});
+  $$('option[data-en]').forEach(function(o){o.textContent=o.dataset[l]});
+  $$('.lang').forEach(function(g){var on=null;$$('button',g).forEach(function(b){var p=b.dataset.set===l;b.setAttribute('aria-pressed',p);if(p)on=b});
+    var pill=$('.pill',g);if(on&&on.offsetWidth){pill.style.width=on.offsetWidth+'px';pill.style.transform='translateX('+(on.offsetLeft-4)+'px)'}});
+  var mb=$('#menuBtn');mb.setAttribute('aria-label',document.body.classList.contains('menu-open')?T[l].close:T[l].open);
+  var f=$('#form'),sel=f.lang;if(!f.dataset.touched)sel.value=l==='zh'?'zh':'en';
+  $('#err').textContent='';lastClock='';
+}
+function setLang(l){
+  if(l===L())return;try{localStorage.setItem('lh-lang',l)}catch(e){}
+  if(RM){applyLang(l);return}
+  document.body.classList.add('swapping');
+  setTimeout(function(){applyLang(l);requestAnimationFrame(function(){document.body.classList.remove('swapping')})},300);
+}
+$$('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set)})});
+$('#form').lang.addEventListener('change',function(){this.form.dataset.touched='1'});
+var lastClock='';
+applyLang(L());
+addEventListener('load',function(){applyLang(L())});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){applyLang(L())});
+
+/* phone sources */
+if(PHONE){$$('source[data-phone]').forEach(function(s){s.src=s.dataset.phone});$('#heroVid').poster=M+'poster-phone.jpg'}
+var hv=$('#heroVid'); if(RM){hv.removeAttribute('autoplay');hv.pause();hv.style.display='none'} else {hv.load();var p=hv.play();if(p&&p.catch)p.catch(function(){})}
+
+/* nav: hide on scroll down, show on up; menu */
+var nav=$('#nav'),lastY=0,menuBtn=$('#menuBtn'),sheet=$('#sheet');
+function setMenu(o){document.body.classList.toggle('menu-open',o);menuBtn.setAttribute('aria-expanded',o);menuBtn.setAttribute('aria-label',o?T[L()].close:T[L()].open);sheet.setAttribute('aria-hidden',!o);if(o)applyLang(L())}
+menuBtn.addEventListener('click',function(){setMenu(!document.body.classList.contains('menu-open'))});
+$$('#sheet a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+/* reveals */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px'});
+$$('.rv').forEach(function(el){io.observe(el)});
+
+/* tagline words: English by word, Chinese by short phrase; the last phrase lands in gold */
+$$('[data-words]').forEach(function(s){
+  var t=s.textContent,parts;
+  if(s.dataset.words==='zh'){parts=t.match(/[^，。]+[，。]?/g)||[t];parts=parts.reduce(function(a,ph){var ch=ph.match(/.{1,2}/g);return a.concat(ch)},[])}
+  else parts=t.split(' ');
+  var goldFrom=s.dataset.words==='zh'?parts.length-5:parts.length-2;
+  s.innerHTML=parts.map(function(w,i){return '<span class="w'+(i>=goldFrom?' gold':'')+'">'+w+'</span>'}).join(s.dataset.words==='zh'?'':' ');
+});
+var words=$$('#tagline .w');
+
+/* spotlight cards */
+$$('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px')})});
+
+/* dissection take: scroll drives time. Seek only when not already seeking and the target moved by more than 1/30 s */
+var story=$('#story'),take=$('#take'),caps=$$('.cap'),bars=$$('.prog b'),clock=$('#clock'),curBeat=-1,loaded=false,primed=false,goal=0,tgt=0,lastP=-1;
+var clamp=function(v){return v<0?0:v>1?1:v};
+var BEATS=[0,.2,.4,.6,.8,1];
+function loadTake(){if(loaded)return;loaded=true;take.preload='auto';take.load()}
+function prime(){if(primed)return;primed=true;var q=take.play();if(q&&q.then)q.then(function(){take.pause()}).catch(function(){})}
+['touchstart','pointerdown','keydown','wheel'].forEach(function(ev){addEventListener(ev,prime,{once:true,passive:true})});
+function setCaps(p){
+  var beat=0;for(var i=0;i<5;i++)if(p>=BEATS[i])beat=i;
+  if(beat!==curBeat){caps.forEach(function(c,i){c.classList.toggle('on',i===beat)});curBeat=beat}
+  bars.forEach(function(b,i){var t=clamp((p-BEATS[i])/(BEATS[i+1]-BEATS[i]));b.style.transform=(PHONE?'scaleX(':'scaleY(')+t.toFixed(3)+')'});
+  var lt=clamp((p-.62)/.14),n=Math.round(lt*6);$$('#layers li').forEach(function(li,i){li.classList.toggle('lit',i<n)});
+  var layer=p<.4?0:p<.6?Math.round(clamp((p-.4)/.2)*4):p<.8?Math.max(4,n):6;
+  var txt=L()==='zh'?'第 0'+layer+' 层 / 共 6 层':'LAYER 0'+layer+' / 06';if(txt!==lastClock){clock.textContent=txt;lastClock=txt}
+}
+var heroVisible=true;
+new IntersectionObserver(function(es){heroVisible=es[0].isIntersecting;if(!RM){if(heroVisible){var q=hv.play();if(q&&q.catch)q.catch(function(){})}else hv.pause()}}).observe($('#top'));
+function frame(){
+  var y=scrollY;
+  if(Math.abs(y-lastY)>4){nav.classList.toggle('hide',y>lastY&&y>200&&!document.body.classList.contains('menu-open'));lastY=y}
+  if(!RM){
+    var r=story.getBoundingClientRect(),len=story.offsetHeight-innerHeight,p=clamp(-r.top/len);
+    if(r.top<innerHeight*2.5)loadTake();
+    if(r.bottom>0&&r.top<innerHeight){
+      if(Math.abs(p-lastP)>0.0005||lastClock===''){setCaps(p);lastP=p}
+      var d=take.duration;if(d){goal=p*(d-0.05);tgt+=(goal-tgt)*0.2;if(Math.abs(goal-tgt)<0.01)tgt=goal;
+        if(!take.seeking&&Math.abs(take.currentTime-tgt)>1/30)take.currentTime=tgt}
+    }
+  }
+  var line=innerHeight*0.62;
+  for(var i=0;i<words.length;i++){var w=words[i];if(!w.classList.contains('lit')&&w.offsetParent&&w.getBoundingClientRect().top<line)w.classList.add('lit')}
+  requestAnimationFrame(frame);
+}
+if(RM){caps.forEach(function(c){c.classList.add('on')});words.forEach(function(w){w.classList.add('lit')});take.style.display='none'}else setCaps(0);
+requestAnimationFrame(frame);
+
+/* live tree: load on tap, unload when off screen or tab hidden */
+var tree=$('#tree'),ifr=null;
+function stopTree(){if(ifr){ifr.remove();ifr=null;tree.classList.remove('on');$('#treePlay').style.display=''}}
+$('#treePlay').addEventListener('click',function(){
+  ifr=document.createElement('iframe');ifr.src=M+'tree.html';ifr.title=L()==='zh'?'树木生长动画':'Live growing tree effect';ifr.setAttribute('loading','eager');
+  tree.insertBefore(ifr,$('#treeStop'));tree.classList.add('on');this.style.display='none';
+});
+$('#treeStop').addEventListener('click',stopTree);
+new IntersectionObserver(function(es){if(!es[0].isIntersecting)stopTree()}).observe(tree);
+document.addEventListener('visibilitychange',function(){if(document.hidden)stopTree()});
+
+/* chips and concept form */
+$$('#chips button').forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true')})});
+$('#form').addEventListener('submit',function(e){
+  e.preventDefault();var f=e.target,err=$('#err');
+  if(!f.name.value.trim()){err.textContent=T[L()].name;f.name.focus();return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim())){err.textContent=T[L()].mail;f.email.focus();return}
+  err.textContent='';f.classList.add('sent');
+});
+})();
+</script>
+</body>
+</html>
