@@ -4,18 +4,21 @@
   "title": "Larkhollow Landscape Studio",
   "industry": "Landscaping",
   "kind": "industry",
-  "date": "2026-11-06",
+  "date": "2026-11-09",
   "status": "live",
   "concept": true,
-  "summary": "Landscape design and build in west Toronto. A golden hour garden loop, then a dissection scroll: the garden lifts out of the ground and comes apart into its six layers, then builds back up with the lights on.",
-  "poster": "work/landscaper/media/poster.jpg",
+  "summary": "Landscape design and build in west Toronto, redrawn as a field guide folio. Plate I is an engraved block diagram of the garden that draws itself in ink; scrolling cuts it open and lifts the pergola, plants, stone, sand, gravel and fabric apart with a numbered key in real build order, then builds it back. A specimen index of Ontario natives filters by light and season, and the booking form is a yard walk request slip.",
+  "poster": "work/landscaper/media/plate.jpg",
   "skills": [
-   "landing-page-design",
-   "grok-hero-art",
-   "scroll-world",
-   "showroom",
-   "threeui"
-  ]
+   "impeccable",
+   "landing-page-design"
+  ],
+  "design_skill": "impeccable",
+  "art_lane": "engraving plate and section drawing",
+  "format": "printed artefact",
+  "layout": "folio spread: text page left, engraved plate right",
+  "typeface": "IM Fell English (+SC), Libre Franklin",
+  "theme": "herbarium sage card, iron gall ink, gilt and botanical colour plates"
  },
  {
   "slug": "landscaper-zh",
@@ -34,5 +37,49 @@
    "threeui",
    "bilingual-switch"
   ]
+ },
+ {
+  "slug": "roofer",
+  "title": "Brindlewick Roofing",
+  "industry": "Roofing",
+  "kind": "industry",
+  "date": "2026-11-08",
+  "status": "live",
+  "concept": true,
+  "summary": "Fictional residential roofer in east Toronto, redone as a riso printed one object page: an isometric house drawn in three inks. Scrolling lifts the roof off, fans it into an exploded parts diagram, lights each of the seven layers in real install order, puts them back deck first, then rain runs off into the eavestrough. Work order form with a rubber stamp.",
+  "poster": "work/roofer/media/poster.jpg",
+  "skills": [
+   "frontend-design",
+   "gsap",
+   "landing-page-design"
+  ],
+  "design_skill": "frontend-design",
+  "art_lane": "risograph print",
+  "format": "one object page",
+  "layout": "full bleed poster, headline overprinted on the house",
+  "typeface": "Archivo (variable width, 112 to 125 for display)",
+  "theme": "cool paper ground, three riso inks: federal blue, fluorescent pink, yellow"
+ },
+ {
+  "slug": "bakery",
+  "title": "Ninefold Bakehouse",
+  "industry": "Bakery",
+  "kind": "industry",
+  "date": "2026-11-09",
+  "status": "live",
+  "concept": true,
+  "summary": "Fictional sourdough bakery in Toronto's east end. The first screen is a working pre order composer set as a bakery counter: the headline sits behind a large drawn bag and the order controls run along a receipt strip under it; pick a day and loaves and tomorrow's bag is drawn with them in it. Then the night: a dough sheet is folded nine times by scroll or by hand, shaped, scored and baked. Every loaf is grown in code from its own seed; tap one on the rack to slice it and see its crumb.",
+  "poster": "work/bakery/media/poster.jpg",
+  "skills": [
+   "landing-page-design",
+   "algorithmic-art",
+   "frontend-design"
+  ],
+  "design_skill": "algorithmic-art",
+  "art_lane": "generative dough",
+  "format": "interactive tool first",
+  "layout": "bag stage with receipt strip",
+  "typeface": "Bricolage Grotesque",
+  "theme": "drenched wheat ground, rye ink, receipt paper"
  }
 ]
