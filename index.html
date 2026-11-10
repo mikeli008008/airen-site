@@ -2,512 +2,791 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Airen Sites</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="A website and a brand video for any local business, anywhere in the world, built in five business days and kept fresh every month.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Airen · A website and brand video for your local business</title>
+<meta name="description" content="A website and a brand video for any local business, anywhere in the world, built in five business days and kept fresh every month. See a free preview before you pay.">
+<meta name="theme-color" content="#FFF8E8">
 <meta property="og:title" content="Airen Sites">
 <meta property="og:description" content="Website plus brand video, built in five business days. Free preview before you pay.">
-<meta property="og:image" content="https://mikeli008008.github.io/airen-site/media/hero-poster.jpg">
+<meta property="og:image" content="https://mikeli008008.github.io/airen-site/media/og-shop.jpg">
 <meta property="og:url" content="https://mikeli008008.github.io/airen-site/">
-<link rel="canonical" href="https://mikeli008008.github.io/airen-site/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23000'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23FFB547'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23FFB547' stroke-opacity='.5' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://mikeli008008.github.io/airen-site/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFB547'/%3E%3Cpath d='M10 24h44v10a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0Z' fill='%23F2547D'/%3E%3Crect x='16' y='38' width='32' height='16' rx='3' fill='%2322163A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Airen","description":"Website and brand video packages for local businesses, live in five business days.","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"},"email":"airen.sites@gmail.com","url":"https://mikeli008008.github.io/airen-site/"}
+</script>
 <style>
-/* Layout concept: the signal. A night field of a few thousand lights (your customers) drifts toward one beacon; as you scroll, the lights reassemble into what Airen builds: a website, a video, a five day promise. One amber accent, the colour of the beacon, marks everything you can act on. Single dark world by design. */
 :root{
-  --bg:#000000;
-  --surface:#131209;
-  --surface-2:#1F1F1F;
-  --raised:#272727;
-  --line:rgba(255,244,224,.12);
-  --text:#F6F1E7;
-  --muted:#9B9B9B;
-  --amber:#FFB547;
-  --amber-ink:#1E1300;
-  --amber-soft:rgba(255,181,71,.12);
-  --error:#FF8A7A;
-  --font:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  color-scheme: light;
+  --paper:#FFF8E8; --paper-2:#FFEFCF; --ink:#22163A; --ink-2:#4E4366; --ink-3:#7A6F8F;
+  --palm:#127A55; --palm-2:#0D5E41; --leaf:#8CCB5E; --mango:#FFB547; --mango-2:#F59E1B;
+  --hibiscus:#F2547D; --lagoon:#1BA9B5; --sand:#F4D9A6; --line:rgba(34,22,58,.14);
+  --shop:#F2547D; --shop-trim:#22163A; --stripe:#FFF8E8; --stripe-2:#F2547D; --pop:#1BA9B5;
   --ease:cubic-bezier(.22,1,.36,1);
-  color-scheme:dark;
+  --r-lg:16px; --r-xl:24px;
 }
-*{box-sizing:border-box}
-html{overflow-x:clip;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;overflow-x:clip}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:150;background:var(--bg)}
-img,video{max-width:100%;display:block}
-h1,h2,h3,p{margin:0}
-h1,h2,h3{text-wrap:balance;font-weight:600;letter-spacing:-.02em}
-p,li{text-wrap:pretty}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:96px}
+
+body{background:var(--paper);color:var(--ink);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:24px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video,svg{display:block;max-width:100%}
 a{color:inherit}
-button{font:inherit;color:inherit}
-::selection{background:var(--amber);color:var(--amber-ink)}
-:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:8px}
-.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
-.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
-@media (max-width:640px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
-.skip{position:fixed;left:16px;top:-80px;z-index:200;background:var(--amber);color:var(--amber-ink);padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none;transition:transform .3s var(--ease)}
-.skip:focus{transform:translateY(96px)}
-.eyebrow{font-family:var(--mono);font-size:12px;line-height:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
-.grad{background:linear-gradient(90deg,#FFFFFF,#9B9B9B);-webkit-background-clip:text;background-clip:text;color:transparent}
-.h2{font-size:48px;line-height:1;margin-top:16px;max-width:680px}
-@media (max-width:640px){.h2{font-size:36px;line-height:40px}}
-.lead{color:var(--muted);font-size:18px;line-height:28px;margin-top:24px;max-width:600px}
-section.pad{padding-block:96px}
-@media (max-width:640px){section.pad{padding-block:64px}}
+button,input,select{font:inherit;color:inherit}
+h1,h2,h3{text-wrap:balance;font-weight:600}
+p{text-wrap:pretty}
+:focus-visible{outline:3px solid var(--lagoon);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:16px;top:-64px;background:var(--ink);color:var(--paper);padding:8px 12px;border-radius:8px;z-index:100;transition:transform .3s var(--ease)}
+.skip:focus{transform:translateY(80px)}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .5s var(--ease),background-color .3s var(--ease),border-color .3s var(--ease),box-shadow .5s var(--ease)}
-.btn-lg{padding:12px 24px;border-radius:16px}
-.btn-sm{font-size:14px;line-height:20px;white-space:nowrap}
-/* Primary button: adapted from ThreeUI Community "LumenCta" (MIT, Meng To; see showroom/LICENSE-threeui.txt), recoloured to amber */
-.btn-amber{position:relative;color:#FFF8EC;background:linear-gradient(90deg,#140B00,#2A1800,#5A3500 40%,#9A5C00 65%,#C97F12 82%,#E39A2E);outline:1px solid rgba(255,244,224,.14);outline-offset:-1px;box-shadow:0 4px 22px rgba(255,181,71,.22),inset 0 1px rgba(255,255,255,.16);text-shadow:0 1px 2px rgba(20,11,0,.45);transition:transform .5s var(--ease),filter .25s ease,box-shadow .5s var(--ease)}
-.btn-amber:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 8px 32px rgba(255,181,71,.38),inset 0 1px rgba(255,255,255,.2)}
-.btn-amber:not(:has(.arrow))::after{content:"";width:7px;height:7px;border-radius:50%;border:1.3px solid rgba(255,248,236,.9);flex:none}
-.btn-ghost{border-color:var(--line);background:rgba(19,18,9,.55)}
-.btn-ghost:hover{background:rgba(255,244,224,.1);transform:translateY(-2px)}
-.btn:active{transform:scale(.98)}
-.btn svg{width:20px;height:20px;flex:none}
-.btn .arrow{transition:transform .5s var(--ease)}
-.btn:hover .arrow{transform:translateX(4px)}
-.btn[disabled]{opacity:.6;cursor:default}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;font-weight:600;font-size:16px;line-height:24px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background-color .3s var(--ease);white-space:nowrap}
+.btn-lg{padding:12px 24px;font-size:18px;line-height:28px;border-radius:16px}
+.btn-main{background:var(--mango);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn-main:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn-main:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn-plain{background:transparent;color:var(--ink);border-color:transparent;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+.btn-plain:hover{text-decoration-color:var(--hibiscus)}
+.btn svg{width:20px;height:20px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
 
-/* nav */
-.nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 16px);left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:8px;padding:8px;border-radius:24px;background:rgba(19,18,9,.88);border:1px solid var(--line);max-width:calc(100vw - 32px);transition:transform .5s var(--ease)}
+/* ---------- nav ---------- */
+.nav{position:fixed;top:12px;left:50%;z-index:50;display:flex;align-items:center;gap:4px;padding:4px 4px 4px 12px;background:rgba(255,248,232,.94);border:2px solid var(--ink);border-radius:16px;transform:translateX(-50%);transition:transform .5s var(--ease);box-shadow:0 4px 0 var(--ink)}
 .nav.hide{transform:translate(-50%,-96px)}
-.brand{display:flex;align-items:center;gap:8px;padding:4px 12px 4px 4px;text-decoration:none;font-weight:600;font-size:14px;line-height:20px;white-space:nowrap}
-.brand-mark{width:32px;height:32px;border-radius:16px;display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line)}
-.brand-mark i{width:8px;height:8px;border-radius:8px;background:var(--amber);box-shadow:0 0 12px var(--amber)}
-.nav-links{display:flex;gap:4px}
-.nav-links a{padding:8px 12px;border-radius:16px;font-size:14px;line-height:20px;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .3s var(--ease),background-color .3s var(--ease)}
-.nav-links a:hover{color:var(--text)}
-.nav-links a[aria-current="true"]{color:var(--text);background:var(--raised)}
-.menu-btn{display:none;width:40px;height:40px;border-radius:16px;border:1px solid var(--line);background:transparent;cursor:pointer;position:relative}
-.menu-btn i{position:absolute;left:12px;width:16px;height:2px;border-radius:2px;background:var(--text);transition:transform .5s var(--ease)}
-.menu-btn i:first-child{top:15px}.menu-btn i:last-child{top:23px}
-.menu-open .menu-btn i:first-child{transform:translateY(4px) rotate(45deg)}
-.menu-open .menu-btn i:last-child{transform:translateY(-4px) rotate(-45deg)}
-@media (max-width:900px){.nav-links{display:none}.menu-btn{display:block}.nav .btn-sm{display:none}}
-.panel{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:calc(env(safe-area-inset-top,0px) + 96px) max(24px,env(safe-area-inset-right,0px)) 32px max(24px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:8px;opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
-.menu-open .panel{opacity:1;pointer-events:auto}
-.panel a{font-size:36px;line-height:40px;font-weight:600;text-decoration:none;padding:8px 0;opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
-.menu-open .panel a{opacity:1;transform:none}
-.menu-open .panel a:nth-child(2){transition-delay:60ms}.menu-open .panel a:nth-child(3){transition-delay:120ms}.menu-open .panel a:nth-child(4){transition-delay:180ms}.menu-open .panel a:nth-child(5){transition-delay:240ms}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:18px;line-height:28px;text-decoration:none;margin-right:8px}
+.brand svg{width:24px;height:24px}
+.nav-links{display:flex;gap:2px}
+.nav-links a{padding:4px 12px;border-radius:8px;font-size:14px;line-height:20px;font-weight:500;text-decoration:none;transition:background-color .3s var(--ease)}
+.nav-links a:hover,.nav-links a[aria-current="true"]{background:var(--paper-2)}
+.nav .btn{font-size:14px;line-height:20px;padding:8px 12px;box-shadow:none;border-width:2px}
+.menu-btn{display:none;width:40px;height:40px;border:0;background:none;border-radius:8px;cursor:pointer;position:relative}
+.menu-btn i{position:absolute;left:10px;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:transform .5s var(--ease),opacity .3s var(--ease)}
+.menu-btn i:nth-child(1){top:14px}.menu-btn i:nth-child(2){top:19px}.menu-btn i:nth-child(3){top:24px}
+.menu-open .menu-btn i:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-open .menu-btn i:nth-child(2){opacity:0}
+.menu-open .menu-btn i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:40;background:rgba(255,248,232,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:96px 24px 32px;display:flex;flex-direction:column;gap:8px;opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.menu-open .sheet{opacity:1;pointer-events:auto}
+.sheet a{font-size:30px;line-height:36px;font-weight:600;text-decoration:none;padding:8px 0;opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.menu-open .sheet a{opacity:1;transform:none}
+.sheet .btn{align-self:flex-start;margin-top:16px;font-size:18px}
 
-/* story: pinned canvas, scroll drives the particles */
-.story{position:relative;height:900vh}
-.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-#field{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 50%;max-width:none}
-@media (max-width:640px){.hero-video{object-position:76% 50%}.hero-video.fly{object-position:50% 50%}}
-.reduced .hero-video.fly{display:none}
-.lite-frames{position:absolute;inset:0;display:none}
-.lite-frames img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:60% 50%;opacity:0;will-change:transform,opacity}
-.lite .lite-frames{display:block}
-.lite .hero-video.fly{display:none}
-.scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,0) 70%)}
-@media (max-width:640px){.scrim{background:linear-gradient(180deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,.2) 100%)}}
-.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 30% 50%,transparent 40%,rgba(0,0,0,.65) 100%)}
-.captions{position:absolute;inset:0;display:flex;align-items:center;pointer-events:none}
-.cap{position:absolute;max-width:600px;opacity:0;transform:translateY(24px);transition:none}
-.cap.live{pointer-events:auto}
-.cap h1{font-size:72px;line-height:1;margin-top:24px}
-.cap h2{font-size:60px;line-height:1;margin-top:16px}
-@media (max-width:900px){.cap h1{font-size:48px;line-height:1}.cap h2{font-size:40px;line-height:44px}}
-@media (max-width:640px){.cap{top:112px}.cap h1{font-size:40px;line-height:44px}.cap h2{font-size:36px;line-height:40px}}
-.cap p.sub{color:var(--muted);font-size:18px;line-height:28px;margin-top:24px;max-width:520px}
-@media (max-width:640px){.cap p.sub{font-size:16px;line-height:24px}.cap h1,.cap h2,.cap p.sub{text-shadow:0 0 16px #000,0 0 32px #000}}
-.cap .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.status{display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 8px;border-radius:16px;border:1px solid var(--line);background:rgba(19,18,9,.6);font-size:14px;line-height:20px;color:var(--muted)}
-.status b{color:var(--text);font-weight:500}
-.pulse{width:8px;height:8px;border-radius:8px;background:var(--amber);animation:pulse 2.4s var(--ease) infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,181,71,.6)}70%{box-shadow:0 0 0 8px rgba(255,181,71,0)}100%{box-shadow:0 0 0 0 rgba(255,181,71,0)}}
-.progress{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted)}
-.progress span{width:24px;height:2px;border-radius:2px;background:var(--line);overflow:hidden;position:relative}
-.progress span i{position:absolute;inset:0;background:var(--amber);transform-origin:left;transform:scaleX(0)}
-.hint{position:absolute;right:max(24px,env(safe-area-inset-right,0px));bottom:32px;font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted);display:flex;align-items:center;gap:8px}
-.hint i{width:1px;height:24px;background:var(--muted);animation:drip 1.8s var(--ease) infinite;transform-origin:top}
-@keyframes drip{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
-@media (max-width:640px){.hint{display:none}}
+/* ---------- story ---------- */
+.story{position:relative;height:620vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#FFE2B5}
+#world{position:absolute;inset:0;width:100%;height:100%}
+#cam{will-change:transform}
+#world{will-change:transform;transform:translateZ(0)}
+.beat,.ov,.dots,.scrollhint{will-change:transform,opacity}
+.tagline .sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 5.5s var(--ease) infinite alternate}
+.tagline .sway.b{animation-duration:6.5s;animation-delay:-2s}
+.tagline .sway.c{animation-duration:4.8s;animation-delay:-1s}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+@keyframes leaf{from{transform:rotate(-2.5deg)}to{transform:rotate(2.5deg)}}
+.bob{animation:bob .5s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-4px)}}
+.paused .tagline .sway{animation-play-state:paused}
+#door-leaf{transform-box:fill-box;transform-origin:0 50%;transition:transform .9s var(--ease)}
+.door-open #door-leaf{transform:scaleX(.18)}
+.stripe-fill{transition:fill .6s var(--ease)}
+#sign-text{font-family:Poppins,sans-serif;font-weight:700}
 
-/* horizontal work gallery */
-.work{position:relative}
-.work-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:40px}
-.work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
-.work-count{font-family:var(--mono);font-size:14px;line-height:20px;color:var(--muted)}
-.work-count b{color:var(--amber);font-weight:500}
-.work-side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.track{display:flex;gap:24px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));will-change:transform;width:max-content}
-.slide{flex:none;width:min(720px,82vw);border-radius:24px;background:var(--surface);border:1px solid var(--line);padding:8px;display:flex;flex-direction:column}
-.slide.narrow{width:min(360px,72vw)}
-.browser{border-radius:16px;overflow:hidden;background:var(--surface-2);border:1px solid var(--line)}
-.browser-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line)}
-.browser-bar i{width:8px;height:8px;border-radius:8px;background:rgba(255,244,224,.25)}
-.browser-bar .url{margin-left:8px;font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted);padding:2px 8px;border-radius:8px;background:var(--raised);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
-.browser .shot{overflow:hidden;aspect-ratio:16/10}
-.browser .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transform:scale(1.04);transition:transform .9s var(--ease)}
-.slide:hover .browser .shot img{transform:scale(1)}
-.slide-body{padding:16px 16px 8px;display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap}
-.slide-body h3{font-size:24px;line-height:32px}
-.slide-body p{color:var(--muted);font-size:14px;line-height:20px;margin-top:4px;max-width:420px}
-.link{display:inline-flex;align-items:center;gap:8px;color:var(--amber);font-weight:600;text-decoration:none;font-size:14px;line-height:20px;white-space:nowrap}
-.link svg{width:16px;height:16px;transition:transform .5s var(--ease)}
-.link:hover svg{transform:translate(2px,-2px)}
-.phone-card{border-radius:16px;overflow:hidden;background:#0B0B0B;aspect-ratio:9/16;position:relative}
-.phone-card video{width:100%;height:100%;object-fit:cover}
-.sound{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:20px;border:1px solid var(--line);background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.sound svg{width:16px;height:16px}
-.slide.next{justify-content:center;align-items:flex-start;padding:40px;gap:24px;background:var(--amber-soft);border-color:rgba(255,181,71,.35)}
-.slide.next h3{font-size:36px;line-height:40px}
-.slide.next p{color:var(--muted)}
+.copy{position:absolute;z-index:3;left:max(24px,calc((100vw - 1200px)/2));top:50%;width:min(560px,44vw);transform:translateY(-50%);pointer-events:none}
+.copy > *{pointer-events:auto}
+.beat{position:absolute;inset:auto;left:0;top:0;width:100%;transform:translateY(-50%);opacity:0;visibility:hidden;transition:opacity .5s var(--ease),transform .7s var(--ease),visibility 0s .5s}
+.beat.on{opacity:1;visibility:visible;transform:translateY(-50%);transition:opacity .5s var(--ease),transform .7s var(--ease),visibility 0s}
+.beat.before{transform:translateY(calc(-50% + 32px))}
+.beat.after{transform:translateY(calc(-50% - 32px))}
+.card{background:var(--paper);border:2px solid var(--ink);border-radius:var(--r-xl);padding:32px;box-shadow:8px 8px 0 var(--ink)}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;line-height:20px;font-weight:600;color:var(--palm);margin-bottom:12px}
+.kicker b{display:grid;place-items:center;width:24px;height:24px;border-radius:999px;background:var(--palm);color:var(--paper);font-size:12px;line-height:16px}
+h1{font-size:60px;line-height:1;letter-spacing:-.02em;font-weight:700;background:linear-gradient(90deg,#22163A,#6B5A8C);-webkit-background-clip:text;background-clip:text;color:transparent;max-width:680px}
+.beat h2{font-size:48px;line-height:1;letter-spacing:-.02em;font-weight:700}
+.lede-short{display:none;margin-top:8px;font-size:14px;line-height:20px;color:var(--ink-2)}
+.lede{margin-top:16px;font-size:18px;line-height:28px;color:var(--ink-2);max-width:680px}
+.namer{margin-top:24px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.namer label{font-size:14px;line-height:20px;font-weight:600}
+.namefield{display:flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--ink);border-radius:12px;padding:4px 4px 4px 12px}
+.namefield input{flex:1;min-width:0;border:0;background:transparent;font-size:18px;line-height:28px;font-weight:500;padding:8px 0;outline:none}
+.namefield:focus-within{box-shadow:0 0 0 4px rgba(27,169,181,.35)}
+.namefield .dice{border:0;background:var(--paper-2);border-radius:8px;width:40px;height:40px;display:grid;place-items:center;cursor:pointer;transition:transform .3s var(--ease)}
+.namefield .dice:hover{transform:rotate(-12deg)}
+.namefield .dice svg{width:20px;height:20px}
+.trades{display:flex;flex-wrap:wrap;gap:8px}
+.trades button{border:2px solid var(--ink);background:var(--paper);border-radius:999px;padding:4px 12px;font-size:14px;line-height:20px;font-weight:500;cursor:pointer;transition:background-color .3s var(--ease),transform .3s var(--ease)}
+.trades button:hover{transform:translateY(-2px)}
+.trades button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.hero-cta{margin-top:24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.proof{margin-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;line-height:20px;color:var(--ink-2)}
+.proof i{width:8px;height:8px;border-radius:999px;background:var(--hibiscus);box-shadow:0 0 0 4px rgba(242,84,125,.25);animation:pulse 1.6s var(--ease) infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(242,84,125,0)}}
+.beat ul{margin-top:16px;list-style:none;display:grid;gap:8px}
+.beat li{display:flex;gap:8px;font-size:16px;line-height:24px;color:var(--ink-2)}
+.beat li svg{flex:none;width:20px;height:20px;margin-top:2px;color:var(--palm)}
+
+/* overlays: browser + phone */
+.ov{position:absolute;z-index:2;opacity:0;visibility:hidden;transition:opacity .6s var(--ease),transform .8s var(--ease),visibility 0s .6s;pointer-events:none}
+.ov.on{opacity:1;visibility:visible;transition:opacity .6s var(--ease),transform .8s var(--ease),visibility 0s;pointer-events:auto}
+.ov-browser{right:max(24px,calc((100vw - 1200px)/2));top:50%;width:min(600px,42vw);transform:translateY(-46%) scale(.94)}
+.ov-browser.on{transform:translateY(-50%) scale(1)}
+.browser{background:#fff;border:2px solid var(--ink);border-radius:var(--r-lg);overflow:hidden;box-shadow:12px 12px 0 var(--ink)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:2px solid var(--ink);background:var(--paper-2)}
+.browser-bar i{width:12px;height:12px;border-radius:999px;border:2px solid var(--ink)}
+.browser-bar i:nth-child(1){background:var(--hibiscus)}.browser-bar i:nth-child(2){background:var(--mango)}.browser-bar i:nth-child(3){background:var(--leaf)}
+.browser-bar .url{margin-left:8px;flex:1;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:0 8px;font-size:12px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shots{position:relative;aspect-ratio:16/10;background:var(--paper)}
+.shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .8s var(--ease)}
+.shots img.on{opacity:1}
+.shot-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.shot-tabs button{border:2px solid var(--ink);background:var(--paper);border-radius:999px;padding:2px 12px;font-size:12px;line-height:16px;font-weight:600;cursor:pointer}
+.shot-tabs button[aria-pressed="true"]{background:var(--mango)}
+.ov-phone{right:max(48px,calc((100vw - 1200px)/2 + 96px));top:50%;width:min(300px,26vw);transform:translateY(-44%) rotate(4deg)}
+.ov-phone.on{transform:translateY(-50%) rotate(-3deg)}
+.phone{position:relative;border:2px solid var(--ink);border-radius:40px;background:var(--ink);padding:12px;box-shadow:12px 12px 0 var(--hibiscus)}
+.phone video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#000}
+.sound{position:absolute;right:24px;bottom:24px;width:40px;height:40px;border-radius:999px;border:2px solid var(--ink);background:var(--paper);display:grid;place-items:center;cursor:pointer}
+.sound svg{width:20px;height:20px}
+
+.dots{position:absolute;z-index:4;right:16px;top:50%;transform:translateY(-50%);display:grid;gap:8px}
+.dots button{width:12px;height:12px;border-radius:999px;border:2px solid var(--ink);background:var(--paper);cursor:pointer;padding:0;transition:transform .3s var(--ease),background-color .3s var(--ease)}
+.dots button[aria-current="true"]{background:var(--hibiscus);transform:scale(1.3)}
+.scrollhint{position:absolute;z-index:3;left:50%;bottom:24px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;font-size:14px;line-height:20px;font-weight:600;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:4px 12px;transition:opacity .5s var(--ease)}
+.scrollhint svg{width:16px;height:16px;animation:bob .7s ease-in-out infinite alternate}
+
+/* ---------- sections ---------- */
+section.block{padding:96px 0}
+.eyebrow{font-size:14px;line-height:20px;font-weight:600;color:var(--palm);margin-bottom:12px}
+.h2{font-size:48px;line-height:1;letter-spacing:-.02em;font-weight:700;max-width:760px}
+.lead{margin-top:16px;font-size:18px;line-height:28px;color:var(--ink-2);max-width:640px}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* street of work */
+.street{margin-top:48px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.shopcard{grid-column:span 3;min-width:0;position:relative;display:flex;flex-direction:column;background:#fff;border:2px solid var(--ink);border-radius:var(--r-lg);box-shadow:6px 6px 0 var(--ink);text-decoration:none;transition:transform .5s var(--ease),box-shadow .5s var(--ease);transform-style:preserve-3d}
+.shopcard.big{grid-column:span 6}
+.shopcard:hover{box-shadow:10px 10px 0 var(--ink)}
+.awn{height:32px;border-bottom:2px solid var(--ink);border-radius:14px 14px 0 0;background:repeating-linear-gradient(90deg,var(--c) 0 32px,#fff 32px 64px);position:relative}
+.awn::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:12px;background:radial-gradient(circle at 16px 0,var(--c) 11px,transparent 12px) 0 0/64px 12px repeat-x,radial-gradient(circle at 48px 0,#fff 11px,transparent 12px) 0 0/64px 12px repeat-x}
+.shopcard .pic{margin:24px 16px 0;border:2px solid var(--ink);border-radius:8px;overflow:hidden;aspect-ratio:16/10;background:var(--paper-2)}
+.shopcard .pic img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s var(--ease)}
+.shopcard:hover .pic img{transform:scale(1.05)}
+.shopcard .body{padding:16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.shopcard h3{font-size:20px;line-height:28px}
+.shopcard p{font-size:14px;line-height:20px;color:var(--ink-2)}
+.tag{align-self:flex-start;font-size:12px;line-height:16px;font-weight:600;border:2px solid var(--ink);border-radius:999px;padding:2px 8px;margin-bottom:4px}
+.tag.live{background:var(--leaf)}
+.tag.concept{background:var(--paper-2)}
+.shopcard .go{margin-top:auto;padding-top:12px;font-size:14px;line-height:20px;font-weight:600;display:flex;align-items:center;gap:4px}
+.shopcard .go svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.shopcard:hover .go svg{transform:translateX(4px)}
+.shopcard.yours{grid-column:span var(--span,3);background:var(--mango);justify-content:center;padding:32px;gap:12px}
+.shopcard.yours h3{font-size:24px;line-height:32px}
+.shopcard.yours p{font-size:16px;line-height:24px;color:var(--ink)}
 
 /* tagline */
-.tagline{padding-block:160px}
-.tagline p{font-size:60px;line-height:1;font-weight:600;letter-spacing:-.02em;max-width:900px}
-@media (max-width:900px){.tagline p{font-size:48px;line-height:1}}
-@media (max-width:640px){.tagline{padding-block:96px}.tagline p{font-size:36px;line-height:40px}}
-.tagline .w{opacity:.28;transition:opacity .6s var(--ease),color .6s var(--ease)}
+.tagline{background:var(--palm);color:var(--paper);padding:96px 0;border-block:2px solid var(--ink);position:relative;overflow:hidden}
+.tagline p{font-size:60px;line-height:1;letter-spacing:-.02em;font-weight:600;max-width:960px}
+.tagline .w{opacity:.3;transition:opacity .6s var(--ease),color .6s var(--ease)}
 .tagline .w.on{opacity:1}
-.tagline .w.hot{color:var(--amber)}
+.tagline .w.hot.on{color:var(--mango)}
+.vine-row{position:absolute;top:0;left:0;right:0;height:96px;pointer-events:none}
 
-/* build log with scroll progress line */
-.log{position:relative;margin-top:64px;padding-left:48px}
-.log-line{position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line);border-radius:2px;overflow:hidden}
-.log-line i{position:absolute;inset:0;background:var(--amber);transform-origin:top;transform:scaleY(0)}
-.log-row{position:relative;padding-block:24px;display:grid;grid-template-columns:140px minmax(0,1fr) 140px;gap:24px;align-items:baseline;border-top:1px solid var(--line);opacity:.4;transition:opacity .6s var(--ease)}
-.log-row:first-of-type{border-top:0}
-.log-row.on{opacity:1}
-.log-row::before{content:"";position:absolute;left:-42px;top:32px;width:12px;height:12px;border-radius:12px;background:var(--bg);border:2px solid var(--line);transition:background-color .5s var(--ease),border-color .5s var(--ease),box-shadow .5s var(--ease)}
-.log-row.on::before{background:var(--amber);border-color:var(--amber);box-shadow:0 0 16px rgba(255,181,71,.6)}
-.log-row .day{font-family:var(--mono);font-size:14px;line-height:20px;color:var(--amber)}
-.log-row h3{font-size:24px;line-height:32px}
-.log-row p{color:var(--muted);margin-top:8px}
-.log-row .who{font-family:var(--mono);font-size:12px;line-height:16px;color:var(--muted);text-align:right}
-@media (max-width:720px){.log{padding-left:40px}.log-row{grid-template-columns:minmax(0,1fr);gap:4px}.log-row::before{left:-34px}.log-row .who{text-align:left}}
+/* build log */
+.log{margin-top:48px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:d}
+.day{position:relative;background:#fff;border:2px solid var(--ink);border-radius:var(--r-lg);padding:48px 16px 16px;box-shadow:4px 4px 0 var(--ink);transition:transform .5s var(--ease)}
+.day:hover{transform:translateY(-4px) rotate(-1deg)}
+.day .chip{position:absolute;top:-2px;left:-2px;right:-2px;height:32px;border:2px solid var(--ink);border-radius:16px 16px 0 0;background:var(--c);display:flex;align-items:center;padding:0 12px;font-size:14px;line-height:20px;font-weight:700}
+.day h3{font-size:18px;line-height:28px}
+.day p{margin-top:8px;font-size:14px;line-height:20px;color:var(--ink-2)}
+.day .who{margin-top:12px;display:inline-block;font-size:12px;line-height:16px;font-weight:600;background:var(--paper-2);border-radius:999px;padding:2px 8px}
+.log-note{margin-top:24px;font-size:14px;line-height:20px;color:var(--ink-2)}
 
-/* what you get */
-.gets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:64px}
-@media (max-width:980px){.gets{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.gets{grid-template-columns:minmax(0,1fr)}}
-.get{position:relative;border-radius:24px;border:1px solid var(--line);background:var(--surface);padding:24px;overflow:hidden;display:grid;gap:12px;align-content:start;min-height:240px}
-.get::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s var(--ease);background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(255,181,71,.16),transparent 70%)}
-.get:hover::after{opacity:1}
-.get .big{font-size:48px;line-height:1;font-weight:600;letter-spacing:-.02em;color:var(--amber)}
-.get h3{font-size:18px;line-height:28px;margin-top:auto}
-.get p{color:var(--muted);font-size:14px;line-height:20px}
+/* stickers */
+.stickers{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.sticker{background:var(--c);border:2px solid var(--ink);border-radius:var(--r-xl);padding:24px;box-shadow:6px 6px 0 var(--ink);transform:rotate(var(--r));transition:transform .5s var(--ease)}
+.sticker:hover{transform:rotate(0) translateY(-4px)}
+.sticker .big{display:block;font-size:36px;line-height:40px;font-weight:700;letter-spacing:-.02em}
+.sticker h3{margin-top:16px;font-size:18px;line-height:28px}
+.sticker p{margin-top:4px;font-size:14px;line-height:20px}
 
-/* pricing: one offer */
-.offer{position:relative;margin-top:64px;border:1px solid rgba(255,181,71,.6);border-radius:32px;background:#17140A;padding:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px;transition:transform .5s var(--ease)}
-@media (max-width:900px){.offer{grid-template-columns:minmax(0,1fr);padding:32px 24px;gap:32px}}
-.offer .tag,.addons .tag{font-family:var(--mono);font-size:12px;line-height:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
-.offer-main{display:flex;flex-direction:column;gap:24px}
-.price{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px}
-.price b{font-size:72px;line-height:1;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-@media (max-width:640px){.price b{font-size:60px}}
-.price span{color:var(--muted);font-size:14px;line-height:20px}
-.founding{display:grid;grid-template-columns:8px minmax(0,1fr);gap:12px;align-items:start;padding:12px 16px;border-radius:16px;background:var(--amber-soft);border:1px solid rgba(255,181,71,.3);font-size:14px;line-height:20px;color:var(--muted)}
-.founding .pulse{margin-top:6px}
-.founding b{color:var(--text);font-weight:600}
-.monthly{font-family:var(--mono);font-size:14px;line-height:20px;padding:8px 12px;border-radius:12px;background:var(--surface-2);width:max-content;max-width:100%}
-.monthly b{color:var(--amber);font-weight:500}
-.offer-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
-.paynow{margin-top:16px;color:var(--muted);font-size:14px;line-height:20px}.paynow a{color:var(--amber)}
-.offer-lists{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-content:start}
-@media (max-width:560px){.offer-lists{grid-template-columns:minmax(0,1fr)}}
-.offer-lists h3{font-size:18px;line-height:28px;margin-bottom:16px}
-.offer-lists ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;font-size:14px;line-height:20px;color:var(--muted)}
-.offer-lists li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px}
-.offer-lists li svg{width:16px;height:16px;margin-top:2px;color:var(--amber)}
-.addons{margin-top:24px;border:1px solid var(--line);border-radius:24px;background:var(--surface);padding:24px;display:grid;gap:16px}
-.addon-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-@media (max-width:640px){.addon-row{grid-template-columns:minmax(0,1fr)}}
-.addon-row div{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:baseline}
-.addon-row b{font-size:18px;line-height:28px;color:var(--text);font-weight:500}
-.addon-row span{color:var(--muted);font-size:14px;line-height:20px}
-.fine{color:var(--muted);font-size:14px;line-height:20px;margin-top:32px;max-width:680px}
+/* showroom */
+.shows{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.show{background:#fff;border:2px solid var(--ink);border-radius:var(--r-lg);overflow:hidden;box-shadow:4px 4px 0 var(--ink)}
+.show-stage{position:relative;aspect-ratio:16/10;background:#111;border-bottom:2px solid var(--ink)}
+.show-stage img,.show-stage iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.show-play{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:grid;place-items:end start;padding:12px}
+.show-play span{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:4px 12px;font-size:14px;line-height:20px;font-weight:600;transition:transform .3s var(--ease)}
+.show-play:hover span{transform:translateY(-2px)}
+.show-play i{width:8px;height:8px;border-radius:999px;background:var(--hibiscus)}
+.show-stop{position:absolute;right:12px;top:12px;z-index:2;border:2px solid var(--ink);background:var(--paper);border-radius:999px;padding:2px 12px;font-size:14px;line-height:20px;font-weight:600;cursor:pointer}
+.show-body{padding:16px}
+.show-body h3{font-size:16px;line-height:24px}
+.show-body p{font-size:14px;line-height:20px;color:var(--ink-2)}
+.show-note{margin-top:24px;font-size:14px;line-height:20px;color:var(--ink-2)}
+
+/* pricing */
+.pricing{background:var(--mango);border-block:2px solid var(--ink)}
+.price-grid{margin-top:48px;display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:start}
+.hang{position:relative;padding-top:64px;display:flex;justify-content:center}
+.hang::before{content:"";position:absolute;top:0;left:50%;width:2px;height:72px;background:var(--ink)}
+.pricetag{position:relative;width:min(400px,100%);background:var(--paper);border:2px solid var(--ink);border-radius:24px 24px 32px 32px;padding:48px 32px 32px;box-shadow:8px 8px 0 var(--ink);transform-origin:50% -64px;animation:swing 4s var(--ease) infinite alternate}
+@keyframes swing{from{transform:rotate(-2.5deg)}to{transform:rotate(2.5deg)}}
+.pricetag::before{content:"";position:absolute;top:16px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:999px;border:2px solid var(--ink);background:var(--mango)}
+.pricetag .pkg{font-size:14px;line-height:20px;font-weight:600;color:var(--palm)}
+.pricetag .was{margin-top:8px;font-size:20px;line-height:28px;color:var(--ink-3);text-decoration:line-through;text-decoration-thickness:2px}
+.pricetag .now{font-size:72px;line-height:1;font-weight:700;letter-spacing:-.03em}
+.pricetag .note{margin-top:8px;font-size:14px;line-height:20px;color:var(--ink-2)}
+.pricetag .monthly{margin-top:16px;padding-top:16px;border-top:2px dashed var(--line);font-size:18px;line-height:28px}
+.pricetag .monthly b{font-size:30px;line-height:36px}
+.pricetag .btn{margin-top:24px;width:100%;justify-content:center}
+.pricetag .alt{margin-top:12px;text-align:center;font-size:14px;line-height:20px}
+.spots{margin-top:16px;display:flex;gap:4px}
+.spots i{flex:1;height:8px;border-radius:999px;background:var(--leaf);border:2px solid var(--ink)}
+.spots-label{margin-top:4px;font-size:12px;line-height:16px;font-weight:600}
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.list{background:var(--paper);border:2px solid var(--ink);border-radius:var(--r-lg);padding:24px}
+.list h3{font-size:18px;line-height:28px}
+.list ul{margin-top:12px;list-style:none;display:grid;gap:8px}
+.list li{display:flex;gap:8px;font-size:14px;line-height:20px}
+.list li svg{flex:none;width:20px;height:20px;color:var(--palm)}
+.addons{grid-column:1/-1;background:var(--paper);border:2px solid var(--ink);border-radius:var(--r-lg);padding:24px}
+.addons h3{font-size:18px;line-height:28px}
+.addon-row{margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.addon-row div{display:flex;flex-direction:column;gap:4px;font-size:14px;line-height:20px}
+.addon-row b{font-size:24px;line-height:32px}
+.paynow{grid-column:1/-1;font-size:14px;line-height:20px}
+.paynow a{font-weight:600;text-underline-offset:4px}
+.fine{margin-top:24px;font-size:14px;line-height:20px;max-width:760px}
 
 /* faq */
-.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start}
-@media (max-width:900px){.faq-grid{grid-template-columns:minmax(0,1fr);gap:32px}}
-.faq{border-top:1px solid var(--line)}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;padding:24px 0;font-weight:600;font-size:18px;line-height:28px;display:flex;justify-content:space-between;gap:16px}
+.faq-grid{display:grid;grid-template-columns:5fr 7fr;gap:48px}
+.faq details{border-bottom:2px solid var(--ink)}
+.faq details:first-child{border-top:2px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-size:18px;line-height:28px;font-weight:600}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary .pm{flex:none;width:24px;height:24px;position:relative;margin-top:2px}
-.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:5px;right:5px;top:11px;height:2px;border-radius:2px;background:var(--muted);transition:transform .5s var(--ease),background-color .3s var(--ease)}
-.faq summary .pm::after{transform:rotate(90deg)}
-.faq details[open] .pm::after{transform:rotate(0)}
-.faq details[open] .pm::before{background:var(--amber)}
-.faq .a{padding:0 0 24px;color:var(--muted);max-width:62ch}
+.pm{flex:none;width:32px;height:32px;border-radius:999px;border:2px solid var(--ink);position:relative;transition:transform .5s var(--ease),background-color .3s var(--ease)}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:var(--ink)}
+.pm::after{transform:rotate(90deg)}
+details[open] .pm{transform:rotate(45deg);background:var(--mango)}
+.faq .a{padding:0 48px 16px 0;color:var(--ink-2)}
 
 /* request */
-.request-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:32px;background:var(--surface);padding:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}
-@media (max-width:900px){.request-card{grid-template-columns:minmax(0,1fr);padding:32px 24px;gap:40px}}
-#mini{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.55}
-.request-card > div{position:relative}
-.form{display:grid;gap:16px;margin-top:32px}
-.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
-@media (max-width:560px){.row2{grid-template-columns:minmax(0,1fr)}}
-.field{display:grid;gap:8px}
-.field label{font-size:14px;line-height:20px;font-weight:500}
-.field input,.field select{font:inherit;color:var(--text);background:rgba(0,0,0,.6);border:1px solid var(--line);border-radius:12px;padding:8px 12px;width:100%;min-width:0;transition:border-color .3s var(--ease)}
-.field input:focus,.field select:focus{border-color:var(--amber);outline:none}
-.field [aria-invalid="true"]{border-color:var(--error)}
-.err{color:var(--error);font-size:12px;line-height:16px}
-.ok{padding:16px;border-radius:12px;background:var(--amber-soft);border:1px solid rgba(255,181,71,.35)}
-.assure{display:grid;gap:24px;align-content:center}
-.assure div{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px}
-.assure .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--raised);color:var(--amber)}
+.request{padding:96px 0}
+.req-card{background:#fff;border:2px solid var(--ink);border-radius:var(--r-xl);box-shadow:10px 10px 0 var(--ink);overflow:hidden}
+.req-card > .awn{height:48px;border-radius:0;--c:var(--hibiscus);background:repeating-linear-gradient(90deg,var(--c) 0 48px,#fff 48px 96px)}
+.req-card > .awn::after{bottom:-16px;height:16px;background:radial-gradient(circle at 24px 0,var(--c) 23px,transparent 24px) 0 0/96px 16px repeat-x,radial-gradient(circle at 72px 0,#fff 23px,transparent 24px) 0 0/96px 16px repeat-x}
+.req-inner{display:grid;grid-template-columns:7fr 5fr;gap:48px;padding:64px 48px 48px}
+.form{margin-top:24px;display:grid;gap:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:4px}
+.field label{font-size:14px;line-height:20px;font-weight:600}
+.field input,.field select{width:100%;border:2px solid var(--ink);border-radius:12px;background:var(--paper);padding:8px 12px;font-size:16px;line-height:24px}
+.field input:focus,.field select:focus{outline:none;box-shadow:0 0 0 4px rgba(27,169,181,.35)}
+.field input[aria-invalid="true"]{border-color:var(--hibiscus)}
+.err{font-size:14px;line-height:20px;color:#C2264F;font-weight:500}
+.ok{background:var(--leaf);border:2px solid var(--ink);border-radius:12px;padding:12px 16px;font-weight:500}
+.form .btn{justify-content:center}
+.form .btn[disabled]{opacity:.7;cursor:progress}
+.assure{display:grid;gap:16px;align-content:start}
+.assure div{display:flex;gap:12px;background:var(--paper);border:2px solid var(--ink);border-radius:var(--r-lg);padding:16px}
+.assure .ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--c);border:2px solid var(--ink);display:grid;place-items:center}
 .assure .ic svg{width:20px;height:20px}
-.assure b{display:block;font-weight:600}
-.assure span{color:var(--muted);font-size:14px;line-height:20px}
+.assure b{display:block;font-size:16px;line-height:24px}
+.assure span.t{display:block;font-size:14px;line-height:20px;color:var(--ink-2)}
 
-footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);font-size:14px;line-height:20px}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-.foot nav{display:flex;flex-wrap:wrap;gap:16px}
-.foot a{text-decoration:none}.foot a:hover{color:var(--text)}
-.legal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-top:40px}
-@media (max-width:720px){.legal{grid-template-columns:minmax(0,1fr)}}
-.legal h3{font-size:14px;line-height:20px;color:var(--text);margin-bottom:8px}
+/* footer */
+footer{background:var(--ink);color:var(--paper);padding:64px 0 32px;position:relative}
+.foot-street{position:absolute;left:0;right:0;top:-62px;height:64px;pointer-events:none}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.foot .brand{color:var(--paper)}
+.foot p{font-size:14px;line-height:20px;opacity:.8;margin-top:8px}
+.foot nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+.foot nav a{font-size:14px;line-height:20px;text-decoration:none;opacity:.85}
+.foot nav a:hover{opacity:1;text-decoration:underline}
+.legal{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:32px;font-size:12px;line-height:16px;opacity:.75}
+.legal h3{font-size:14px;line-height:20px;margin-bottom:4px}
+.credit{margin-top:24px;font-size:12px;line-height:16px;opacity:.6}
 
-.rv{transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.rv.pre{opacity:0;transform:translateY(32px)}
-
-/* reduced motion: static composition, no pinning */
-.reduced .story{height:auto}
-.reduced .stage{position:relative;height:auto;min-height:100vh}
-.reduced .cap{position:relative;opacity:1;transform:none;pointer-events:auto;padding-block:160px 64px}
-.reduced .cap:not(:first-child){display:none}
-.reduced .work{height:auto!important}
-.reduced .work-stage{position:relative;height:auto;padding-block:96px}
-.reduced .track{flex-wrap:wrap;width:auto;transform:none!important}
-@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
-
-/* Showroom: tap to load one live ThreeUI effect at a time */
-.shows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px}
-@media (max-width:960px){.shows{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.shows{grid-template-columns:minmax(0,1fr);gap:16px}}
-.show{background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
-.show-stage{position:relative;aspect-ratio:16/10;background:#000;overflow:hidden}
-.show-stage img,.show-stage iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
-.show-play{position:absolute;inset:0;width:100%;border:0;padding:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-start;padding:16px;color:var(--text)}
-.show-play span{display:inline-flex;align-items:center;gap:8px;background:rgba(19,18,9,.88);border:1px solid var(--line);border-radius:12px;padding:6px 12px;font-size:14px;line-height:20px;font-weight:600;transition:transform .5s var(--ease),background-color .3s var(--ease)}
-.show-play span i{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
-.show-play:hover span{transform:translateY(-2px);background:rgba(39,39,39,.95)}
-.show-play:focus-visible{outline:2px solid var(--amber);outline-offset:-4px;border-radius:24px 24px 0 0}
-.show-stop{position:absolute;top:12px;right:12px;z-index:2;border:1px solid var(--line);background:rgba(19,18,9,.88);color:var(--text);border-radius:12px;padding:4px 10px;font:600 13px/20px var(--font);cursor:pointer}
-.show-body{padding:16px 24px 24px}
-.show-body h3{font-size:18px;line-height:28px;font-weight:600;margin:0}
-.show-body p{color:var(--muted);font-size:14px;line-height:20px;margin:4px 0 0}
-.show-note{color:var(--muted);font-size:14px;line-height:20px;margin-top:24px}
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .street{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .street .shopcard,.street .shopcard.big{grid-column:span 1}
+  .shopcard,.shopcard.big{grid-column:span 1}
+  .log{grid-template-columns:repeat(2,1fr)}
+  .stickers{grid-template-columns:repeat(2,1fr)}
+  .shows{grid-template-columns:repeat(2,1fr)}
+  .price-grid,.faq-grid,.req-inner{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:860px){
+  .nav-links,.nav > .btn{display:none}
+  .menu-btn{display:block}
+  .nav{width:calc(100% - 24px);justify-content:space-between}
+  h1{font-size:30px;line-height:36px}
+  .beat h2{font-size:30px;line-height:36px}
+  .lede{font-size:16px;line-height:24px;margin-top:8px}
+  .copy{left:12px;right:12px;width:auto;top:auto;bottom:12px;transform:none}
+  .beat{top:auto;bottom:0;transform:none}
+  .beat.on{transform:none}
+  .beat.before{transform:translateY(32px)}.beat.after{transform:translateY(-32px)}
+  .card{padding:16px;border-radius:var(--r-lg);box-shadow:4px 4px 0 var(--ink)}
+  .namer{margin-top:12px;gap:8px}
+  .namer label{display:none}
+  .namefield input{font-size:16px;line-height:24px;padding:4px 0}
+  .namefield .dice{width:32px;height:32px}
+  .trades{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px}
+  .trades::-webkit-scrollbar{display:none}
+  .trades button{flex:none}
+  .hero .btn-plain{display:none}
+  .hero .lede{display:none}
+  .hero .lede-short{display:block}
+  .hero-cta{margin-top:12px}
+  .proof{margin-top:8px;font-size:12px;line-height:16px}
+  .beat ul{display:none}
+  .ov-browser{left:24px;right:24px;width:auto;top:84px;transform:translateY(16px) scale(.96)}
+  .ov-browser.on{transform:none}
+  .shot-tabs{display:none}
+  .ov-phone{left:50%;right:auto;top:80px;width:min(150px,38vw);transform:translate(-50%,16px) rotate(3deg)}
+  .ov-phone.on{transform:translate(-50%,0) rotate(-2deg)}
+  .phone{border-radius:28px;padding:8px}
+  .phone video{border-radius:20px}
+  .sound{right:16px;bottom:16px}
+  .dots{display:none}
+  .scrollhint{display:none}
+  section.block,.request{padding:64px 0}
+  .tagline{padding:64px 0}
+  .h2{font-size:36px;line-height:40px}
+  .tagline p{font-size:36px;line-height:40px}
+  .street,.log,.stickers,.shows,.lists,.row2,.addon-row,.legal{grid-template-columns:minmax(0,1fr)}
+  .req-inner{padding:48px 16px 24px;gap:32px}
+  .pricetag .now{font-size:60px}
+  .wrap{width:calc(100% - 32px)}
+}
+@media (max-height:700px) and (min-width:861px){
+  h1{font-size:48px}
+  .beat h2{font-size:36px;line-height:40px}
+  .card{padding:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:opacity .2s linear!important}
+  .story{height:auto}
+  .stage{position:relative;height:100vh;height:100svh}
+  .beat:not(.hero),.ov,.dots,.scrollhint{display:none}
+  .rv{opacity:1;transform:none}
+  .tagline .w{opacity:1}
+  .static-beats{display:block!important}
+}
+.static-beats{display:none}
+.static-beats .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:64px 0}
+@media (max-width:860px){.static-beats .wrap{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="Airen home"><span class="brand-mark"><i></i></span>Airen</a>
-  <nav class="nav-links" aria-label="Sections">
-    <a href="#work">Work</a>
-    <a href="#how">How it works</a>
-    <a href="#showroom">Showroom</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#faq">FAQ</a>
+  <a class="brand" href="#top" aria-label="Airen home">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FFB547"/><path d="M10 24h44v10a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0Z" fill="#F2547D"/><rect x="16" y="38" width="32" height="16" rx="3" fill="#22163A"/></svg>Airen
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#work">Work</a><a href="#how">How it works</a><a href="#showroom">Effects</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a>
   </nav>
-  <a class="btn btn-amber btn-sm" href="#request">Free preview</a>
-  <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="panel"><i></i><i></i></button>
+  <a class="btn btn-main" href="#request">Free preview</a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i><i></i></button>
 </header>
-<div class="panel" id="panel" aria-label="Menu">
-  <a href="#work">Work</a>
-  <a href="#how">How it works</a>
-    <a href="#showroom">Showroom</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#faq">FAQ</a>
-  <a href="#request">Get a free preview</a>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <a href="#work">Work</a><a href="#how">How it works</a><a href="#showroom">Effects</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a>
+  <a class="btn btn-main" href="#request">Get my free preview</a>
 </div>
 
 <main id="main">
 <section class="story" id="top" aria-label="Introduction">
-  <div class="stage">
-    <video id="hero-video" class="hero-video" src="media/hero.mp4" poster="media/hero-poster.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
-    <video id="fly-video" class="hero-video fly" src="media/flyin.mp4" muted playsinline preload="auto" aria-hidden="true" style="opacity:0"></video>
-    <video id="v-sky" class="hero-video fly" src="media/beam-sky.mp4" muted playsinline preload="none" aria-hidden="true" style="opacity:0"></video>
-    <video id="v-ocean" class="hero-video fly" src="media/beam-ocean.mp4" muted playsinline preload="none" aria-hidden="true" style="opacity:0"></video>
-    <video id="v-forest" class="hero-video fly" src="media/beam-forest.mp4" muted playsinline preload="none" aria-hidden="true" style="opacity:0"></video>
-    <video id="h-sky" class="hero-video fly" src="media/hold-sky.mp4" muted loop playsinline preload="none" aria-hidden="true" style="opacity:0;display:none"></video>
-    <video id="h-ocean" class="hero-video fly" src="media/hold-ocean.mp4" muted loop playsinline preload="none" aria-hidden="true" style="opacity:0;display:none"></video>
-    <video id="h-forest" class="hero-video fly" src="media/hold-forest.mp4" muted loop playsinline preload="none" aria-hidden="true" style="opacity:0;display:none"></video>
-        <div class="scrim" aria-hidden="true"></div>
-    <canvas id="field" aria-hidden="true"></canvas>
-    <div class="vignette" aria-hidden="true"></div>
-    <div class="captions wrap">
-      <div class="cap" data-at="0">
-        <span class="status"><span class="pulse" aria-hidden="true"></span>Founding price: <b class="mono">10 of 10</b> spots open</span>
-        <h1 class="grad">Your customers<br>are out there<br>looking for a light</h1>
-        <p class="sub">Airen builds a website and a brand video that bring them to your door. Trades, restaurants, clinics, shops, studios, agents: any local business, anywhere in the world. Built remotely, live in five business days, preview free.</p>
-        <div class="ctas">
-          <a class="btn btn-amber btn-lg" href="#request">Get my free preview <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a class="btn btn-ghost btn-lg" href="#work">See the work</a>
+  <div class="stage" id="stage">
+    <svg id="world" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <defs>
+        <clipPath id="win-clip"><rect x="924" y="694" width="292" height="182" rx="8"/></clipPath>
+      </defs>
+      <g id="cam">
+        <!-- sky and sun -->
+        <rect x="-2400" y="-2200" width="7200" height="3100" fill="#FFE2B5"/>
+        <g id="sun"><circle cx="560" cy="210" r="150" fill="#FFD27A"/><circle cx="560" cy="210" r="100" fill="#FFB547"/></g>
+        <g id="clouds" fill="#FFF8E8">
+          <g><ellipse cx="260" cy="150" rx="90" ry="28"/><ellipse cx="310" cy="128" rx="60" ry="30"/></g>
+          <g><ellipse cx="1330" cy="110" rx="110" ry="26"/><ellipse cx="1280" cy="92" rx="56" ry="26"/></g>
+          <g><ellipse cx="-600" cy="60" rx="140" ry="30"/><ellipse cx="2300" cy="130" rx="130" ry="30"/></g>
+        </g>
+        <!-- terraces behind, planted -->
+        <g id="terraces">
+          <path d="M-2400 880V560h900v-90h700v-120h800v60h500V250h900v90h700v-80h900v160h700v-110h900v590Z" fill="#FFCF8A"/>
+          <path d="M-2400 880V640h700v-70h900v-60h600v90h500v-140h700v100h600v-60h800v120h700v-90h900v190h800v270Z" fill="#F9B9C4"/>
+          <g fill="#8CCB5E">
+            <circle cx="-1450" cy="560" r="34"/><circle cx="-1400" cy="548" r="26"/><circle cx="-640" cy="350" r="38"/><circle cx="-580" cy="340" r="28"/>
+            <circle cx="180" cy="410" r="30"/><circle cx="230" cy="400" r="40"/><circle cx="290" cy="412" r="28"/>
+            <circle cx="700" cy="250" r="36"/><circle cx="760" cy="240" r="46"/><circle cx="820" cy="252" r="30"/>
+            <circle cx="1650" cy="340" r="40"/><circle cx="1710" cy="330" r="30"/><circle cx="2380" cy="260" r="44"/><circle cx="3060" cy="420" r="38"/>
+          </g>
+          <g fill="#127A55"><circle cx="-1420" cy="575" r="18"/><circle cx="210" cy="425" r="18"/><circle cx="740" cy="268" r="22"/><circle cx="1680" cy="355" r="20"/><circle cx="2400" cy="282" r="22"/></g>
+          <g stroke="#127A55" stroke-width="4" fill="none" stroke-linecap="round">
+            <path class="sway c" d="M760 260c-6 40 8 70-2 110"/><path class="sway" d="M236 410c4 34-8 54 0 86"/><path class="sway b" d="M1700 345c-6 36 8 60-2 96"/>
+          </g>
+        </g>
+        <!-- ground -->
+        <rect x="-2400" y="880" width="7200" height="80" fill="#F4D9A6"/>
+        <path d="M-2400 920H4800" stroke="#E7C58B" stroke-width="80" stroke-dasharray="3 77"/>
+        <path d="M-2400 918H4800" stroke="#E7C58B" stroke-width="3"/>
+        <rect x="-2400" y="958" width="7200" height="14" fill="#E3B877"/>
+        <rect x="-2400" y="972" width="7200" height="1400" fill="#4B3F66"/>
+        <path d="M-2400 1060h7200" stroke="#FFB547" stroke-width="10" stroke-dasharray="60 50"/>
+
+        <!-- neighbours (filled by JS) -->
+        <g id="neighbours"></g>
+
+        <!-- main shop -->
+        <g id="shop">
+          <rect x="880" y="230" width="600" height="650" fill="var(--shop)" stroke="#22163A" stroke-width="6"/>
+          <rect x="866" y="206" width="628" height="34" rx="8" fill="var(--shop-trim)"/>
+          <!-- upper windows -->
+          <g stroke="#22163A" stroke-width="6">
+            <path d="M940 420V330a90 70 0 0 1 180 0v90Z" fill="#CFEFF0"/>
+            <path d="M1240 420V330a90 70 0 0 1 180 0v90Z" fill="#CFEFF0"/>
+            <rect x="926" y="420" width="208" height="26" rx="6" fill="#127A55"/>
+            <rect x="1226" y="420" width="208" height="26" rx="6" fill="#127A55"/>
+          </g>
+          <path d="M970 330l50-40M1270 330l50-40" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+          <g id="flowers">
+            <circle cx="946" cy="414" r="12" fill="#F2547D"/><circle cx="976" cy="408" r="14" fill="#FFB547"/><circle cx="1010" cy="414" r="11" fill="#FFF8E8"/><circle cx="1046" cy="410" r="13" fill="#F2547D"/><circle cx="1082" cy="414" r="12" fill="#FFB547"/><circle cx="1114" cy="410" r="11" fill="#8CCB5E"/>
+            <circle cx="1246" cy="414" r="12" fill="#FFB547"/><circle cx="1280" cy="408" r="14" fill="#F2547D"/><circle cx="1316" cy="414" r="11" fill="#8CCB5E"/><circle cx="1350" cy="410" r="13" fill="#FFF8E8"/><circle cx="1384" cy="414" r="12" fill="#F2547D"/><circle cx="1416" cy="410" r="11" fill="#FFB547"/>
+          </g>
+          <!-- hanging vines -->
+          <g fill="#127A55">
+            <g class="sway"><path d="M900 236c-10 50 10 90 0 150" stroke="#127A55" stroke-width="5" fill="none"/><ellipse cx="910" cy="280" rx="14" ry="8" transform="rotate(30 910 280)"/><ellipse cx="892" cy="320" rx="14" ry="8" transform="rotate(-30 892 320)"/><ellipse cx="906" cy="360" rx="14" ry="8" fill="#8CCB5E" transform="rotate(30 906 360)"/></g>
+            <g class="sway b"><path d="M1460 236c10 60-10 100 0 190" stroke="#127A55" stroke-width="5" fill="none"/><ellipse cx="1450" cy="290" rx="14" ry="8" transform="rotate(-30 1450 290)"/><ellipse cx="1470" cy="340" rx="14" ry="8" fill="#8CCB5E" transform="rotate(30 1470 340)"/><ellipse cx="1452" cy="390" rx="14" ry="8" transform="rotate(-30 1452 390)"/></g>
+            <g class="sway c"><path d="M1180 236c-8 30 8 56 0 84" stroke="#127A55" stroke-width="5" fill="none"/><ellipse cx="1170" cy="270" rx="12" ry="7" fill="#8CCB5E" transform="rotate(30 1170 270)"/><ellipse cx="1188" cy="300" rx="12" ry="7" transform="rotate(-30 1188 300)"/></g>
+          </g>
+          <!-- sign -->
+          <g id="sign">
+            <rect x="926" y="458" width="508" height="100" rx="16" fill="#22163A"/>
+            <rect x="934" y="466" width="492" height="84" rx="12" fill="#FFF8E8"/>
+            <text id="sign-text" x="1180" y="524" text-anchor="middle" font-size="52" fill="#22163A">Your business</text>
+          </g>
+          <!-- awning -->
+          <rect x="896" y="566" width="568" height="16" rx="6" fill="var(--shop-trim)"/>
+          <g id="awning" stroke="#22163A" stroke-width="5"></g>
+          <g id="days" font-family="Poppins,sans-serif" font-weight="700" font-size="24" text-anchor="middle" fill="#22163A" opacity="0"></g>
+          <!-- window with mini site -->
+          <rect x="916" y="686" width="308" height="198" rx="12" fill="#22163A"/>
+          <g clip-path="url(#win-clip)">
+            <rect x="924" y="694" width="292" height="182" fill="#CFEFF0"/>
+            <rect x="940" y="708" width="260" height="18" rx="4" fill="#fff"/>
+            <circle cx="952" cy="717" r="5" fill="var(--pop)"/>
+            <rect x="940" y="736" width="150" height="96" rx="6" fill="var(--pop)"/>
+            <rect x="1102" y="740" width="98" height="10" rx="5" fill="#22163A"/>
+            <rect x="1102" y="758" width="80" height="8" rx="4" fill="#7A6F8F"/>
+            <rect x="1102" y="772" width="90" height="8" rx="4" fill="#7A6F8F"/>
+            <rect x="1102" y="796" width="64" height="22" rx="6" fill="#FFB547" stroke="#22163A" stroke-width="3"/>
+            <path d="M940 852l220-150" stroke="#fff" stroke-width="18" opacity=".45"/>
+          </g>
+          <!-- door -->
+          <rect x="1268" y="670" width="176" height="210" rx="8" fill="var(--shop-trim)"/>
+          <rect x="1280" y="682" width="152" height="198" fill="#FFE9A8"/>
+          <g id="door-leaf">
+            <rect x="1280" y="682" width="152" height="198" fill="#22163A" stroke="#22163A" stroke-width="4"/>
+            <circle cx="1356" cy="744" r="30" fill="#CFEFF0" stroke="#FFB547" stroke-width="6"/>
+            <rect x="1300" y="800" width="112" height="60" rx="6" fill="none" stroke="#4E4366" stroke-width="4"/>
+            <circle cx="1414" cy="790" r="8" fill="#FFB547"/>
+          </g>
+          <g id="open-sign" font-family="Poppins,sans-serif" font-weight="700">
+            <path d="M1340 640l16-18 16 18" stroke="#22163A" stroke-width="3" fill="none"/>
+            <rect x="1312" y="640" width="88" height="34" rx="8" fill="#8CCB5E" stroke="#22163A" stroke-width="3"/>
+            <text x="1356" y="664" text-anchor="middle" font-size="18" fill="#22163A">Open</text>
+          </g>
+          <!-- planters -->
+          <g>
+            <g class="leafsway"><path d="M800 860c-60-40-70-130-30-180 10 70 30 120 60 160Z" fill="#127A55"/><path d="M820 856c-10-80 20-150 80-170-30 60-40 120-50 168Z" fill="#8CCB5E"/><path d="M836 860c30-60 90-90 140-70-60 20-100 50-120 74Z" fill="#127A55"/></g>
+            <path d="M782 850h100l-14 40h-72Z" fill="#F2547D" stroke="#22163A" stroke-width="5"/>
+            <g class="leafsway b"><path d="M1530 860c60-40 70-130 30-180-10 70-30 120-60 160Z" fill="#127A55"/><path d="M1510 856c10-80-20-150-80-170 30 60 40 120 50 168Z" fill="#8CCB5E"/><path d="M1494 860c-30-60-90-90-140-70 60 20 100 50 120 74Z" fill="#127A55"/></g>
+            <path d="M1450 850h100l-14 40h-72Z" fill="#1BA9B5" stroke="#22163A" stroke-width="5"/>
+          </g>
+        </g>
+        <!-- customers (filled by JS) -->
+        <g id="people"></g>
+      </g>
+    </svg>
+
+    <div class="copy" id="copy">
+      <div class="beat hero on card" data-beat="0">
+        <h1>Open for business on every phone</h1>
+        <p class="lede">Airen builds a website and a brand video for your local business, live in five business days. Type your name and watch the shop become yours.</p>
+        <p class="lede-short">A website and brand video, live in five business days. Type your name:</p>
+        <div class="namer">
+          <label for="biz-name">Your business name</label>
+          <div class="namefield">
+            <input id="biz-name" maxlength="28" placeholder="Maple Street Bakery" autocomplete="organization">
+            <button class="dice" id="dice" type="button" aria-label="Try another example name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></button>
+          </div>
+          <div class="trades" role="group" aria-label="Your kind of business">
+            <button type="button" data-trade="bakery" aria-pressed="true">Bakery</button>
+            <button type="button" data-trade="cafe" aria-pressed="false">Cafe</button>
+            <button type="button" data-trade="reno" aria-pressed="false">Renovation</button>
+            <button type="button" data-trade="salon" aria-pressed="false">Salon</button>
+            <button type="button" data-trade="clinic" aria-pressed="false">Clinic</button>
+            <button type="button" data-trade="garden" aria-pressed="false">Landscaping</button>
+            <button type="button" data-trade="auto" aria-pressed="false">Auto</button>
+          </div>
         </div>
+        <div class="hero-cta">
+          <a class="btn btn-main btn-lg" href="#request" id="hero-cta">Get my free preview <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-plain" href="#work">See real builds</a>
+        </div>
+        <p class="proof"><i aria-hidden="true"></i>Founding price $1,450 for the first 10 businesses</p>
       </div>
-      <div class="cap" data-at="1">
-        <p class="eyebrow">01 · The website</p>
-        <h2 class="grad">A site that proves<br>your work in<br>ten seconds</h2>
-        <p class="sub">Your photos, your services, your reviews, one clear button. Fast on a phone, in English, Chinese or both.</p>
+
+      <div class="beat card before" data-beat="1">
+        <p class="kicker"><b>1</b>The website</p>
+        <h2>A site that shows your work in ten seconds</h2>
+        <p class="lede">Your photos, your services and one clear button, fast on a phone, in English, Chinese or both.</p>
+        <div class="shot-tabs" id="shot-tabs" role="group" aria-label="Real builds"></div>
       </div>
-      <div class="cap" data-at="2">
-        <p class="eyebrow">02 · The video</p>
-        <h2 class="grad">A video that<br>stops the scroll</h2>
-        <p class="sub">A captioned brand film for your site, Instagram, TikTok and WeChat. Then a new short every month.</p>
+      <div class="beat card before" data-beat="2">
+        <p class="kicker"><b>2</b>The video</p>
+        <h2>A video that stops the scroll</h2>
+        <p class="lede">A 30 to 60 second brand film, captioned and cut for every feed. This one is Daniel's Kitchen.</p>
       </div>
-      <div class="cap" data-at="3">
-        <p class="eyebrow">03 · The promise</p>
-        <h2 class="grad">Live in five<br>business days</h2>
-        <p class="sub">Fixed price, two revision rounds, and a care plan that keeps it all fresh. You see it before you pay.</p>
+      <div class="beat card before" data-beat="3">
+        <p class="kicker"><b>3</b>The week</p>
+        <h2>Live in five business days</h2>
+        <p class="lede">You spend about fifteen minutes of it. Fixed price, two revision rounds, and you see it before you pay.</p>
+      </div>
+      <div class="beat card before" data-beat="4">
+        <p class="kicker"><b>4</b>Every month after</p>
+        <h2>Then we keep the lights on</h2>
+        <p class="lede">The care plan keeps your shop fresh while you work.</p>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited small edits, live in 2 business days</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>A new short video every month</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Four Google Business posts a month</li>
+        </ul>
+        <div class="hero-cta"><a class="btn btn-main" href="#request">Get my free preview</a></div>
       </div>
     </div>
-    <div class="progress" aria-hidden="true"><span><i id="pg0"></i></span><span><i id="pg1"></i></span><span><i id="pg2"></i></span><span><i id="pg3"></i></span></div>
-    <div class="hint" aria-hidden="true"><i></i>Scroll</div>
+
+    <div class="ov ov-browser" id="ov-browser">
+      <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url" id="shot-url">archlinehaojiang.com</span></div>
+        <div class="shots" id="shots"></div>
+      </div>
+    </div>
+    <div class="ov ov-phone" id="ov-phone">
+      <div class="phone">
+        <video id="promo" muted loop playsinline preload="none" poster="media/kitchen-poster.jpg" aria-label="Daniel's Kitchen brand video" data-src="media/kitchen-promo.mp4"></video>
+        <button class="sound" id="sound" type="button" aria-label="Turn sound on" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9Z"/><path id="snd-x" d="m17 9 4 6m0-6-4 6"/></svg></button>
+      </div>
+    </div>
+
+    <nav class="dots" id="dots" aria-label="Story steps"></nav>
+    <div class="scrollhint" id="scrollhint" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10m-4-4 4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Scroll to build it</div>
   </div>
 </section>
 
-<section class="work" id="work" aria-label="Finished work">
-  <div class="work-stage">
-    <div class="wrap work-head">
-      <div>
-        <p class="eyebrow">Finished work</p>
-        <h2 class="h2 grad">Real businesses, live today</h2>
-      </div>
-      <div class="work-side"><p class="work-count"><b id="wc">01</b> / 04</p><a class="link" href="work.html">See all work <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<!-- static version of the story for reduced motion -->
+<div class="static-beats" aria-hidden="true">
+  <div class="wrap">
+    <div class="card"><h2 class="h2">A site that shows your work in ten seconds</h2><p class="lead">Your photos, your services and one clear button, fast on a phone.</p></div>
+    <div class="card"><h2 class="h2">A video that stops the scroll</h2><p class="lead">A 30 to 60 second brand film, captioned and cut for every feed.</p></div>
+    <div class="card"><h2 class="h2">Live in five business days</h2><p class="lead">You spend about fifteen minutes of it.</p></div>
+    <div class="card"><h2 class="h2">Then we keep the lights on</h2><p class="lead">Small edits, a new video and four Google posts every month.</p></div>
+  </div>
+</div>
+
+<section class="block" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="head-row rv">
+      <div><p class="eyebrow">The street so far</p><h2 class="h2" id="work-h">Fourteen sites you can open right now</h2></div>
+      <a class="btn btn-plain" href="work.html">See all work</a>
     </div>
-    <div class="track" id="track">
-      <article class="slide">
-        <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url">archlinehaojiang.com</span></div><div class="shot"><img src="media/archline.jpg" alt="ArchLine Haojiang Renovation homepage: a sunlit living room beside the headline Renovation as a craft"></div></div>
-        <div class="slide-body"><div><h3>ArchLine Haojiang Renovation</h3><p>Renovation and design build. Project gallery, services through permits, one consultation button.</p></div><a class="link" href="https://archlinehaojiang.com/" target="_blank" rel="noopener">Open live site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      </article>
-      <article class="slide">
-        <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url">mikeli008008.github.io/daniels-kitchen</span></div><div class="shot"><img src="media/kitchen.jpg" alt="Daniel's Kitchen homepage with plated dishes and an order countdown"></div></div>
-        <div class="slide-body"><div><h3>Daniel's Kitchen</h3><p>Friday dinners from a Bocuse d'Or Team Canada chef. Weekly menu, order countdown, the chef's story.</p></div><a class="link" href="https://mikeli008008.github.io/daniels-kitchen/" target="_blank" rel="noopener">Open live site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      </article>
-      <article class="slide narrow">
-        <div class="phone-card">
-          <video id="promo" src="media/kitchen-promo.mp4" poster="media/kitchen-poster.jpg" muted loop playsinline preload="metadata" aria-label="Daniel's Kitchen 35 second promo video"></video>
-          <button class="sound" id="sound" aria-label="Turn sound on" aria-pressed="false"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 6h2.5L8 3v10L4.5 10H2z" fill="currentColor"/><path id="sound-x" d="m11 6 3 4m0-4-3 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-        </div>
-        <div class="slide-body"><div><h3>The promo</h3><p>35 seconds, vertical, cut for every feed.</p></div></div>
-      </article>
-      <article class="slide narrow next">
-        <p class="eyebrow">Next</p>
-        <h3>Your business,<br>in this row</h3>
+    <div class="street">
+<!--street:start-->
+      <a class="shopcard big rv" style="--c:#F2547D" href="work/terminal-x/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/terminal-x/assets/poster.jpg" alt="Terminal X Auto Detailing homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag live">Client preview</span><h3>Terminal X Auto Detailing</h3><p>One continuous film from the wash bay into the seats and back out.</p><span class="go">Open site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard big rv" style="--c:#FFB547" href="https://archlinehaojiang.com/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="media/archline.jpg" alt="ArchLine Haojiang Renovation homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag live">Live client</span><h3>ArchLine Haojiang Renovation</h3><p>Renovation and design build, with a 3D house that opens up as you scroll.</p><span class="go">Open live site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard big rv" style="--c:#127A55" href="work/haojiang-3d/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/haojiang-3d/assets/poster.jpg" alt="Hao Jiang Archline, 3D Showcase homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag live">Client 3D Showcase</span><h3>Hao Jiang Archline, 3D Showcase</h3><p>A renovation film from bare site to finished home, materials taken apart.</p><span class="go">Open site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard big rv" style="--c:#1BA9B5" href="https://mikeli008008.github.io/daniels-kitchen/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="media/kitchen.jpg" alt="Daniel&#x27;s Kitchen homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag live">Live client</span><h3>Daniel&#x27;s Kitchen</h3><p>Friday dinners from a Bocuse d&#x27;Or Team Canada chef, with a 35 second promo.</p><span class="go">Open live site <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#127A55" href="work/landscaper/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/landscaper/media/plate.jpg" alt="Larkhollow Landscape Studio homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Larkhollow Landscape Studio</h3><p>A garden drawn in ink that lifts apart in build order.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#1BA9B5" href="work/bakery/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/bakery/media/poster.jpg" alt="Ninefold Bakehouse homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Ninefold Bakehouse</h3><p>Fill tomorrow&#x27;s bag tonight; every loaf grown in code.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#8CCB5E" href="work/kestrel-movers/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/kestrel-movers/poster.jpg" alt="Kestrel Movers homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Kestrel Movers</h3><p>A 3D toy world of the whole move, yard to doorstep.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#F9B9C4" href="work/ninth-room/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/ninth-room/poster.jpg" alt="Ninth Room Gallery homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Ninth Room Gallery</h3><p>Walk a gallery room by room, every image drawn in code.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#F2547D" href="work/roofer/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/roofer/media/poster.jpg" alt="Brindlewick Roofing homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Brindlewick Roofing</h3><p>Scroll to take a roof apart, layer by layer.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#FFB547" href="work/landscaper-zh/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/landscaper/media/poster.jpg" alt="Larkhollow Landscape Studio, EN / 中文 homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Larkhollow Landscape Studio, EN / 中文</h3><p>One page, two languages, switched in place.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#127A55" href="work/paperbolt/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/paperbolt/assets/poster.jpg" alt="Paperbolt Studio homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Paperbolt Studio</h3><p>A marketing studio told through one colour burst film.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#1BA9B5" href="work/velune/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/velune/assets/poster.jpg" alt="Velune Cliff Villas homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Velune Cliff Villas</h3><p>Twelve cliff villas at sunset, with an availability check.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#8CCB5E" href="work/evas-cafes/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/evas-cafes/assets/poster.jpg" alt="Evas Cafes homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Evas Cafes</h3><p>From bean to cup, poured by your scroll.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard rv" style="--c:#F9B9C4" href="work/lahab-shawarma/" target="_blank" rel="noopener">
+        <div class="awn"></div>
+        <div class="pic"><img src="work/lahab-shawarma/assets/poster.jpg" alt="Lahab Shawarma homepage" loading="lazy" decoding="async"></div>
+        <div class="body"><span class="tag concept">Concept</span><h3>Lahab Shawarma</h3><p>Scroll the fire, then build your own wrap.</p><span class="go">Open concept <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="shopcard yours rv" style="--span:6" href="#request" id="yours-card">
+        <h3 id="yours-h">Your shop goes here next</h3>
         <p>Send a link or a few photos. Your free preview arrives within 2 business days.</p>
-        <a class="btn btn-amber" href="#request">Start my preview <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </article>
+        <span class="btn btn-main" style="align-self:flex-start">Start my preview</span>
+      </a>
+      <!--street:end-->
     </div>
   </div>
 </section>
 
-<section class="tagline wrap" aria-label="What we believe">
-  <p id="tagline-words">Your work is already good. Your website should prove it in ten seconds, on a phone, before anyone calls.</p>
+<section class="tagline" aria-label="What we believe">
+  <svg class="vine-row" viewBox="0 0 1600 96" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="#8CCB5E"><g class="sway"><path d="M120 0c-8 30 8 50 0 80" stroke="#8CCB5E" stroke-width="4" fill="none"/><ellipse cx="128" cy="34" rx="10" ry="6"/><ellipse cx="112" cy="60" rx="10" ry="6"/></g><g class="sway b"><path d="M520 0c8 24-8 40 0 60" stroke="#8CCB5E" stroke-width="4" fill="none"/><ellipse cx="512" cy="30" rx="10" ry="6"/></g><g class="sway c"><path d="M1080 0c-8 34 8 56 0 90" stroke="#8CCB5E" stroke-width="4" fill="none"/><ellipse cx="1088" cy="40" rx="10" ry="6"/><ellipse cx="1072" cy="70" rx="10" ry="6"/></g><g class="sway"><path d="M1480 0c8 24-8 40 0 60" stroke="#8CCB5E" stroke-width="4" fill="none"/><ellipse cx="1488" cy="28" rx="10" ry="6"/></g></g>
+  </svg>
+  <div class="wrap"><p id="tagline">Your work is already good. Your website should <span data-hot>prove it</span> in ten seconds, on a phone, before anyone <span data-hot>calls.</span></p></div>
 </section>
 
-<section class="wrap pad" id="how">
-  <p class="eyebrow">How it works</p>
-  <h2 class="h2 grad">The five day build log</h2>
-  <p class="lead">Every Airen build runs the same week. You spend about fifteen minutes of it.</p>
-  <div class="log" id="log">
-    <div class="log-line" aria-hidden="true"><i id="log-fill"></i></div>
-    <div class="log-row"><span class="day">Before day 1</span><div><h3>Send a few photos or a link</h3><p>Your Google listing, Instagram or 5 to 15 photos. A free homepage preview and a rough video cut arrive within 2 business days.</p></div><span class="who">You · 5 min</span></div>
-    <div class="log-row"><span class="day">Day 1</span><div><h3>Approve, pay, fill the intake</h3><p>Pick a package and pay once. An 8 minute form covers services, hours, tone and language.</p></div><span class="who">You · 10 min</span></div>
-    <div class="log-row"><span class="day">Day 2 to 3</span><div><h3>Site and video built</h3><p>Pages written in your words, photos cleaned and sized, brand video cut and captioned.</p></div><span class="who">Airen</span></div>
-    <div class="log-row"><span class="day">Day 4</span><div><h3>Checked, then revised</h3><p>Mobile layout, speed above 90, form test, spelling in every language. Then your two revision rounds.</p></div><span class="who">Airen and you</span></div>
-    <div class="log-row"><span class="day">Day 5</span><div><h3>Live on your domain</h3><p>Secure link, Google Business Profile connected, video cut for each platform. The care plan starts here.</p></div><span class="who">Airen</span></div>
+<section class="block" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">How it works</p><h2 class="h2" id="how-h">One week, five days, about fifteen minutes of yours</h2></div>
+    <div class="log">
+      <article class="day rv" style="--c:#FFB547"><span class="chip">Before day 1</span><h3>Send a few photos or a link</h3><p>Your Google listing, Instagram or 5 to 15 photos. A free homepage preview and a rough video cut arrive within 2 business days.</p><span class="who">You, 5 min</span></article>
+      <article class="day rv" style="--c:#F2547D"><span class="chip">Day 1</span><h3>Approve, pay, fill the intake</h3><p>Pay once. An 8 minute form covers services, hours, tone and language.</p><span class="who">You, 10 min</span></article>
+      <article class="day rv" style="--c:#8CCB5E"><span class="chip">Days 2 and 3</span><h3>Site and video built</h3><p>Pages written in your words, photos cleaned and sized, brand video cut and captioned.</p><span class="who">Airen</span></article>
+      <article class="day rv" style="--c:#1BA9B5"><span class="chip">Day 4</span><h3>Checked, then revised</h3><p>Mobile layout, speed above 90, form test, spelling in every language. Then your two revision rounds.</p><span class="who">Airen and you</span></article>
+      <article class="day rv" style="--c:#FFB547"><span class="chip">Day 5</span><h3>Live on your domain</h3><p>Secure link, Google Business Profile connected, video cut for each platform. The care plan starts here.</p><span class="who">Airen</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="gets" aria-labelledby="gets-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">What you get</p><h2 class="h2" id="gets-h">Built to bring in work</h2></div>
+    <div class="stickers">
+      <div class="sticker rv" style="--c:#8CCB5E;--r:-2deg"><span class="big">90+</span><h3>Fast on a phone</h3><p>Every page passes a 90 or higher mobile speed score before you see it.</p></div>
+      <div class="sticker rv" style="--c:#FFB547;--r:1.5deg"><span class="big">1 a month</span><h3>A new video monthly</h3><p>A brand film at launch, then a fresh short each month on the care plan.</p></div>
+      <div class="sticker rv" style="--c:#F9B9C4;--r:-1deg"><span class="big">4 a month</span><h3>Google Maps posts</h3><p>Your Business Profile set up, cleaned up and posted to every week.</p></div>
+      <div class="sticker rv" style="--c:#CFEFF0;--r:2deg"><span class="big">EN 中 +</span><h3>Your customers' language</h3><p>English, Chinese or another major language at no extra cost, written for local readers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="showroom" aria-labelledby="show-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">What we can build</p><h2 class="h2" id="show-h">Effects your competitors do not have</h2><p class="lead">Each site gets one signature moment matched to its trade. Tap any card to run it live on your device.</p></div>
+    <div class="shows" id="shows">
+      <article class="show rv" data-key="liquid"><div class="show-stage"><img src="showroom/poster-liquid.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for jewellers, watchmakers and beauty brands"><span><i></i>Tap to try it live</span></button></div><div class="show-body"><h3>Jewellers, watchmakers and beauty brands</h3><p>Liquid metal that follows your cursor</p></div></article>
+      <article class="show rv" data-key="tree"><div class="show-stage"><img src="showroom/poster-tree.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for arborists, tree care and garden centres"><span><i></i>Tap to try it live</span></button></div><div class="show-body"><h3>Arborists, tree care and garden centres</h3><p>A tree that grows as you watch</p></div></article>
+      <article class="show rv" data-key="green"><div class="show-stage"><img src="showroom/poster-green.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for florists, spas and wellness"><span><i></i>Tap to try it live</span></button></div><div class="show-body"><h3>Florists, spas and wellness</h3><p>A living green world to drift through</p></div></article>
+      <article class="show rv" data-key="network"><div class="show-stage"><img src="showroom/poster-network.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for IT, consulting and tech services"><span><i></i>Tap to try it live</span></button></div><div class="show-body"><h3>IT, consulting and tech services</h3><p>A network that reacts to every move</p></div></article>
+      <article class="show rv" data-key="gauge"><div class="show-stage"><img src="showroom/poster-gauge.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for auto repair, detailing and dealers"><span><i></i>Tap to try it live</span></button></div><div class="show-body"><h3>Auto repair, detailing and dealers</h3><p>A live gauge for your real numbers</p></div></article>
+      <article class="show rv" data-key="gallery"><div class="show-stage"><img src="showroom/poster-gallery.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for photographers, studios and galleries"><span><i></i>Tap to try it live</span></button></div><div class="show-body"><h3>Photographers, studios and galleries</h3><p>Your work orbiting your headline</p></div></article>
+    </div>
+    <p class="show-note">One effect runs at a time and stops when you scroll past, so your phone stays cool. Effects built with ThreeUI Community (MIT).</p>
   </div>
 </section>
 
-<section class="wrap pad rv" id="gets">
-  <p class="eyebrow">What you get</p>
-  <h2 class="h2 grad">Built to bring in work</h2>
-  <div class="gets">
-    <div class="get"><span class="big mono">90+</span><h3>Fast on a phone</h3><p>Every page passes a 90 or higher mobile speed score before you see it.</p></div>
-    <div class="get"><span class="big mono">1/mo</span><h3>A new video monthly</h3><p>A brand film at launch, then a fresh short each month on the care plan.</p></div>
-    <div class="get"><span class="big mono">4/mo</span><h3>Google Maps posts</h3><p>Your Business Profile set up, cleaned up and posted to every week.</p></div>
-    <div class="get"><span class="big mono">EN 中 +</span><h3>Your customers' language</h3><p>English, Chinese or another major language at no extra cost, written for local readers.</p></div>
+<section class="block pricing" id="pricing" aria-labelledby="price-h">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow" style="color:var(--ink)">Pricing in CAD, local taxes where they apply</p><h2 class="h2" id="price-h">One package. One price. Nothing hourly.</h2><p class="lead" style="color:var(--ink)">Every business gets the same complete package. The care plan starts after you go live and cancels in one click.</p></div>
+    <div class="price-grid">
+      <div class="hang rv">
+        <div class="pricetag" id="pricetag">
+          <p class="pkg">Website + Video, founding price</p>
+          <p class="was"><span class="sr">Standard price </span>$1,950</p>
+          <p class="now">$1,450</p>
+          <p class="note">Setup, once. For the first 10 businesses, in exchange for a testimonial and a short case study.</p>
+          <div class="spots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="spots-label">10 founding spots</p>
+          <p class="monthly">then <b>$129</b>/month care plan</p>
+          <a class="btn btn-main btn-lg" href="#request" data-plan="Founding price">Claim a founding spot</a>
+          <p class="alt"><a href="#request" data-plan="Standard price">Or start with a free preview at the standard $1,950</a></p>
+        </div>
+      </div>
+      <div class="lists">
+        <div class="list rv"><h3>Setup includes</h3><ul>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Up to five page website, domain and hosting</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Brand video, 30 to 60 seconds, captioned and cut for every feed</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Google Business Profile setup</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>English, Chinese or both</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Two revision rounds, live in five business days</li>
+        </ul></div>
+        <div class="list rv"><h3>Care plan includes</h3><ul>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Hosting, plus unlimited small edits, one at a time, live in 2 business days</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>A new short video every month</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Four Google Business posts a month</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancel any time, keep your site</li>
+        </ul></div>
+        <div class="addons rv"><h3>Add when you need it</h3>
+          <div class="addon-row">
+            <div><b>$199</b><span>Extra video: a listing, a menu, a product or a finished project</span></div>
+            <div><b>$149</b><span>Extra page beyond five</span></div>
+            <div><b>$2,450</b><span>3D Showcase: your build or product opened up as visitors scroll, in 10 business days. Founding $1,450 for the first 3.</span></div>
+          </div>
+        </div>
+        <p class="paynow rv">Seen your preview? <a href="https://buy.stripe.com/cNi9AM8AI0sn49C24t5os01" data-stripe="founding">Pay the founding price</a> or <a href="https://buy.stripe.com/fZufZa18gfnh35ycJ75os00" data-stripe="standard">the standard price</a> by card through Stripe. Your care plan starts 7 days after checkout.</p>
+      </div>
+    </div>
+    <p class="fine rv">Not offered: online stores, custom web apps, booking systems beyond an embedded widget, logo redesigns and hourly work. If you need one of those we will tell you and point you to someone good.</p>
   </div>
 </section>
 
-<section class="wrap pad rv" id="showroom">
-  <p class="eyebrow">What we can build</p>
-  <h2 class="h2 grad">Effects your competitors do not have</h2>
-  <p class="lead">Each site gets one signature moment matched to its trade. Tap any card to run it live on your device.</p>
-  <div class="shows" id="shows">
-    <article class="show" data-key="liquid">
-      <div class="show-stage"><img src="showroom/poster-liquid.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for jewellers, watchmakers and beauty brands"><span><i></i>Tap to try it live</span></button></div>
-      <div class="show-body"><h3>Jewellers, watchmakers and beauty brands</h3><p>Liquid metal that follows your cursor</p></div>
-    </article>
-    <article class="show" data-key="tree">
-      <div class="show-stage"><img src="showroom/poster-tree.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for arborists, tree care and garden centres"><span><i></i>Tap to try it live</span></button></div>
-      <div class="show-body"><h3>Arborists, tree care and garden centres</h3><p>A tree that grows as you watch</p></div>
-    </article>
-    <article class="show" data-key="green">
-      <div class="show-stage"><img src="showroom/poster-green.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for florists, spas and wellness"><span><i></i>Tap to try it live</span></button></div>
-      <div class="show-body"><h3>Florists, spas and wellness</h3><p>A living green world to drift through</p></div>
-    </article>
-    <article class="show" data-key="network">
-      <div class="show-stage"><img src="showroom/poster-network.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for it, consulting and tech services"><span><i></i>Tap to try it live</span></button></div>
-      <div class="show-body"><h3>IT, consulting and tech services</h3><p>A network that reacts to every move</p></div>
-    </article>
-    <article class="show" data-key="gauge">
-      <div class="show-stage"><img src="showroom/poster-gauge.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for auto repair, detailing and dealers"><span><i></i>Tap to try it live</span></button></div>
-      <div class="show-body"><h3>Auto repair, detailing and dealers</h3><p>A live gauge for your real numbers</p></div>
-    </article>
-    <article class="show" data-key="gallery">
-      <div class="show-stage"><img src="showroom/poster-gallery.jpg" alt="" loading="lazy" decoding="async" width="720" height="450"><button class="show-play" type="button" aria-label="Try the live effect for photographers, studios and galleries"><span><i></i>Tap to try it live</span></button></div>
-      <div class="show-body"><h3>Photographers, studios and galleries</h3><p>Your work orbiting your headline</p></div>
-    </article>
-  </div>
-  <p class="show-note">One effect runs at a time and stops when you scroll past, so your phone stays cool. Effects built with ThreeUI Community (MIT).</p>
-</section>
-
-<section class="wrap pad rv" id="pricing">
-  <p class="eyebrow">Pricing · CAD, local taxes where they apply</p>
-  <h2 class="h2 grad">One package. One price. Nothing hourly.</h2>
-  <p class="lead">Every business gets the same complete package. The care plan starts the day you go live and cancels in one click.</p>
-  <article class="offer tilt">
-    <div class="offer-main">
-      <p class="tag">Website + Video</p>
-      <div class="price"><b>$1,950</b><span>setup, once</span></div>
-      <div class="founding"><span class="pulse" aria-hidden="true"></span><p><b>Founding price $1,450</b> for the first 10 businesses, in exchange for a testimonial and a short case study.</p></div>
-      <p class="monthly">then <b>$129</b>/month care plan</p>
-      <div class="offer-ctas"><a class="btn btn-amber btn-lg" href="#request" data-plan="Founding price">Claim a founding spot <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-ghost btn-lg" href="#request" data-plan="Standard price">Start with a free preview</a></div>
-      <p class="paynow">Seen your preview? <a href="https://buy.stripe.com/cNi9AM8AI0sn49C24t5os01" data-stripe="founding">Pay the founding price</a> or <a href="https://buy.stripe.com/fZufZa18gfnh35ycJ75os00" data-stripe="standard">the standard price</a> by card through Stripe. Your care plan starts 7 days after checkout.</p>
-    </div>
-    <div class="offer-lists">
-      <div><h3>Setup includes</h3><ul><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Up to five page website, domain and hosting</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Brand video, 30 to 60 seconds, captioned and cut for every feed</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Google Business Profile setup</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>English, Chinese or both</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Two revision rounds, live in five business days</li></ul></div>
-      <div><h3>Care plan includes</h3><ul><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Hosting, plus unlimited small edits, one at a time, live in 2 business days</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>A new short video every month</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Four Google Business posts a month</li><li><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8 3 3 7-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancel any time, keep your site</li></ul></div>
-    </div>
-  </article>
-  <div class="addons">
-    <p class="tag">Add when you need it</p>
-    <div class="addon-row">
-      <div><b class="mono">$199</b><span>Extra video: a listing, a menu, a product, a finished project</span></div>
-      <div><b class="mono">$149</b><span>Extra page beyond five</span></div>
-    </div>
-  </div>
-  <p class="fine">Not offered: online stores, custom web apps, booking systems beyond an embedded widget, logo redesigns and hourly work. If you need one of those we will tell you and point you to someone good.</p>
-</section>
-
-<section class="wrap pad rv" id="faq">
-  <div class="faq-grid">
-    <div>
-      <p class="eyebrow">Questions</p>
-      <h2 class="h2 grad">What owners ask before they say yes</h2>
-      <p class="lead">Anything else, ask in the preview request. A person replies within one business day.</p>
-    </div>
-    <div class="faq">
+<section class="block" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-grid">
+    <div class="rv"><p class="eyebrow">Questions</p><h2 class="h2" id="faq-h">What owners ask before they say yes</h2><p class="lead">Anything else, ask in the preview request. A person replies within one business day.</p></div>
+    <div class="faq rv">
       <details><summary>Do you work with my kind of business?<span class="pm" aria-hidden="true"></span></summary><p class="a">If you serve local customers, yes: trades and renovators, restaurants and home kitchens, clinics, salons, studios, shops, tutors, agents and professional offices. The package is the same for everyone; the design and the video are built around your business.</p></details>
       <details><summary>What is in the free preview?<span class="pm" aria-hidden="true"></span></summary><p class="a">A real homepage built with your name, photos and services at a private link, plus a rough cut of your video. If you do not go ahead, nothing is owed and the preview comes down.</p></details>
       <details><summary>Why is this so much less than an agency?<span class="pm" aria-hidden="true"></span></summary><p class="a">Airen is a one person studio that runs on its own automation. The build, the video edit and the monthly updates are produced by AI tools and checked by a person, so there is no team to pay for.</p></details>
@@ -521,413 +800,361 @@ footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);fo
   </div>
 </section>
 
-<section class="wrap pad" id="request">
-  <div class="request-card rv">
-    <canvas id="mini" aria-hidden="true"></canvas>
-    <div>
-      <p class="eyebrow">Free preview</p>
-      <h2 class="h2 grad">See your site before you spend anything</h2>
-      <p class="lead">Tell us who you are and where your photos live. Your preview arrives within 2 business days.</p>
-      <form class="form" id="preview-form" novalidate>
-        <div class="row2">
-          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name" hidden>Enter your name.</span></div>
-          <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization" required><span class="err" id="e-biz" hidden>Enter your business name.</span></div>
+<section class="request" id="request" aria-labelledby="req-h">
+  <div class="wrap">
+    <div class="req-card rv">
+      <div class="awn"></div>
+      <div class="req-inner">
+        <div>
+          <p class="eyebrow">Free preview</p>
+          <h2 class="h2" id="req-h">See your site before you spend anything</h2>
+          <p class="lead">Tell us who you are and where your photos live. Your preview arrives within 2 business days.</p>
+          <form class="form" id="preview-form" novalidate>
+            <div class="row2">
+              <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name" hidden>Enter your name.</span></div>
+              <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization" required><span class="err" id="e-biz" hidden>Enter your business name.</span></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" id="e-email" hidden>Enter an email like name@business.ca.</span></div>
+              <div class="field"><label for="f-plan">Price</label><select id="f-plan" name="plan"><option>Founding price</option><option>Standard price</option><option>Not sure yet</option></select></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="f-link">Google listing, Instagram or site</label><input id="f-link" name="link" type="url" placeholder="https://"></div>
+              <div class="field"><label for="f-lang">Site language</label><select id="f-lang" name="language"><option>English</option><option>Chinese</option><option>English and Chinese</option><option>Another language (tell us in the link field)</option></select></div>
+            </div>
+            <div class="hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn btn-main btn-lg" type="submit" id="submit-btn">Request my free preview</button>
+            <div class="ok" id="form-ok" role="status" hidden></div>
+          </form>
         </div>
-        <div class="row2">
-          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" id="e-email" hidden>Enter an email like name@business.ca.</span></div>
-          <div class="field"><label for="f-plan">Price</label><select id="f-plan" name="plan"><option>Founding price</option><option>Standard price</option><option>Not sure yet</option></select></div>
+        <div class="assure">
+          <div><span class="ic" style="--c:#8CCB5E"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg></span><p><b>Preview before payment</b><span class="t">A real homepage and a rough video cut, before any money changes hands.</span></p></div>
+          <div><span class="ic" style="--c:#FFB547"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10a6 6 0 1 1 1.8 4.3M4 15v-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p><b>Full refund if we cannot deliver</b><span class="t">If the package cannot be delivered as described, the setup fee comes back in full.</span></p></div>
+          <div><span class="ic" style="--c:#F9B9C4"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="5" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.8"/></svg></span><p><b>Cancel in one click</b><span class="t">The care plan stops from your billing portal, any time. You keep the site and your files.</span></p></div>
+          <div><span class="ic" style="--c:#CFEFF0"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M4 17c1-3 3.5-4.5 6-4.5s5 1.5 6 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><p><b>A person reads every request</b><span class="t">Replies within one business day from Han or the Airen assistant.</span></p></div>
         </div>
-        <div class="row2">
-          <div class="field"><label for="f-link">Google listing, Instagram or site</label><input id="f-link" name="link" type="url" placeholder="https://"></div>
-          <div class="field"><label for="f-lang">Site language</label><select id="f-lang" name="language"><option>English</option><option>Chinese</option><option>English and Chinese</option><option>Another language (tell us in the link field)</option></select></div>
-        </div>
-        <div class="hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
-        <button class="btn btn-amber btn-lg" type="submit" id="submit-btn" style="justify-content:center">Request my free preview</button>
-        <div class="ok" id="form-ok" role="status" hidden></div>
-      </form>
-    </div>
-    <div class="assure">
-      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6Z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span><p><b>Preview before payment</b><span>A real homepage and a rough video cut, before any money changes hands.</span></p></div>
-      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10a6 6 0 1 1 1.8 4.3M4 15v-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p><b>Full refund if we cannot deliver</b><span>If the package cannot be delivered as described, the setup fee comes back in full.</span></p></div>
-      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="5" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/></svg></span><p><b>Cancel in one click</b><span>The care plan stops from your billing portal, any time. You keep the site and your files.</span></p></div>
-      <div><span class="ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 17c1-3 3.5-4.5 6-4.5s5 1.5 6 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><p><b>A person reads every request</b><span>Replies within one business day from Han or the Airen assistant.</span></p></div>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
+  <svg class="foot-street" viewBox="0 0 1600 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 64V40h120V20h160v24h120V8h200v36h100V24h180v20h140V0h220v44h120V28h240v36Z" fill="#22163A"/></svg>
   <div class="wrap">
     <div class="foot">
-      <span><b style="color:var(--text)">Airen</b> · Based in Toronto, building for businesses worldwide · <span class="mono">airen.sites@gmail.com</span></span>
-      <nav aria-label="Footer"><a href="terms.html">Terms and refunds</a><a href="privacy.html">Privacy</a><a href="edit.html">Request an edit</a><a href="https://billing.stripe.com/p/login/fZufZa18gfnh35ycJ75os00" data-stripe="portal">Manage your care plan</a><a href="#top">Back to top</a></nav>
+      <div>
+        <a class="brand" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FFB547"/><path d="M10 24h44v10a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0Z" fill="#F2547D"/><rect x="16" y="38" width="32" height="16" rx="3" fill="#22163A"/></svg>Airen</a>
+        <p>Based in Toronto, building for local businesses worldwide. <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></p>
+      </div>
+      <nav aria-label="Footer"><a href="work.html">All work</a><a href="terms.html">Terms and refunds</a><a href="privacy.html">Privacy</a><a href="edit.html">Request an edit</a><a href="https://billing.stripe.com/p/login/fZufZa18gfnh35ycJ75os00" data-stripe="portal">Manage your care plan</a><a href="#top">Back to top</a></nav>
     </div>
     <div class="legal">
       <div id="terms"><h3>Terms in brief</h3><p>Packages are delivered in five business days from a complete intake, with two revision rounds. Setup fees are non refundable once the build starts; if we cannot deliver as described, the fee is refunded in full. The care plan bills monthly from go live and cancels any time. It includes unlimited small edits to existing pages, handled one request at a time within 2 business days; new pages, new sections and redesigns are extra. On full payment you own your site content and design; Airen keeps its templates and tools. Liability is limited to fees paid in the prior 12 months. <a href="terms.html">Full terms and refund policy</a>.</p></div>
       <div id="privacy"><h3>Privacy</h3><p>We collect only what you send in the preview request and intake form, use it to build and run your site, and never sell or share it. Ask for a copy or deletion at airen.sites@gmail.com. <a href="privacy.html">Full privacy policy</a>.</p></div>
     </div>
+    <p class="credit">Showroom effects built with ThreeUI Community by Meng To, MIT licence.</p>
   </div>
 </footer>
+
 <script src="js/config.js"></script>
 <script src="js/forms.js"></script>
-
 <script>
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) document.documentElement.classList.add('reduced');
-  var clamp = function(v,a,b){ return v<a?a:v>b?b:v; };
-  var smooth = function(t){ t=clamp(t,0,1); return t*t*(3-2*t); };
-  var vh = function(){ return window.innerHeight; };
+'use strict';
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $ = function(s,r){ return (r||document).querySelector(s); };
+var $$ = function(s,r){ return [].slice.call((r||document).querySelectorAll(s)); };
+var NS='http://www.w3.org/2000/svg';
+function el(tag,attrs,parent){ var e=document.createElementNS(NS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); if(parent) parent.appendChild(e); return e; }
 
-  /* ---------- the field: particles that morph with scroll ---------- */
-  var cv = document.getElementById('field'), ctx = cv.getContext('2d');
-  var story = document.querySelector('.story');
-  var W=0, H=0, DPR=1, N=0, P=[], shapes=[], mouse={x:-9999,y:-9999,on:false}, beacon={x:0,y:0};
-  var AMBER=[255,181,71], CREAM=[246,241,231];
-  var hv=document.getElementById('hero-video'), hasVideo=!!hv;
-  if(hv && reduce){ hv.removeAttribute('autoplay'); hv.pause(); }
-  var fv=document.getElementById('fly-video'), heroPlaying=true;
-  // phones and touch devices: same camera flights, from small portrait encodes that track the lantern
-  var phone = window.matchMedia('(max-width: 760px), (pointer: coarse) and (max-width: 1100px)').matches;
-  var lite = false;
-  if(phone){ [['fly-video','flyin'],['v-sky','beam-sky'],['v-ocean','beam-ocean'],['v-forest','beam-forest'],['h-sky','hold-sky'],['h-ocean','hold-ocean'],['h-forest','hold-forest']].forEach(function(x){ var el=document.getElementById(x[0]); if(el){ el.src='media/'+x[1]+'-m.mp4'; } }); }
-  var LF={}; [].forEach.call(document.querySelectorAll('.lite-frames img'),function(im){ LF[im.dataset.k]=im; });
-  var LITE_PAIR={fly:['start','tower'], sky:['tower','sky'], ocean:['tower','ocean'], forest:['tower','forest']};
-  var holdPlaying=null, canvasClear=false;
-  var VID={fly:fv, sky:document.getElementById('v-sky'), ocean:document.getElementById('v-ocean'), forest:document.getElementById('v-forest')};
-  var vT={fly:-1,sky:-1,ocean:-1,forest:-1}, loaded={fly:true};
-  // the camera: fly to the lantern, then follow the beam to the sky (page 2), back to the tower, to the ocean (page 3), back, to the forest (page 4)
-  var SEG=[
-    {v:'fly',a:0.00,b:0.18,dir:1},
-    {v:'sky',a:0.18,b:0.28,dir:1},
-    {v:'sky',a:0.28,b:0.42,hold:1},
-    {v:'sky',a:0.42,b:0.47,dir:-1},
-    {v:'ocean',a:0.47,b:0.57,dir:1},
-    {v:'ocean',a:0.57,b:0.70,hold:2},
-    {v:'ocean',a:0.70,b:0.75,dir:-1},
-    {v:'forest',a:0.75,b:0.85,dir:1},
-    {v:'forest',a:0.85,b:1.01,hold:3}
+/* ---------- trades: colours and example names ---------- */
+var TRADES={
+  bakery:{shop:'#F2547D',trim:'#22163A',s1:'#FFF8E8',s2:'#F2547D',pop:'#FFB547',names:['Maple Street Bakery','Ninefold Bakehouse','Little Crumb','Sunrise Buns']},
+  cafe:{shop:'#1BA9B5',trim:'#22163A',s1:'#FFF8E8',s2:'#FFB547',pop:'#F2547D',names:['Corner Cup Cafe','Morning Pour','Two Spoons','The Steep']},
+  reno:{shop:'#FFB547',trim:'#22163A',s1:'#FFF8E8',s2:'#127A55',pop:'#1BA9B5',names:['Northline Renovation','Square and Level','Brick by Brick','True Plumb Builders']},
+  salon:{shop:'#F9B9C4',trim:'#22163A',s1:'#FFF8E8',s2:'#F2547D',pop:'#127A55',names:['Studio Bloom','Glow Room','Fringe and Co','Silk Hair Studio']},
+  clinic:{shop:'#CFEFF0',trim:'#127A55',s1:'#FFF8E8',s2:'#1BA9B5',pop:'#8CCB5E',names:['Bright Smile Dental','Harbour Physio','Kind Family Clinic','Clear Eye Optometry']},
+  garden:{shop:'#8CCB5E',trim:'#127A55',s1:'#FFF8E8',s2:'#127A55',pop:'#FFB547',names:['Larkhollow Gardens','Green Thumb Yards','Fernway Landscaping','Stone and Stem']},
+  auto:{shop:'#4E4366',trim:'#22163A',s1:'#FFF8E8',s2:'#FFB547',pop:'#1BA9B5',names:['Terminal Auto Spa','Quick Lane Garage','Shine Bay Detailing','Torque Street Auto']}
+};
+var trade='bakery', nameIdx=0, typed='';
+var root=document.documentElement;
+var signText=$('#sign-text'), input=$('#biz-name'), fbiz=$('#f-biz');
+
+/* awning stripes */
+var awning=$('#awning'), daysG=$('#days'), stripes=[];
+for(var i=0;i<5;i++){
+  var x=900+i*112;
+  var p=el('path',{d:'M'+x+' 582h112v66a56 22 0 0 1 -112 0Z','class':'stripe-fill'},awning);
+  stripes.push(p);
+  var t=el('text',{x:x+56,y:626},daysG); t.textContent='Day '+(i+1);
+}
+function paintStripes(filled){
+  var T=TRADES[trade];
+  stripes.forEach(function(s,i){ s.setAttribute('fill', i<filled ? '#FFB547' : (i%2? T.s1 : T.s2)); });
+}
+function fitSign(){
+  signText.setAttribute('font-size','52');
+  try{ var w=signText.getComputedTextLength(); if(w>460) signText.setAttribute('font-size',String(Math.floor(52*460/w))); }catch(e){}
+}
+function setName(n){
+  signText.textContent=n; fitSign();
+  if(fbiz && !fbiz.dataset.touched) fbiz.value = typed ? typed : '';
+  var yh=$('#yours-h'); if(yh) yh.textContent = typed ? typed+' goes here next' : 'Your shop goes here next';
+}
+function setTrade(k){
+  trade=k; var T=TRADES[k];
+  root.style.setProperty('--shop',T.shop); root.style.setProperty('--shop-trim',T.trim); root.style.setProperty('--pop',T.pop);
+  $$('.trades button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.trade===k ? 'true':'false'); });
+  paintStripes(curFill);
+  nameIdx=0; input.placeholder=T.names[0];
+  if(!typed) setName(T.names[0]);
+}
+input.addEventListener('input',function(){ typed=input.value.trim(); setName(typed || TRADES[trade].names[nameIdx]); });
+$('#dice').addEventListener('click',function(){ var T=TRADES[trade]; nameIdx=(nameIdx+1)%T.names.length; input.value=''; typed=''; input.placeholder=T.names[nameIdx]; setName(T.names[nameIdx]); });
+$$('.trades button').forEach(function(b){ b.addEventListener('click',function(){ setTrade(b.dataset.trade); }); });
+if(fbiz) fbiz.addEventListener('input',function(){ fbiz.dataset.touched='1'; });
+var curFill=0;
+document.fonts && document.fonts.ready.then(fitSign);
+setTrade('bakery');
+
+/* ---------- neighbours: real builds on the street ---------- */
+var N=$('#neighbours');
+var NB=[
+  {x:-3260,w:560,c:'#F9B9C4',t:'#22163A',a:'#127A55',name:'Evas Cafes'},
+  {x:-2620,w:560,c:'#FFB547',t:'#22163A',a:'#F2547D',name:'Lahab Shawarma'},
+  {x:-1980,w:560,c:'#FFB547',t:'#22163A',a:'#F2547D',name:'Ninefold Bakehouse'},
+  {x:-1340,w:560,c:'#127A55',t:'#22163A',a:'#FFF8E8',name:'Larkhollow'},
+  {x:-700,w:560,c:'#F9B9C4',t:'#22163A',a:'#1BA9B5',name:'ArchLine'},
+  {x:1620,w:560,c:'#1BA9B5',t:'#22163A',a:'#FFB547',name:'Brindlewick Roofing'},
+  {x:2260,w:560,c:'#4E4366',t:'#22163A',a:'#FFB547',name:"Daniel's Kitchen"},
+  {x:2900,w:560,c:'#8CCB5E',t:'#127A55',a:'#F2547D',name:'Velune Villas'},
+  {x:3540,w:560,c:'#CFEFF0',t:'#127A55',a:'#FFB547',name:'Your shop next'}
+];
+NB.forEach(function(b,k){
+  var g=el('g',{},N), top=300+(k%3)*40;
+  el('rect',{x:b.x,y:top,width:b.w,height:880-top,fill:b.c,stroke:'#22163A','stroke-width':6},g);
+  el('rect',{x:b.x-12,y:top-24,width:b.w+24,height:30,rx:8,fill:b.t},g);
+  el('rect',{x:b.x+40,y:top+50,width:b.w-80,height:84,rx:14,fill:'#FFF8E8',stroke:'#22163A','stroke-width':6},g);
+  var tx=el('text',{x:b.x+b.w/2,y:top+106,'text-anchor':'middle','font-family':'Poppins,sans-serif','font-weight':'700','font-size':'40',fill:'#22163A'},g); tx.textContent=b.name;
+  for(var s=0;s<5;s++){ el('path',{d:'M'+(b.x+20+s*104)+' '+(top+160)+'h104v56a52 20 0 0 1 -104 0Z',fill:s%2?'#FFF8E8':b.a,stroke:'#22163A','stroke-width':5},g); }
+  el('rect',{x:b.x+40,y:690,width:260,height:180,rx:10,fill:'#CFEFF0',stroke:'#22163A','stroke-width':6},g);
+  el('rect',{x:b.x+340,y:670,width:160,height:210,rx:8,fill:'#22163A'},g);
+  el('circle',{cx:b.x+470,cy:780,r:8,fill:'#FFB547'},g);
+  el('path',{d:'M'+(b.x+60)+' 850l120-120',stroke:'#fff','stroke-width':14,opacity:.5},g);
+  var v=el('g',{'class':'sway'+(k%2?' b':'')},g);
+  el('path',{d:'M'+(b.x+20)+' '+top+'c-8 40 8 70 0 120',stroke:'#127A55','stroke-width':5,fill:'none'},v);
+  el('ellipse',{cx:b.x+26,cy:top+50,rx:13,ry:7,fill:'#8CCB5E'},v);
+  el('ellipse',{cx:b.x+14,cy:top+90,rx:13,ry:7,fill:'#127A55'},v);
+});
+
+/* ---------- people walking ---------- */
+var walkers=[], P=$('#people'), PC=['#F2547D','#1BA9B5','#127A55','#FFB547','#4E4366','#F9B9C4','#8CCB5E'];
+function person(x,y,c,dur,from,to,delay){
+  var w=el('g',{},P);
+  var b=el('g',{},w);
+  walkers.push({w:w,b:b,from:from,to:to,dur:dur*1000,off:-delay*1000});
+  el('rect',{x:x-11,y:y-34,width:22,height:34,rx:10,fill:c,stroke:'#22163A','stroke-width':4},b);
+  el('circle',{cx:x,cy:y-46,r:11,fill:'#FFE0BD',stroke:'#22163A','stroke-width':4},b);
+  return w;
+}
+for(var k=0;k<14;k++){
+  var dir=k%2? 1:-1, y=912+(k%3)*14, c=PC[k%PC.length];
+  person(0,y,c, 26+(k%5)*5, dir>0?-2600:3600, dir>0?3600:-2600, -k*3.7);
+}
+
+/* ---------- screenshots for beat 1 ---------- */
+var SHOTS=[
+  {src:'media/archline.jpg',url:'archlinehaojiang.com',label:'ArchLine'},
+  {src:'media/kitchen.jpg',url:'daniels-kitchen',label:"Daniel's Kitchen"},
+  {src:'work/bakery/media/poster.jpg',url:'ninefold concept',label:'Ninefold'},
+  {src:'work/roofer/media/poster.jpg',url:'brindlewick concept',label:'Brindlewick'},
+  {src:'work/landscaper/media/plate.jpg',url:'larkhollow concept',label:'Larkhollow'},
+  {src:'work/velune/assets/poster.jpg',url:'velune concept',label:'Velune'},
+  {src:'work/lahab-shawarma/assets/poster.jpg',url:'lahab concept',label:'Lahab'}
+];
+var shotsBox=$('#shots'), tabs=$('#shot-tabs'), shotIdx=0, shotTimer=null, shotsLoaded=false;
+SHOTS.forEach(function(s,i){
+  var im=document.createElement('img'); im.alt=s.label+' homepage'; im.decoding='async'; im.dataset.src=s.src; if(i===0) im.className='on'; shotsBox.appendChild(im);
+  var b=document.createElement('button'); b.type='button'; b.textContent=s.label; b.setAttribute('aria-pressed',i===0?'true':'false');
+  b.addEventListener('click',function(){ showShot(i); restartShots(); }); tabs.appendChild(b);
+});
+function loadShots(){ if(shotsLoaded) return; shotsLoaded=true; $$('img',shotsBox).forEach(function(im){ im.src=im.dataset.src; }); }
+function showShot(i){
+  shotIdx=i; $$('img',shotsBox).forEach(function(im,k){ im.classList.toggle('on',k===i); });
+  $$('button',tabs).forEach(function(b,k){ b.setAttribute('aria-pressed',k===i?'true':'false'); });
+  $('#shot-url').textContent=SHOTS[i].url;
+}
+function restartShots(){ clearInterval(shotTimer); shotTimer=setInterval(function(){ showShot((shotIdx+1)%SHOTS.length); },2600); }
+function stopShots(){ clearInterval(shotTimer); shotTimer=null; }
+
+/* ---------- promo video ---------- */
+var promo=$('#promo'), sound=$('#sound');
+function playPromo(){ if(!promo.src){ promo.src=promo.dataset.src; } var p=promo.play(); if(p&&p.catch) p.catch(function(){}); }
+sound.addEventListener('click',function(){ promo.muted=!promo.muted; if(!promo.muted) playPromo(); sound.setAttribute('aria-pressed',String(!promo.muted)); sound.setAttribute('aria-label',promo.muted?'Turn sound on':'Turn sound off'); $('#snd-x').style.opacity=promo.muted?1:0; });
+
+/* ---------- camera ---------- */
+var stage=$('#stage'), story=$('#top'), svg=$('#world'), cam=$('#cam');
+var beats=$$('.beat'), ovB=$('#ov-browser'), ovP=$('#ov-phone'), dots=$('#dots'), hint=$('#scrollhint');
+var NB_BEATS=5;
+for(var d=0; d<NB_BEATS; d++){ (function(d){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Go to step '+(d+1)); b.addEventListener('click',function(){ goBeat(d); }); dots.appendChild(b); })(d); }
+var isPhone=function(){ return matchMedia('(max-width: 860px)').matches; };
+/* each shot: focus point in world, visible world size, where the focus sits on screen */
+function shots(){
+  if(isPhone()) return [
+    {fx:1180,fy:560,w:740,h:760,sx:.5,sy:.36},
+    {fx:1070,fy:785,w:420,h:300,sx:.5,sy:.4},
+    {fx:1356,fy:780,w:360,h:300,sx:.5,sy:.4},
+    {fx:1180,fy:610,w:620,h:520,sx:.5,sy:.42},
+    {fx:1180,fy:620,w:1500,h:1400,sx:.5,sy:.32}
   ];
-  function segAt(p){ for(var i=0;i<SEG.length;i++){ if(p<SEG[i].b) return SEG[i]; } return SEG[SEG.length-1]; }
-  var HOLD={sky:document.getElementById('h-sky'), ocean:document.getElementById('h-ocean'), forest:document.getElementById('h-forest')};
-  function ensure(name){ if(!loaded[name] && VID[name]){ VID[name].preload='auto'; VID[name].load(); if(HOLD[name]){ HOLD[name].preload='auto'; HOLD[name].load(); } loaded[name]=true; } }
-
-  function rand(a,b){ return a+Math.random()*(b-a); }
-  function sampleSegments(segs, n){
-    var total=0, i; for(i=0;i<segs.length;i++){ var s=segs[i]; s.len=Math.hypot(s[2]-s[0],s[3]-s[1]); total+=s.len; }
-    var out=[]; for(i=0;i<n;i++){ var r=Math.random()*total, k=0; while(r>segs[k].len && k<segs.length-1){ r-=segs[k].len; k++; } var s2=segs[k], t=s2.len?r/s2.len:0; out.push([s2[0]+(s2[2]-s2[0])*t+rand(-1,1), s2[1]+(s2[3]-s2[1])*t+rand(-1,1)]); }
-    return out;
-  }
-  function rectSegs(x,y,w,h,r){
-    var s=[], steps=6, a, k;
-    s.push([x+r,y,x+w-r,y],[x+w,y+r,x+w,y+h-r],[x+w-r,y+h,x+r,y+h],[x,y+h-r,x,y+r]);
-    var corners=[[x+w-r,y+r,-Math.PI/2],[x+w-r,y+h-r,0],[x+r,y+h-r,Math.PI/2],[x+r,y+r,Math.PI]];
-    corners.forEach(function(c){ for(k=0;k<steps;k++){ var a0=c[2]+k*(Math.PI/2)/steps, a1=c[2]+(k+1)*(Math.PI/2)/steps; s.push([c[0]+r*Math.cos(a0),c[1]+r*Math.sin(a0),c[0]+r*Math.cos(a1),c[1]+r*Math.sin(a1)]); } });
-    return s;
-  }
-  function browserShape(n,cx,cy,sc){
-    var w=560*sc, h=380*sc, x=cx-w/2, y=cy-h/2, s=rectSegs(x,y,w,h,18*sc);
-    s.push([x,y+44*sc,x+w,y+44*sc]);
-    for(var d=0;d<3;d++){ var dx=x+26*sc+d*20*sc, dy=y+22*sc; s=s.concat(rectSegs(dx-4*sc,dy-4*sc,8*sc,8*sc,4*sc)); }
-    s=s.concat(rectSegs(x+32*sc,y+80*sc,w*0.46,150*sc,10*sc));
-    s.push([x+w*0.56,y+96*sc,x+w-32*sc,y+96*sc],[x+w*0.56,y+124*sc,x+w-60*sc,y+124*sc],[x+w*0.56,y+152*sc,x+w-96*sc,y+152*sc]);
-    s=s.concat(rectSegs(x+w*0.56,y+188*sc,120*sc,36*sc,12*sc));
-    for(var c=0;c<3;c++){ s=s.concat(rectSegs(x+32*sc+c*(w-64*sc)/3+ (c?8*sc:0), y+260*sc, (w-64*sc)/3-8*sc, 88*sc, 10*sc)); }
-    return sampleSegments(s,n);
-  }
-  function phoneShape(n,cx,cy,sc){
-    var w=230*sc, h=460*sc, x=cx-w/2, y=cy-h/2, s=rectSegs(x,y,w,h,36*sc);
-    s=s.concat(rectSegs(x+12*sc,y+12*sc,w-24*sc,h-24*sc,26*sc));
-    s.push([cx-24*sc,y+30*sc,cx+24*sc,y+30*sc]);
-    var tx=cx-22*sc, ty=cy-30*sc; s.push([tx,ty,tx,ty+60*sc],[tx,ty+60*sc,tx+52*sc,ty+30*sc],[tx+52*sc,ty+30*sc,tx,ty]);
-    s.push([x+36*sc,y+h-80*sc,x+w-36*sc,y+h-80*sc],[x+36*sc,y+h-56*sc,x+w-90*sc,y+h-56*sc]);
-    return sampleSegments(s,n);
-  }
-  function textShape(n,cx,cy,str,size){
-    var oc=document.createElement('canvas'), ox=oc.getContext('2d');
-    ox.font='700 '+size+'px Geist, system-ui, sans-serif';
-    var tw=Math.ceil(ox.measureText(str).width)+20, th=Math.ceil(size*1.2);
-    oc.width=tw; oc.height=th; ox.font='700 '+size+'px Geist, system-ui, sans-serif'; ox.fillStyle='#fff'; ox.textBaseline='middle'; ox.fillText(str,10,th/2);
-    var d=ox.getImageData(0,0,tw,th).data, pts=[], step=Math.max(2,Math.round(size/48));
-    for(var yy=0;yy<th;yy+=step) for(var xx=0;xx<tw;xx+=step) if(d[(yy*tw+xx)*4+3]>140) pts.push([cx-tw/2+xx,cy-th/2+yy]);
-    var out=[]; if(!pts.length){ for(var i=0;i<n;i++) out.push([cx,cy]); return out; }
-    for(var j=0;j<n;j++){ var p=pts[(Math.random()*pts.length)|0]; out.push([p[0]+rand(-1,1),p[1]+rand(-1,1)]); }
-    return out;
-  }
-  function crowdHomes(n){
-    var out=[];
-    for(var i=0;i<n;i++){
-      var r=Math.random();
-      if(r<0.72){ // the crowd on the ground, denser near the horizon
-        var t=Math.pow(Math.random(),1.6), y=H*0.6+t*H*0.42, spread=0.25+t*0.9;
-        out.push([beacon.x+(Math.random()-0.5)*W*spread*1.6, y]);
-      } else { // stars
-        out.push([Math.random()*W, Math.random()*H*0.55]);
-      }
-    }
-    return out;
-  }
-  function layout(){
-    DPR=Math.min(window.devicePixelRatio||1,1.5);
-    W=cv.clientWidth; H=cv.clientHeight;
-    cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
-    var mobile=W<760;
-    N = mobile ? 800 : 1600;
-    var cx = mobile ? W*0.5 : W*0.7, cy = mobile ? H*0.68 : H*0.52;
-    var sc = mobile ? Math.min(W/640,H/1500) : Math.min(W/1500,H/900)*1.25;
-    beacon.x = mobile ? W*0.72 : W*0.74; beacon.y = mobile ? H*0.58 : H*0.5;
-    shapes=[crowdHomes(N), browserShape(N,cx,cy,sc), phoneShape(N,cx,cy,sc*1.1), textShape(N,cx,cy,'5 DAYS', mobile?Math.min(W*0.26,120):Math.min(W*0.13,190))];
-    if(P.length!==N){
-      P=[]; for(var i=0;i<N;i++){ var h=shapes[0][i]; P.push({x:h[0],y:h[1],vx:0,vy:0,ph:Math.random()*6.283,sp:rand(.3,1),s:Math.random()<0.12?2.2:1.4,c:Math.random()<0.2?1:0,star:h[1]<H*0.55}); }
-    } else { for(var k=0;k<N;k++) P[k].star = shapes[0][k][1]<H*0.55; }
-  }
-
-  function storyProgress(){
-    var r=story.getBoundingClientRect(), total=r.height-vh();
-    return total>0 ? clamp(-r.top/total,0,1) : 0;
-  }
-  var caps=[].slice.call(document.querySelectorAll('.cap'));
-  var pgs=[0,1,2,3].map(function(i){ return document.getElementById('pg'+i); });
-  var stops=[0,0.18,0.42,0.70];
-  // p 0 to 0.27: fly from the wide hero up to the lantern; particles form the browser after landing
-
-  function stageWeights(p){
-    // returns [indexA,indexB,t]
-    for(var i=0;i<stops.length-1;i++){ if(p<stops[i+1]){ var span=stops[i+1]-stops[i], local=(p-stops[i])/span; var t = (i===0 && fv) ? smooth((p-0.27)/0.09) : smooth((local-0.35)/0.5); return [i,i+1,t]; } }
-    return [3,3,0];
-  }
-
-  var last=0, time=0, running=true;
-  function frame(now){
-    if(!running){ requestAnimationFrame(frame); return; }
-    var dt=Math.min((now-last)/16.67,3); last=now; time+=dt*0.016;
-    var p=reduce?0:storyProgress();
-    var sg=segAt(p), hold=sg.hold||0, isLast=(hold===3);
-    var page = p<0.42?1 : p<0.70?2 : 3;
-    var A=shapes[0], B=shapes[page], t = hold ? 1 : 0;
-    var vis = hold ? Math.min(smooth((p-sg.a)/0.05), isLast?1:smooth((sg.b-p)/0.03)) : 0;
-    var crowdness = 0;
-
-    if(hasVideo && vis>=0.01){ ctx.globalCompositeOperation='destination-out'; ctx.fillStyle='rgba(0,0,0,0.35)'; ctx.fillRect(0,0,W,H); }
-    if(hasVideo && fv && !reduce){
-      var enter=smooth(p/0.03);
-      hv.style.opacity=String(1-enter);
-      if(enter>0.99 && heroPlaying){ hv.pause(); heroPlaying=false; } else if(enter<0.99 && !heroPlaying){ hv.play().catch(function(){}); heroPlaying=true; }
-      var dim = hold ? 1-0.55*Math.min(smooth((p-sg.a)/0.03), isLast?1:smooth((sg.b-p)/0.03)) : 1;
-      var f=clamp((p-sg.a)/(sg.b-sg.a),0,1);
-      if(lite){
-        // phones: crossfade still frames with a slow push, no video seeking
-        var pair=LITE_PAIR[sg.v], from=pair[0], to=pair[1], mix;
-        if(hold) mix=1; else mix = sg.dir>0 ? smooth(f) : 1-smooth(f);
-        for(var k in LF){
-          var o=0, sc=1;
-          if(k===to){ o=mix; sc=1.12-0.12*mix + (hold?0.03*Math.sin(time*0.5):0); }
-          else if(k===from){ o=1-mix; sc=1+0.15*mix; }
-          if(sg.v==='fly' && k==='start') o*=enter;
-          if(sg.v==='fly' && k==='tower') o*=enter;
-          LF[k].style.opacity=String(o*dim); LF[k].style.transform='scale('+sc.toFixed(4)+')';
-        }
-      } else {
-        if(p>0.02) ensure('sky'); if(p>0.3) ensure('ocean'); if(p>0.58) ensure('forest');
-        for(var nm in VID){
-          var el=VID[nm]; if(!el) continue;
-          var on = nm===sg.v;
-          var holdReady = hold && HOLD[nm] && HOLD[nm].readyState>=2;
-          var vis2 = (on && !holdReady) ? '' : 'none';
-          if(el.style.display!==vis2) el.style.display=vis2;
-          if(!on){ if(!el.paused) el.pause(); if(HOLD[nm] && HOLD[nm].style.display!=='none'){ HOLD[nm].pause(); HOLD[nm].style.display='none'; } continue; }
-          el.style.opacity = String((nm==='fly'? enter : 1)*dim);
-          if(el.readyState<1 || !el.duration) continue;
-          var end=el.duration-0.05;
-          var hv2=HOLD[nm];
-          if(hold && hv2 && hv2.readyState>=2){
-            // a page holds: the scrub video parks on its last frame and a seamless back and forth loop takes over (same frame, no jump)
-            if(Math.abs(end-vT[nm])>1/48 && !el.seeking){ el.currentTime=end; vT[nm]=end; }
-            if(hv2.style.display!==''){ hv2.currentTime=0; hv2.style.display=''; hv2.play().catch(function(){}); }
-            hv2.style.opacity=String(dim);
-            continue;
-          }
-          if(hv2 && hv2.style.display!=='none'){ hv2.pause(); hv2.style.display='none'; }
-          if(hold){
-            if(!el.seeking && Math.abs(end-vT[nm])>1/48){ el.currentTime=end; vT[nm]=end; }
-          } else {
-            if(holdPlaying===nm){ el.pause(); holdPlaying=null; }
-            var tg=(sg.dir>0? f : 1-f)*end;
-            if(!el.seeking && Math.abs(tg-vT[nm])>1/30){ el.currentTime=tg; vT[nm]=tg; }
-          }
-        }
-      }
-    }
-
-    // beacon and sweeping beam, fades as the crowd becomes the product
-    if(!hasVideo && crowdness>0.01){
-      var ang=Math.sin(time*0.6)*0.55-Math.PI*0.5+0.25, len=Math.max(W,H)*1.1, spread=0.16;
-      ctx.globalCompositeOperation='lighter';
-      var g=ctx.createRadialGradient(beacon.x,beacon.y,0,beacon.x,beacon.y,len);
-      g.addColorStop(0,'rgba(255,190,90,'+(0.22*crowdness)+')'); g.addColorStop(1,'rgba(255,190,90,0)');
-      ctx.fillStyle=g; ctx.beginPath(); ctx.moveTo(beacon.x,beacon.y);
-      ctx.lineTo(beacon.x+Math.cos(ang-spread)*len,beacon.y+Math.sin(ang-spread)*len);
-      ctx.lineTo(beacon.x+Math.cos(ang+spread)*len,beacon.y+Math.sin(ang+spread)*len); ctx.closePath(); ctx.fill();
-      var g2=ctx.createRadialGradient(beacon.x,beacon.y,0,beacon.x,beacon.y,60);
-      g2.addColorStop(0,'rgba(255,220,150,'+(0.9*crowdness)+')'); g2.addColorStop(1,'rgba(255,181,71,0)');
-      ctx.fillStyle=g2; ctx.beginPath(); ctx.arc(beacon.x,beacon.y,60,0,6.283); ctx.fill();
-      // tower
-      ctx.globalCompositeOperation='source-over';
-      ctx.fillStyle='rgba(19,18,9,'+crowdness+')';
-      ctx.beginPath(); ctx.moveTo(beacon.x-7,beacon.y+10); ctx.lineTo(beacon.x+7,beacon.y+10); ctx.lineTo(beacon.x+16,H*0.66); ctx.lineTo(beacon.x-16,H*0.66); ctx.closePath(); ctx.fill();
-      ctx.strokeStyle='rgba(255,181,71,'+(0.35*crowdness)+')'; ctx.lineWidth=1; ctx.stroke();
-    } else { beamSet=false; }
-
-    ctx.globalCompositeOperation='lighter';
-    var k=0.045, damp=0.84, mr=110;
-    var skip = hasVideo && vis<0.01;
-    if(skip){ if(!canvasClear){ ctx.globalCompositeOperation='source-over'; ctx.clearRect(0,0,W,H); canvasClear=true; } }
-    else canvasClear=false;
-    for(var i=0;i<(skip?0:N);i++){
-      var q=P[i], a=A[i], b=B[i];
-      var tx=t? b[0] : a[0], ty=t? b[1] : a[1];
-      if(crowdness>0){
-        // the crowd breathes and leans toward the beacon; stars twinkle in place
-        var wob=Math.sin(time*q.sp+q.ph);
-        if(!q.star){ tx+= (beacon.x-tx)*0.02*crowdness + wob*3; ty+= Math.cos(time*q.sp*1.3+q.ph)*1.5; }
-      } else { tx+=Math.sin(time*2+q.ph)*0.6; ty+=Math.cos(time*2+q.ph)*0.6; }
-      q.vx+=(tx-q.x)*k; q.vy+=(ty-q.y)*k;
-      if(mouse.on){ var dx=q.x-mouse.x, dy=q.y-mouse.y, d2=dx*dx+dy*dy; if(d2<mr*mr){ var d=Math.sqrt(d2)||1, f=(1-d/mr)*2.6; q.vx+=dx/d*f; q.vy+=dy/d*f; } }
-      q.vx*=damp; q.vy*=damp; q.x+=q.vx*dt; q.y+=q.vy*dt;
-      var tw = q.star&&crowdness>0 ? 0.45+0.55*Math.abs(Math.sin(time*q.sp*2+q.ph)) : 1;
-      var col = q.c ? CREAM : AMBER, al = (q.c?0.55:0.8)*tw*(hasVideo ? vis : 1);
-      ctx.fillStyle='rgba('+col[0]+','+col[1]+','+col[2]+','+al+')';
-      ctx.fillRect(q.x,q.y,q.s,q.s);
-    }
-
-    // captions follow progress
-    caps.forEach(function(c,i){
-      var o;
-      if(reduce) o = i===0?1:0;
-      else if(i===0) o = 1-smooth(p/0.08);
-      else o = (hold===i) ? Math.min(smooth((p-sg.a-0.02)/0.04), isLast?1:smooth((sg.b-p)/0.03)) : 0;
-      c.style.opacity=o; c.style.transform='translateY('+((1-o)*24)+'px)';
-      c.classList.toggle('live',o>0.6); c.setAttribute('aria-hidden', o<0.05?'true':'false');
-      c.style.visibility = o<0.01 ? 'hidden' : 'visible';
-    });
-    pgs.forEach(function(el,i){ var a=stops[i], b=i<3?stops[i+1]:1; el.style.transform='scaleX('+clamp((p-a)/(b-a),0,1)+')'; });
-
-    requestAnimationFrame(frame);
-  }
-  var beamSet=false;
-  function initField(){ layout(); if(reduce){ /* settle once */ for(var s=0;s<1;s++){} } requestAnimationFrame(function(n){ last=n; frame(n); }); }
-  var rz; window.addEventListener('resize',function(){ clearTimeout(rz); rz=setTimeout(function(){ layout(); sizeWork(); },150); });
-  cv.parentElement.addEventListener('pointermove',function(e){ var r=cv.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top; mouse.on=true; });
-  cv.parentElement.addEventListener('pointerleave',function(){ mouse.on=false; });
-  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ running=es[0].isIntersecting; },{}).observe(story); }
-  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ layout(); }); }
-  initField();
-
-  /* ---------- horizontal work gallery ---------- */
-  var work=document.getElementById('work'), track=document.getElementById('track'), wc=document.getElementById('wc');
-  function sizeWork(){ if(reduce) return; var over=Math.max(0,track.scrollWidth-window.innerWidth); work.style.height=(over+vh()*1.2)+'px'; work.dataset.over=over; }
-  sizeWork(); window.addEventListener('load',sizeWork);
-
-  /* ---------- tagline words ---------- */
-  var tl=document.getElementById('tagline-words'), spans=[];
-  if(tl){ var words=tl.textContent.trim().split(/\s+/); tl.innerHTML=words.map(function(w){ var hot=/^(good\.|ten|seconds,|phone,)$/.test(w); return '<span class="w'+(hot?' hotw':'')+'">'+w+'</span>'; }).join(' '); spans=[].slice.call(tl.querySelectorAll('.w')); if(reduce) spans.forEach(function(s){ s.classList.add('on'); if(s.classList.contains('hotw')) s.classList.add('hot'); }); }
-
-  /* ---------- build log ---------- */
-  var log=document.getElementById('log'), fill=document.getElementById('log-fill'), rows=[].slice.call(log.querySelectorAll('.log-row'));
-
-  /* ---------- one scroll driven loop for everything below the story ---------- */
-  var nav=document.getElementById('nav'), lastY=window.scrollY;
-  function tick(){
-    var y=window.scrollY;
-    // hide nav on fast downward scroll, show on up
-    if(!document.body.classList.contains('menu-open')){ if(y>lastY+6 && y>200) nav.classList.add('hide'); else if(y<lastY-6) nav.classList.remove('hide'); }
-    lastY=y;
-    if(!reduce){
-      var r=work.getBoundingClientRect(), over=+work.dataset.over||0, total=r.height-vh();
-      var wp = total>0 ? clamp(-r.top/total,0,1) : 0;
-      track.style.transform='translate3d('+(-wp*over)+'px,0,0)';
-      wc.textContent='0'+Math.min(4,1+Math.floor(wp*3.999));
-      var line=vh()*0.65;
-      spans.forEach(function(s){ var on=s.getBoundingClientRect().top<line; s.classList.toggle('on',on); if(s.classList.contains('hotw')) s.classList.toggle('hot',on); });
-      var lr=log.getBoundingClientRect(), lp=clamp((vh()*0.6-lr.top)/lr.height,0,1);
-      fill.style.transform='scaleY('+lp+')';
-      rows.forEach(function(row){ row.classList.toggle('on', row.getBoundingClientRect().top < vh()*0.6); });
-    }
-    requestAnimationFrame(tick);
-  }
-  if(reduce) rows.forEach(function(r){ r.classList.add('on'); });
-  requestAnimationFrame(tick);
-
-  /* ---------- reveals ---------- */
-  if('IntersectionObserver' in window && !reduce){
-    var obs=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove('pre'); obs.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px'});
-    document.querySelectorAll('.rv').forEach(function(el){ if(el.getBoundingClientRect().top>vh()) el.classList.add('pre'); obs.observe(el); });
-  }
-
-  /* ---------- spotlight cards and tilt ---------- */
-  document.querySelectorAll('.get').forEach(function(el){ el.addEventListener('pointermove',function(e){ var r=el.getBoundingClientRect(); el.style.setProperty('--mx',(e.clientX-r.left)+'px'); el.style.setProperty('--my',(e.clientY-r.top)+'px'); }); });
-  if(!reduce && window.matchMedia('(hover: hover)').matches){
-    document.querySelectorAll('.tilt').forEach(function(el){
-      el.addEventListener('pointermove',function(e){ var r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-0.5, y=(e.clientY-r.top)/r.height-0.5; el.style.transform='rotateY('+(x*3)+'deg) rotateX('+(-y*3)+'deg) translateY(-4px)'; });
-      el.addEventListener('pointerleave',function(){ el.style.transform=''; });
-    });
-  }
-
-  /* ---------- mini field behind the form ---------- */
-  (function(){
-    var c=document.getElementById('mini'), x=c.getContext('2d'), pts=[], w, h, on=false;
-    function sz(){ var d=Math.min(window.devicePixelRatio||1,2); w=c.clientWidth; h=c.clientHeight; c.width=w*d; c.height=h*d; x.setTransform(d,0,0,d,0,0); pts=[]; for(var i=0;i<160;i++) pts.push({x:Math.random()*w,y:Math.random()*h,v:rand(.1,.4),p:Math.random()*6}); }
-    sz(); window.addEventListener('resize',sz);
-    if('IntersectionObserver' in window) new IntersectionObserver(function(es){ on=es[0].isIntersecting; }).observe(c);
-    (function loop(n){ if(on && !reduce){ x.clearRect(0,0,w,h); pts.forEach(function(q){ q.y-=q.v; if(q.y<0){ q.y=h; q.x=Math.random()*w; } var a=0.3+0.5*Math.abs(Math.sin(n/900+q.p)); x.fillStyle='rgba(255,181,71,'+a+')'; x.fillRect(q.x,q.y,1.6,1.6); }); } requestAnimationFrame(loop); })(0);
-  })();
-
-  /* ---------- nav current section ---------- */
-  var links=[].slice.call(document.querySelectorAll('.nav-links a'));
-  if('IntersectionObserver' in window){
-    var so=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) links.forEach(function(a){ a.setAttribute('aria-current', a.getAttribute('href')==='#'+e.target.id?'true':'false'); }); }); },{rootMargin:'-45% 0px -50% 0px'});
-    ['work','how','pricing','faq'].forEach(function(id){ so.observe(document.getElementById(id)); });
-  }
-
-  /* ---------- mobile menu ---------- */
-  var mb=document.getElementById('menu-btn');
-  function setMenu(o){ document.body.classList.toggle('menu-open',o); mb.setAttribute('aria-expanded',o); mb.setAttribute('aria-label',o?'Close menu':'Open menu'); if(o) nav.classList.remove('hide'); }
-  mb.addEventListener('click',function(){ setMenu(!document.body.classList.contains('menu-open')); });
-  document.querySelectorAll('#panel a').forEach(function(a){ a.addEventListener('click',function(){ setMenu(false); }); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') setMenu(false); });
-
-  /* ---------- promo video ---------- */
-  var v=document.getElementById('promo'), sb=document.getElementById('sound'), sx=document.getElementById('sound-x');
-  if('IntersectionObserver' in window && !reduce){ new IntersectionObserver(function(es){ if(es[0].isIntersecting) v.play().catch(function(){}); else v.pause(); },{threshold:0.3}).observe(v); } else { v.controls=true; }
-  sb.addEventListener('click',function(){ v.muted=!v.muted; if(!v.muted) v.play().catch(function(){}); sx.style.display=v.muted?'':'none'; sb.setAttribute('aria-pressed',String(!v.muted)); sb.setAttribute('aria-label',v.muted?'Turn sound on':'Turn sound off'); });
-
-  /* ---------- form ---------- */
-  document.querySelectorAll('[data-plan]').forEach(function(a){ a.addEventListener('click',function(){ document.getElementById('f-plan').value=a.getAttribute('data-plan'); }); });
-  var form=document.getElementById('preview-form');
-  form.addEventListener('submit',function(ev){
-    ev.preventDefault(); var ok=true;
-    function check(i,e,bad){ var el=document.getElementById(i); document.getElementById(e).hidden=!bad; el.setAttribute('aria-invalid',bad?'true':'false'); if(bad&&ok) el.focus(); if(bad) ok=false; }
-    check('f-name','e-name',!document.getElementById('f-name').value.trim());
-    check('f-biz','e-biz',!document.getElementById('f-biz').value.trim());
-    check('f-email','e-email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('f-email').value.trim()));
-    if(!ok) return;
-    var v=function(i){ var el=document.getElementById(i); return el? el.value.trim() : ''; };
-    var data={name:v('f-name'),business:v('f-biz'),email:v('f-email'),plan:v('f-plan'),link:v('f-link'),language:v('f-lang'),website:(form.elements.website||{}).value||''};
-    var out=document.getElementById('form-ok'), b=document.getElementById('submit-btn');
-    var mail=function(){ var to=(window.Airen&&Airen.contact)||'airen.sites@gmail.com'; location.href='mailto:'+to+'?subject='+encodeURIComponent('Free preview request: '+data.business)+'&body='+encodeURIComponent(['Name: '+data.name,'Business: '+data.business,'Email: '+data.email,'Price: '+data.plan,'Link: '+data.link,'Language: '+data.language].join('\n')); out.innerHTML='Your email app should open with the request filled in. Press send and we reply within 2 business days. If nothing opened, email <a href="mailto:'+to+'">'+to+'</a>.'; out.hidden=false; };
-    if(!(window.Airen&&Airen.live)){ mail(); return; }
-    b.disabled=true; b.textContent='Sending';
-    Airen.post('preview',data).then(function(){ out.textContent='Request received for '+data.business+'. Your private preview link goes to '+data.email+' within 2 business days.'; out.hidden=false; b.textContent='Request sent'; },
-      function(){ b.disabled=false; b.textContent='Request my free preview'; mail(); });
+  return [
+    {fx:1160,fy:560,w:900,h:900,sx:.69,sy:.5},
+    {fx:1070,fy:785,w:420,h:260,sx:.28,sy:.55},
+    {fx:1356,fy:780,w:380,h:300,sx:.36,sy:.5},
+    {fx:1180,fy:640,w:1100,h:720,sx:.74,sy:.52},
+    {fx:600,fy:640,w:4300,h:1500,sx:.62,sy:.5}
+  ];
+}
+var VW=1600, VH=1000, SH=shots();
+function fitView(){
+  var r=stage.getBoundingClientRect(); VW=1000*r.width/r.height; VH=1000;
+  svg.setAttribute('viewBox','0 0 '+VW.toFixed(1)+' '+VH);
+  SH=shots();
+}
+function camOf(s){ var k=Math.min(VW/s.w, VH/s.h); return {k:k, tx:VW*s.sx - s.fx*k, ty:VH*s.sy - s.fy*k}; }
+function camAt(s){ return camOf(s); }
+function ease(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+var lastBeat=-1, raf=0, inView=true, px=0, py=0, sunX=0, sunY=0, pc=-1, lastT=0, moving=false, nbOn=null;
+var neighbours=$('#neighbours'), sunEl=$('#sun'), cloudEl=$('#clouds');
+function progress(){
+  var r=story.getBoundingClientRect(), total=story.offsetHeight-window.innerHeight;
+  return Math.min(1,Math.max(0,-r.top/total));
+}
+var swayEls=null;
+function collectSway(){
+  swayEls=$$('#world .sway, #world .leafsway').map(function(e,i){
+    var bb=e.getBBox(), leaf=e.classList.contains('leafsway');
+    return {e:e, cx:bb.x+bb.width/2, cy: leaf? bb.y+bb.height : bb.y, amp: leaf?2.5:3, per: (leaf?6000:5000)+ (i%3)*900, ph:i*1.7};
   });
-})();
-</script>
+}
+function ambient(t){
+  if(!swayEls) collectSway();
+  for(var i=0;i<swayEls.length;i++){ var s=swayEls[i]; s.e.setAttribute('transform','rotate('+(s.amp*Math.sin(t/s.per*6.283+s.ph)).toFixed(2)+' '+s.cx.toFixed(1)+' '+s.cy.toFixed(1)+')'); }
+  for(var j=0;j<walkers.length;j++){ var w=walkers[j], q=((t+w.off)%w.dur+w.dur)%w.dur/w.dur;
+    w.w.setAttribute('transform','translate('+(w.from+(w.to-w.from)*q).toFixed(1)+' 0)');
+    w.b.setAttribute('transform','translate(0 '+(-4*Math.abs(Math.sin(t/180+j))).toFixed(1)+')'); }
+}
+function frame(t){
+  raf=0; t=t||performance.now();
+  if(!moving) ambient(t);
+  var target=progress()*(NB_BEATS-1); /* 0..4 */
+  var dt=lastT? Math.min(64,t-lastT) : 16; lastT=t;
+  if(pc<0 || Math.abs(target-pc)>1.5) pc=target;          /* jumps (anchors, resize) snap */
+  else pc+= (target-pc)*(1-Math.exp(-dt/110));            /* smooth the wheel steps */
+  if(Math.abs(target-pc)<0.0005) pc=target;
+  var p=pc, i=Math.min(NB_BEATS-2,Math.floor(p)), f=p-i;
+  /* hold for the first 40% of each segment, move during the rest */
+  var m=f<.4 ? 0 : ease((f-.4)/.6);
+  var A=SH[i], B=SH[i+1];
+  /* travel in world space: focus point and screen anchor move linearly, zoom moves in log space */
+  var ka=camOf(A).k, kb=camOf(B).k, k=Math.exp(Math.log(ka)+(Math.log(kb)-Math.log(ka))*m);
+  var fx=A.fx+(B.fx-A.fx)*m, fy=A.fy+(B.fy-A.fy)*m, sx=A.sx+(B.sx-A.sx)*m, sy=A.sy+(B.sy-A.sy)*m;
+  var tx=VW*sx-fx*k, ty=VH*sy-fy*k;
+  cam.setAttribute('transform','translate('+tx.toFixed(2)+' '+ty.toFixed(2)+') scale('+k.toFixed(4)+')');
+  var isMoving = (m>0 && m<1) || Math.abs(target-pc)>0.002;
+  if(isMoving!==moving){ moving=isMoving; stage.classList.toggle('moving',moving); }
+  var showNb = p>2.9;
+  if(showNb!==nbOn){ nbOn=showNb; neighbours.style.display=showNb?'':'none'; }
+  sunX+=(px-sunX)*.08; sunY+=(py-sunY)*.08;
+  sunEl.setAttribute('transform','translate('+(sunX*60).toFixed(1)+' '+(sunY*40).toFixed(1)+')');
+  cloudEl.setAttribute('transform','translate('+(-sunX*30).toFixed(1)+' 0)');
+  var beat=Math.round(p);
+  if(f>.4 && f<.75){ beat = m<.5 ? i : i+1; }
+  if(beat!==lastBeat) setBeat(beat);
+  /* awning days fill during beat 3 */
+  var fill = p<2.5 ? 0 : Math.max(0,Math.min(5,Math.round((p-2.55)*5/0.9)));
+  if(fill!==curFill){ curFill=fill; paintStripes(fill); }
+  daysG.setAttribute('opacity', p>2.4 && p<3.7 ? 1 : 0);
+  hint.style.opacity = p>0.15 ? 0 : 1;
+  if(inView) tick();
+}
+function setBeat(n){
+  lastBeat=n;
+  beats.forEach(function(b){ var k=+b.dataset.beat; b.classList.toggle('on',k===n); b.classList.toggle('before',k>n); b.classList.toggle('after',k<n); b.setAttribute('aria-hidden',k===n?'false':'true'); if(k!==n) b.setAttribute('inert',''); else b.removeAttribute('inert'); });
+  $$('button',dots).forEach(function(d,k){ d.setAttribute('aria-current',k===n?'true':'false'); });
+  ovB.classList.toggle('on',n===1); ovP.classList.toggle('on',n===2);
+  if(n===1){ loadShots(); restartShots(); } else stopShots();
+  if(n===2) playPromo(); else if(!promo.paused) promo.pause();
+  stage.classList.toggle('door-open',n===2);
+}
+function tick(){ if(!raf) raf=requestAnimationFrame(frame); }
+function goBeat(n){
+  var total=story.offsetHeight-window.innerHeight;
+  window.scrollTo({top:story.offsetTop + total*(n/(NB_BEATS-1)) - (n? total*0.02 : 0), behavior: reduce?'auto':'smooth'});
+}
+if(!reduce){
+  fitView(); frame();
+  window.addEventListener('scroll',tick,{passive:true});
+  window.addEventListener('resize',function(){ fitView(); tick(); });
+  window.addEventListener('pointermove',function(e){ px=e.clientX/innerWidth-.5; py=e.clientY/innerHeight-.5; if(inView) tick(); },{passive:true});
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ inView=es[0].isIntersecting; stage.classList.toggle('paused',!inView); if(!inView){ stopShots(); promo.pause(); } else tick(); }).observe(stage);
+  }
+} else {
+  fitView(); var s0=camAt(SH[0]); cam.setAttribute('transform','translate('+s0.tx+' '+s0.ty+') scale('+s0.k+')'); setBeat(0);
+}
 
-<script>
+/* ---------- nav ---------- */
+var nav=$('#nav'), lastY=scrollY, sheet=$('#sheet'), mb=$('#menu-btn');
+window.addEventListener('scroll',function(){ var y=scrollY; if(!document.body.classList.contains('menu-open')) nav.classList.toggle('hide', y>lastY && y>200); lastY=y; },{passive:true});
+function menu(open){
+  document.body.classList.toggle('menu-open',open); mb.setAttribute('aria-expanded',String(open)); mb.setAttribute('aria-label',open?'Close menu':'Open menu'); sheet.setAttribute('aria-hidden',String(!open));
+  $$('a',sheet).forEach(function(a,i){ a.style.transitionDelay = open ? Math.min(i*60,340)+'ms' : '0ms'; });
+}
+mb.addEventListener('click',function(){ menu(!document.body.classList.contains('menu-open')); });
+$$('a',sheet).forEach(function(a){ a.addEventListener('click',function(){ menu(false); }); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') menu(false); });
+var navLinks=$$('.nav-links a');
+if('IntersectionObserver' in window){
+  var secIO=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ navLinks.forEach(function(a){ a.setAttribute('aria-current', a.getAttribute('href')==='#'+e.target.id ? 'true':'false'); }); } }); },{rootMargin:'-45% 0px -50% 0px'});
+  ['work','how','showroom','pricing','faq'].forEach(function(id){ var s=document.getElementById(id); if(s) secIO.observe(s); });
+}
+
+/* ---------- reveals ---------- */
+if('IntersectionObserver' in window && !reduce){
+  var rio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); rio.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px'});
+  $$('.rv').forEach(function(x){ rio.observe(x); });
+} else $$('.rv').forEach(function(x){ x.classList.add('in'); });
+
+/* ---------- tilt on shop cards ---------- */
+if(matchMedia('(hover: hover)').matches && !reduce){
+  $$('.shopcard').forEach(function(c){
+    c.addEventListener('pointermove',function(e){ var r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5; c.style.transform='perspective(900px) rotateX('+(-y*6).toFixed(2)+'deg) rotateY('+(x*6).toFixed(2)+'deg) translateY(-4px)'; });
+    c.addEventListener('pointerleave',function(){ c.style.transform=''; });
+  });
+}
+
+/* ---------- tagline words ---------- */
 (function(){
-  var grid=document.getElementById('shows'); if(!grid) return;
-  var live=null;
-  function stop(card){ if(!card) return; var f=card.querySelector('iframe'), x=card.querySelector('.show-stop'); if(f){ f.src='about:blank'; f.remove(); } if(x) x.remove(); card.querySelector('.show-play').hidden=false; if(live===card) live=null; }
+  var tg=$('#tagline'); if(!tg) return;
+  var out=[];
+  [].slice.call(tg.childNodes).forEach(function(n){
+    var hot = n.nodeType===1 && n.hasAttribute('data-hot');
+    (n.textContent||'').split(/(\s+)/).forEach(function(w){ if(!w) return; if(/^\s+$/.test(w)){ out.push(w); return; } out.push('<span class="w'+(hot?' hot':'')+'">'+w+'</span>'); });
+  });
+  tg.innerHTML=out.join('');
+  var words=$$('.w',tg); if(reduce){ words.forEach(function(w){ w.classList.add('on'); }); return; }
+  var pending=0;
+  function upd(){ pending=0; var line=innerHeight*0.62; words.forEach(function(w){ if(!w.classList.contains('on') && w.getBoundingClientRect().top<line) w.classList.add('on'); }); }
+  window.addEventListener('scroll',function(){ if(!pending) pending=requestAnimationFrame(upd); },{passive:true}); upd();
+})();
+
+/* ---------- showroom ---------- */
+(function(){
+  var grid=$('#shows'), live=null;
+  function stop(card){ var f=card.querySelector('iframe'), x=card.querySelector('.show-stop'); if(f) f.remove(); if(x) x.remove(); card.querySelector('.show-play').hidden=false; if(live===card) live=null; }
   function start(card){
     if(live && live!==card) stop(live);
     var st=card.querySelector('.show-stage'), k=card.dataset.key;
@@ -936,12 +1163,34 @@ footer{border-top:1px solid var(--line);padding-block:48px;color:var(--muted);fo
     var x=document.createElement('button'); x.type='button'; x.className='show-stop'; x.textContent='Stop'; x.onclick=function(){ stop(card); card.querySelector('.show-play').focus(); };
     st.appendChild(x); live=card;
   }
-  [].forEach.call(grid.querySelectorAll('.show'),function(c){ c.querySelector('.show-play').addEventListener('click',function(){ start(c); }); });
+  $$('.show',grid).forEach(function(c){ c.querySelector('.show-play').addEventListener('click',function(){ start(c); }); });
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting && e.target===live) stop(e.target); }); },{threshold:0.15});
-    [].forEach.call(grid.querySelectorAll('.show'),function(c){ io.observe(c); });
+    $$('.show',grid).forEach(function(c){ io.observe(c); });
   }
   document.addEventListener('visibilitychange',function(){ if(document.hidden && live) stop(live); });
+})();
+
+/* ---------- form ---------- */
+$$('[data-plan]').forEach(function(a){ a.addEventListener('click',function(){ $('#f-plan').value=a.getAttribute('data-plan'); }); });
+$('#hero-cta').addEventListener('click',function(){ if(typed && fbiz && !fbiz.dataset.touched) fbiz.value=typed; });
+var form=$('#preview-form');
+form.addEventListener('submit',function(ev){
+  ev.preventDefault(); var ok=true;
+  function check(i,e,bad){ var x=document.getElementById(i); document.getElementById(e).hidden=!bad; x.setAttribute('aria-invalid',bad?'true':'false'); if(bad&&ok) x.focus(); if(bad) ok=false; }
+  check('f-name','e-name',!$('#f-name').value.trim());
+  check('f-biz','e-biz',!$('#f-biz').value.trim());
+  check('f-email','e-email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#f-email').value.trim()));
+  if(!ok) return;
+  var v=function(i){ var x=document.getElementById(i); return x? x.value.trim() : ''; };
+  var data={name:v('f-name'),business:v('f-biz'),email:v('f-email'),plan:v('f-plan'),link:v('f-link'),language:v('f-lang'),website:(form.elements.website||{}).value||''};
+  var out=$('#form-ok'), b=$('#submit-btn');
+  var mail=function(){ var to=(window.Airen&&Airen.contact)||'airen.sites@gmail.com'; location.href='mailto:'+to+'?subject='+encodeURIComponent('Free preview request: '+data.business)+'&body='+encodeURIComponent(['Name: '+data.name,'Business: '+data.business,'Email: '+data.email,'Price: '+data.plan,'Link: '+data.link,'Language: '+data.language].join('\n')); out.innerHTML='Your email app should open with the request filled in. Press send and we reply within 2 business days. If nothing opened, email <a href="mailto:'+to+'">'+to+'</a>.'; out.hidden=false; };
+  if(!(window.Airen&&Airen.live)){ mail(); return; }
+  b.disabled=true; b.textContent='Sending';
+  Airen.post('preview',data).then(function(){ out.textContent='Request received for '+data.business+'. Your private preview link goes to '+data.email+' within 2 business days.'; out.hidden=false; b.textContent='Request sent'; },
+    function(){ b.disabled=false; b.textContent='Request my free preview'; mail(); });
+});
 })();
 </script>
 </body>

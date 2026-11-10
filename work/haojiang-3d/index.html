@@ -1,0 +1,557 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta charset="utf-8">
+<title>Hao Jiang Archline</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Hao Jiang Archline: Toronto renovation as a craft. A warm industrial concept in raw wood, concrete and black steel. Preview by Airen.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Serif+SC:wght@500;700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hao Jiang Archline v3 — warm industrial (原木水泥工业风) concept preview by Airen.
+   Layout: a pinned film of a raw shell becoming a finished loft, then a material board that comes apart, then a quiet document in concrete and oak.
+   Scroll scrub approach follows scroll-world (github.com/oso95/scroll-world, MIT). */
+:root{
+  color-scheme: dark;
+  --concrete:#24231F; --slab:#2F2D29; --slab-2:#393631; --line:#46423B;
+  --cement:#BDB8AF; --linen:#EFEAE2; --oak:#C9A27A; --oak-d:#8C6643; --steel:#121211; --brass:#B8935A;
+  --fg:#EFEAE2; --muted:#A9A296; --ink:#EFEAE2;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --serif:'DM Serif Display', Georgia, serif;
+  --zh:'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --body:'Geist', system-ui, sans-serif;
+  --mono:'Geist Mono', ui-monospace, Menlo, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--concrete)}
+body{background:var(--concrete);color:var(--fg);font-family:var(--body);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-weight:400;text-wrap:balance}
+p{text-wrap:pretty}
+.zh{font-family:var(--zh);font-weight:700;letter-spacing:.04em}
+.mono{font-family:var(--mono)}
+.skip{position:absolute;left:16px;top:-80px;background:var(--oak);color:var(--steel);padding:8px 12px;border-radius:8px;z-index:200}
+.skip:focus{top:16px}
+:focus-visible{outline:2px solid var(--oak);outline-offset:3px;border-radius:6px}
+.wrapx{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cur{position:fixed;left:0;top:0;width:28px;height:28px;margin:-14px 0 0 -14px;border:1.5px solid var(--oak);z-index:95;pointer-events:none;display:none;transform-origin:center;
+  transition:width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),background .3s var(--ease),border-radius .3s var(--ease);border-radius:2px}
+.cur.big{width:72px;height:72px;margin:-36px 0 0 -36px;background:rgba(201,162,122,.14);border-radius:9999px}
+@media (hover:hover) and (pointer:fine){.cur{display:block}}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;top:calc(16px + env(safe-area-inset-top, 0px));left:max(16px, env(safe-area-inset-left, 0px));right:max(16px, env(safe-area-inset-right, 0px));z-index:60;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;transition:transform .5s var(--ease);pointer-events:none}
+.nav > *{pointer-events:auto}
+.nav.hide{transform:translateY(-120px)}
+.brand{display:flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border-radius:12px;background:rgba(18,18,17,.9);border:1px solid var(--line)}
+.brand i{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--oak);color:var(--steel);font-family:var(--zh);font-weight:700;font-size:15px;font-style:normal}
+.brand b{font-weight:600;font-size:14px;line-height:20px;letter-spacing:.02em;white-space:nowrap}
+.brand small{display:block;font-family:var(--zh);font-size:11px;line-height:14px;color:var(--muted);letter-spacing:.12em}
+.pill{display:flex;gap:4px;padding:4px;border-radius:12px;background:rgba(18,18,17,.9);border:1px solid var(--line);list-style:none}
+.pill a{display:block;padding:6px 14px;border-radius:8px;font-size:14px;line-height:20px;font-weight:500;color:var(--muted);white-space:nowrap;transition:background .3s var(--ease),color .3s var(--ease)}
+.pill a:hover{color:var(--fg);background:var(--slab-2)}
+.pill a[aria-current]{color:var(--steel);background:var(--linen)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font:600 16px/24px var(--body);border:1px solid transparent;cursor:pointer;transition:transform .5s var(--ease),background .3s var(--ease),border-color .3s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:18px;height:18px;transition:transform .5s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-oak{background:var(--oak);color:var(--steel)}
+.btn-oak:hover{background:#D8B48C}
+.btn-ghost{background:rgba(18,18,17,.7);color:var(--fg);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--oak)}
+.btn-sm{padding:8px 14px;font-size:14px;line-height:20px}
+
+/* ---------- Film ---------- */
+.film{position:relative;height:1300vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--bg,var(--concrete))}
+.stage video,.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage .poster{transition:opacity .6s var(--ease)}
+.stage .poster.gone{opacity:0}
+.shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(18,18,17,.72) 0%,rgba(18,18,17,.38) 34%,transparent 58%)}
+.water{position:absolute;right:clamp(16px,4vw,64px);bottom:-0.08em;font-family:var(--zh);font-weight:700;font-size:clamp(160px,26vw,420px);line-height:1;color:var(--linen);opacity:.07;pointer-events:none}
+.chapter{position:absolute;inset:0;pointer-events:none;display:none}
+.chapter.show{display:block}
+.chapter.on{pointer-events:auto}
+.copy{position:absolute;left:clamp(16px,6vw,96px);top:50%;transform:translateY(-52%);max-width:min(48vw,640px);color:var(--ink)}
+.eyebrow{display:flex;align-items:center;gap:12px;font:500 12px/16px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--oak);margin-bottom:24px}
+.eyebrow::before{content:"";width:32px;height:1px;background:currentColor}
+.mega{font-family:var(--serif);font-size:clamp(60px,8.4vw,128px);line-height:.92;letter-spacing:-.01em;text-shadow:0 6px 32px rgba(0,0,0,.35)}
+.mega .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.mega .ch{display:inline-block;transform:translateY(110%);transition:transform .9s var(--ease)}
+.chapter.on .mega .ch{transform:none}
+.mega em{font-style:normal;color:var(--oak)}
+.zhline{display:block;margin-top:16px;font-family:var(--zh);font-weight:700;font-size:clamp(22px,2.4vw,32px);line-height:1.3;letter-spacing:.2em;color:var(--cement);opacity:0;transform:translateY(12px);transition:opacity .7s var(--ease) .2s,transform .7s var(--ease) .2s}
+.lead{margin-top:24px;max-width:460px;font-size:18px;line-height:28px;color:var(--cement);opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease) .3s,transform .7s var(--ease) .3s}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease) .4s,transform .7s var(--ease) .4s;list-style:none}
+.tags li{padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:rgba(18,18,17,.6);font-size:14px;line-height:20px}
+.copy .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease) .4s,transform .7s var(--ease) .4s}
+.chapter.on .zhline,.chapter.on .lead,.chapter.on .tags,.chapter.on .copy .row{opacity:1;transform:none}
+
+.rail{position:absolute;right:clamp(16px,2vw,32px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:5}
+.rail button{all:unset;cursor:pointer;display:flex;align-items:center;justify-content:flex-end;gap:10px;font:500 12px/16px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--linen);opacity:.5;transition:opacity .3s var(--ease)}
+.rail button i{display:block;width:16px;height:1px;background:currentColor;transition:width .5s var(--ease)}
+.rail button.on{opacity:1;color:var(--oak)}
+.rail button.on i{width:40px}
+.rail button span{opacity:0;transform:translateX(8px);transition:opacity .3s var(--ease),transform .5s var(--ease)}
+.rail button.on span,.rail button:hover span{opacity:1;transform:none}
+.concept{position:absolute;left:clamp(16px,6vw,96px);bottom:24px;font:400 12px/16px var(--mono);color:rgba(239,234,226,.7);letter-spacing:.04em}
+
+/* ---------- Tagline ---------- */
+.tagline{padding-top:160px;padding-bottom:160px;background:var(--concrete)}
+.tagline p{max-width:1080px;margin:0 auto;font-family:var(--serif);font-size:clamp(40px,5.6vw,80px);line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+.tagline .w{color:rgba(239,234,226,.18);transition:color .6s var(--ease)}
+.tagline .w.lit{color:var(--linen)}
+.tagline .w.lit.acc{color:var(--oak)}
+.tagline small{display:block;max-width:1080px;margin:32px auto 0;font-family:var(--zh);font-weight:500;font-size:20px;line-height:32px;color:var(--muted);letter-spacing:.12em}
+
+/* ---------- Materials, taken apart ---------- */
+.mats{position:relative;height:440vh;background:var(--concrete)}
+.mats .pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:radial-gradient(55% 60% at 64% 52%,rgba(201,162,122,.16),transparent 70%),var(--concrete)}
+.mats .intro{position:absolute;left:clamp(16px,6vw,96px);top:50%;transform:translateY(-50%);max-width:400px;z-index:3}
+.mats h2{font-family:var(--serif);font-size:clamp(56px,6.4vw,104px);line-height:.92}
+.mats h2 em{font-style:normal;color:var(--oak)}
+.mats .zhh{display:block;margin-top:12px;font-family:var(--zh);font-weight:700;font-size:24px;line-height:32px;letter-spacing:.2em;color:var(--cement)}
+.mats .intro p{margin-top:16px;color:var(--muted)}
+.count{display:flex;align-items:baseline;gap:8px;margin-top:24px;font-family:var(--serif);font-size:60px;line-height:1;color:var(--oak);font-variant-numeric:tabular-nums}
+.count span{font:500 12px/16px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.board{position:absolute;left:66%;top:52%;width:min(52vh,34vw);aspect-ratio:1/1;transform:translate(-50%,-50%)}
+.board .base{position:absolute;inset:0;border-radius:6px;will-change:transform;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.08)),#57534C;box-shadow:0 40px 80px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06)}
+.board .base::before{content:"";position:absolute;inset:0;border-radius:6px;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1.6px),radial-gradient(rgba(0,0,0,.25) 1.2px,transparent 1.8px);background-size:19px 19px,27px 27px;background-position:0 0,9px 13px}
+.board .base::after{content:"Archline · Material board  建材样板";position:absolute;left:16px;bottom:12px;font:500 11px/16px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:rgba(239,234,226,.55)}
+.part{position:absolute;left:0;top:0;width:var(--s);will-change:transform}
+.part img{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 18px rgba(0,0,0,.45))}
+.plabel{position:absolute;left:0;top:0;padding:8px 12px;border-radius:10px;background:var(--linen);color:var(--steel);white-space:nowrap;opacity:0;will-change:transform,opacity;pointer-events:none;box-shadow:0 12px 24px rgba(0,0,0,.35)}
+.plabel b{display:block;font-family:var(--serif);font-weight:400;font-size:20px;line-height:24px}
+.plabel .zh{font-size:13px;line-height:18px;color:var(--oak-d);letter-spacing:.08em}
+.plabel small{display:block;font-size:12px;line-height:16px;color:#5a544b}
+.dhint{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font:500 12px/16px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- Document ---------- */
+.doc{background:var(--concrete)}
+.wrap{max-width:1180px;margin:0 auto}
+.sec{padding-top:112px;padding-bottom:112px;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.sec-head h2{font-family:var(--serif);font-size:clamp(44px,5vw,72px);line-height:.95}
+.sec-head h2 .zh{display:block;font-size:.36em;line-height:1.5;color:var(--oak);margin-top:8px;letter-spacing:.2em}
+.sec-head p{max-width:420px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:s;list-style:none}
+.step{position:relative;padding:32px 24px 24px;border-radius:16px;background:var(--slab);border:1px solid var(--line);overflow:hidden}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:72px;line-height:1;color:var(--oak)}
+.step .zh{display:block;margin-top:16px;font-size:14px;line-height:20px;color:var(--muted);letter-spacing:.2em}
+.step h3{font-family:var(--serif);font-size:30px;line-height:36px;margin-top:4px}
+.step p{margin-top:8px;color:var(--cement)}
+.step::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--oak);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
+.step.in::after{transform:scaleX(1)}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{position:relative;padding:24px;border-radius:16px;background:var(--slab);border:1px solid var(--line);overflow:hidden;transition:transform .5s var(--ease),border-color .3s var(--ease)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(201,162,122,.16),transparent 65%);opacity:0;transition:opacity .3s var(--ease);pointer-events:none}
+.card:hover{transform:translateY(-4px);border-color:#6a604f}
+.card:hover::before{opacity:1}
+.card .idx{font:500 12px/16px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--oak)}
+.card h3{font-family:var(--serif);font-size:28px;line-height:32px;margin-top:12px}
+.card .zh{display:block;font-size:13px;line-height:20px;color:var(--muted);letter-spacing:.16em;margin-top:4px}
+.card p{margin-top:12px;color:var(--cement);font-size:14px;line-height:20px}
+.quote{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:48px;align-items:end}
+.quote blockquote{font-family:var(--serif);font-size:clamp(32px,3.6vw,52px);line-height:1.1}
+.quote blockquote::before{content:"“";display:block;font-size:2em;line-height:.6;color:var(--oak)}
+.quote figcaption{color:var(--muted);font-size:14px;line-height:20px}
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:12px}
+details{border-radius:14px;background:var(--slab);border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 24px;font-weight:600;font-size:18px;line-height:28px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary svg{width:22px;height:22px;flex:none;color:var(--oak);transition:transform .5s var(--ease)}
+details[open] summary svg{transform:rotate(135deg)}
+details p{padding:0 24px 24px;color:var(--cement)}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.info{display:flex;flex-direction:column;gap:20px;list-style:none;margin-top:32px}
+.info span{display:block;font:500 12px/16px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.info b{font-weight:500;font-size:18px;line-height:28px;user-select:all;overflow-wrap:anywhere}
+form{display:flex;flex-direction:column;gap:16px;padding:24px;border-radius:16px;background:var(--slab);border:1px solid var(--line)}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:14px;line-height:20px;color:var(--muted)}
+.field input,.field textarea{font:16px/24px var(--body);color:var(--fg);background:var(--concrete);border:1px solid var(--line);border-radius:10px;padding:10px 12px;transition:border-color .3s var(--ease)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--oak)}
+.field textarea{min-height:120px;resize:vertical}
+.field .err{font-size:12px;line-height:16px;color:#E39A7B;min-height:16px}
+.field [aria-invalid="true"]{border-color:#E39A7B}
+.form-msg{font-size:14px;line-height:20px;padding:12px;border-radius:10px;background:var(--slab-2);border:1px solid var(--line)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-top:48px;padding-bottom:48px;border-top:1px solid var(--line);font-size:14px;line-height:20px;color:var(--muted)}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+footer a:hover{color:var(--fg)}
+.foot-brand{font-family:var(--serif);font-size:32px;line-height:40px;color:var(--fg)}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Phone ---------- */
+@media (max-width:900px){.steps,.svc{grid-template-columns:minmax(0,1fr)}.contact,.quote{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){
+  .pill{display:none}
+  .brand small{display:none}
+  .stage video,.stage .poster{height:58%;bottom:auto}
+  .stage{background:var(--concrete)!important}
+  .stage::after{content:"";position:absolute;left:0;right:0;top:40%;height:18.5%;background:linear-gradient(to bottom,rgba(36,35,31,0),var(--concrete));pointer-events:none}
+  .shade{display:none}
+  .chapter{z-index:2}
+  .water,.rail{display:none}
+  .copy{top:auto;bottom:48px;transform:none;left:16px;right:16px;max-width:none}
+  .eyebrow{margin-bottom:12px}
+  .mega{font-size:52px}
+  .zhline{font-size:18px;margin-top:8px}
+  .lead{font-size:15px;line-height:22px;margin-top:12px}
+  .tags{margin-top:12px}
+  .tags li{font-size:12px;line-height:16px;padding:4px 8px}
+  .copy .row{margin-top:16px}
+  .concept{bottom:12px;left:16px;font-size:10px}
+  .mats .intro{top:88px;transform:none;left:16px;right:16px}
+  .mats h2{font-size:48px}
+  .mats .intro p{display:none}
+  .count{font-size:40px;margin-top:8px}
+  .board{left:50%;top:60%;width:min(62vw,38vh)}
+  .plabel{padding:4px 8px;border-radius:8px}
+  .plabel b{font-size:14px;line-height:16px}
+  .plabel .zh,.plabel small{display:none}
+  .tagline{padding-top:96px;padding-bottom:96px}
+  .sec{padding-top:72px;padding-bottom:72px}
+}
+@media (prefers-reduced-motion:reduce){
+  .film{height:auto}.stage{position:relative;height:auto;padding-bottom:48px}.stage video{display:none}.stage .poster{position:relative;height:60vh}
+  .chapter{position:relative;display:block;pointer-events:auto;padding:48px 16px;inset:auto}
+  .copy{position:relative;inset:auto;transform:none;left:auto;max-width:none}
+  .mega .ch,.zhline,.lead,.tags,.copy .row{transform:none!important;opacity:1!important}
+  .water,.rail,.cur,.shade{display:none!important}
+  .mats{height:auto}.mats .pin{position:relative;height:auto;padding:96px 16px}.mats .intro{position:relative;transform:none;left:auto;top:auto}
+  .board{position:relative;left:auto;top:auto;transform:none;margin:48px auto 0}.plabel{opacity:1}
+  .reveal{opacity:1;transform:none}.tagline .w{color:var(--linen)}
+  *{animation:none!important;transition:none!important}
+}
+</style>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cur" id="cur" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <a class="brand" href="#top"><i aria-hidden="true">匠</i><span><b>Hao Jiang Archline</b><small>浩江建筑 · 多伦多</small></span></a>
+  <ul class="pill">
+    <li><a href="#top" aria-current="page">Concept</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="btn btn-oak btn-sm" href="#contact">Book a consultation</a>
+</nav>
+
+<main id="main">
+<div id="top"></div>
+<section class="film" id="film" aria-label="A raw shell becomes a warm industrial home">
+  <div class="stage" id="stage">
+    <img class="poster" id="poster" src="assets/poster.jpg" alt="A raw concrete loft with black steel windows and oak planks waiting to be installed">
+    <video id="vid" muted playsinline preload="auto" aria-hidden="true"></video>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="water" id="water" aria-hidden="true">匠</div>
+
+    <div class="chapter c1">
+      <div class="copy">
+        <p class="eyebrow">Toronto · Design and build</p>
+        <h1 class="mega" data-split>Renovation|as a <em>craft.</em></h1>
+        <span class="zhline">匠心翻新 · 高级原木水泥工业风</span>
+        <p class="lead">Toronto homes, rebuilt with care, on time and on budget. Keep scrolling and watch a raw shell become home.</p>
+        <div class="row"><a class="btn btn-oak" href="#contact">Book a consultation <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.7 133.7l-72 72a8 8 0 0 1-11.4-11.4L196.7 136H40a8 8 0 0 1 0-16h156.7l-58.4-58.3a8 8 0 0 1 11.4-11.4l72 72a8 8 0 0 1 0 11.4z"/></svg></a><a class="btn btn-ghost" href="#services">See services</a></div>
+      </div>
+    </div>
+
+    <div class="chapter c2">
+      <div class="copy">
+        <p class="eyebrow">The concept · 原木水泥</p>
+        <h2 class="mega" data-split>Wood.|Concrete.|<em>Steel.</em></h2>
+        <span class="zhline">原木 · 水泥 · 黑钢</span>
+        <p class="lead">Warm white oak against raw concrete and blackened steel. Quiet, honest materials that get better with time.</p>
+      </div>
+    </div>
+
+    <div class="chapter c3">
+      <div class="copy">
+        <p class="eyebrow">Every layer, documented</p>
+        <h2 class="mega" data-split>Every|<em>layer.</em></h2>
+        <span class="zhline">层层可见 · 细节可查</span>
+        <p class="lead">We document every detail so your home stays beautiful for years. Plans, materials and a clear quote are approved before anyone picks up a tool.</p>
+        <ul class="tags"><li>Design and floor plans</li><li>Permits</li><li>Weekly updates</li></ul>
+      </div>
+    </div>
+
+    <div class="chapter c4">
+      <div class="copy">
+        <p class="eyebrow">Kitchen and bath remodels</p>
+        <h2 class="mega" data-split>Clean lines,|<em>warm</em> materials.</h2>
+        <span class="zhline">细节经久 · 温暖克制</span>
+        <p class="lead">Details that last. Tell us what you're planning. We'll reply within two business days.</p>
+        <div class="row"><a class="btn btn-oak" href="#contact">Book a consultation <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.7 133.7l-72 72a8 8 0 0 1-11.4-11.4L196.7 136H40a8 8 0 0 1 0-16h156.7l-58.4-58.3a8 8 0 0 1 11.4-11.4l72 72a8 8 0 0 1 0 11.4z"/></svg></a></div>
+      </div>
+    </div>
+
+    <div class="rail" id="rail" aria-label="Chapters">
+      <button data-go="0"><span>Craft</span><i></i></button>
+      <button data-go="1"><span>Materials</span><i></i></button>
+      <button data-go="2"><span>Layers</span><i></i></button>
+      <button data-go="3"><span>Home</span><i></i></button>
+    </div>
+    <p class="concept">Concept home · AI rendered · Preview by Airen</p>
+  </div>
+</section>
+
+<section class="tagline wrapx" aria-label="Our promise">
+  <p id="tagline">Built to last. We document <span data-a="acc">every</span> detail so your home stays <span data-a="acc">beautiful</span> for years.</p>
+  <small class="reveal">经久耐用 · 每一处细节都有记录</small>
+</section>
+
+<section class="mats" id="materials" aria-labelledby="mats-h">
+  <div class="pin">
+    <div class="intro">
+      <h2 id="mats-h">Materials,<br><em>taken apart</em><span class="zhh">建材 · 逐层拆解</span></h2>
+      <p>The warm industrial palette, one sample at a time. Keep scrolling and the board comes apart. Scroll back and it comes together.</p>
+      <div class="count"><b id="pcount">0</b><span>of 9 samples out</span></div>
+    </div>
+    <div class="board" id="board"><div class="base" id="pbase" role="img" aria-label="A concrete material board holding nine samples"></div></div>
+    <div class="dhint" id="dhint">Scroll to take it apart</div>
+  </div>
+</section>
+
+<div class="doc wrapx">
+  <div class="wrap">
+    <section class="sec" id="process" aria-labelledby="proc-h">
+      <div class="sec-head reveal"><h2 id="proc-h">A simple, transparent process<span class="zh">简单透明的流程</span></h2><p>Senior hands from first drawing to final walkthrough, so nothing gets lost between trades.</p></div>
+      <ol class="steps">
+        <li class="step reveal"><span class="zh">了解需求</span><h3>Discover</h3><p>We measure, listen, and map your priorities.</p></li>
+        <li class="step reveal"><span class="zh">设计与确认</span><h3>Design and approve</h3><p>Plans, materials, and a clear quote.</p></li>
+        <li class="step reveal"><span class="zh">施工与收尾</span><h3>Build and finish</h3><p>Weekly updates, clean site, final walkthrough.</p></li>
+      </ol>
+    </section>
+
+    <section class="sec" id="services" aria-labelledby="svc-h">
+      <div class="sec-head reveal"><h2 id="svc-h">What we do<span class="zh">服务范围</span></h2><p>Design, build, and finish, so nothing gets lost between trades.</p></div>
+      <div class="svc">
+        <article class="card reveal"><span class="idx">Design</span><h3>Design and floor plans</h3><span class="zh">设计与平面图</span><p>Plans and materials drawn up and approved before anyone picks up a tool.</p></article>
+        <article class="card reveal"><span class="idx">Interiors</span><h3>Kitchen and bath remodels</h3><span class="zh">厨卫翻新</span><p>The rooms you use most, rebuilt around how you live in them.</p></article>
+        <article class="card reveal"><span class="idx">Interiors</span><h3>Basement finishing</h3><span class="zh">地下室装修</span><p>Turn the level below into space you actually use.</p></article>
+        <article class="card reveal"><span class="idx">Structure</span><h3>Additions and structural</h3><span class="zh">扩建与结构</span><p>More room for the family, tied properly into the house you have.</p></article>
+        <article class="card reveal"><span class="idx">Commercial</span><h3>Commercial renovation</h3><span class="zh">商业装修</span><p>The same care and schedule discipline for shops and offices.</p></article>
+        <article class="card reveal"><span class="idx">Paperwork</span><h3>Permits and project management</h3><span class="zh">许可与项目管理</span><p>Permits, trades and weekly updates handled in one place.</p></article>
+      </div>
+    </section>
+
+    <section class="sec" aria-label="Client review">
+      <figure class="quote reveal">
+        <blockquote>They kept the site clean, the schedule honest, and the details exactly where we agreed.</blockquote>
+        <figcaption>Sarah &amp; James<br>Leaside Renovation</figcaption>
+      </figure>
+    </section>
+
+    <section class="sec" id="faq" aria-labelledby="faq-h">
+      <div class="sec-head reveal"><h2 id="faq-h">Before you call<span class="zh">常见问题</span></h2></div>
+      <div class="faq reveal">
+        <details><summary>Will the project stay on budget?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p>You approve the plans, materials, and a clear quote before the build starts. That quote is what we build to.</p></details>
+        <details><summary>How will I know what is happening on site?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p>You get weekly updates through the whole build, and a final walkthrough together at the end.</p></details>
+        <details><summary>Do you handle permits?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p>Yes. Permits and project management are part of what we do, alongside design and the build itself.</p></details>
+        <details><summary>Will my home be a mess during the work?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p>A clean site is part of how we build. Our clients mention it.</p></details>
+        <details><summary>What kinds of projects do you take on?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p>Design and floor plans, kitchen and bath remodels, basement finishing, additions and structural work, and commercial renovation.</p></details>
+        <details><summary>How soon will you get back to me?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p>Within two business days of your message.</p></details>
+      </div>
+    </section>
+
+    <section class="sec" id="contact" aria-labelledby="ct-h">
+      <div class="contact">
+        <div class="reveal">
+          <div class="sec-head" style="margin-bottom:0"><h2 id="ct-h">Book a consultation<span class="zh">预约咨询</span></h2></div>
+          <p style="color:var(--muted);margin-top:16px">Tell us what you're planning. We'll reply within two business days.</p>
+          <ul class="info">
+            <li><span>Email</span><b>archlineconstructioncorp@gmail.com</b></li>
+            <li><span>Phone</span><b>416.939.1569</b></li>
+            <li><span>Office</span><b>Unit 15, 5240 Finch Ave E, Toronto</b></li>
+            <li><span>Contact</span><b>Eva Guo</b></li>
+          </ul>
+        </div>
+        <form id="form" class="reveal" novalidate>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" id="e-email"></span></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"><span class="err"></span></div>
+          <div class="field"><label for="f-msg">What are you planning?</label><textarea id="f-msg" name="message" required></textarea><span class="err" id="e-msg"></span></div>
+          <button class="btn btn-oak" type="submit" style="align-self:flex-start">Send inquiry</button>
+          <p class="form-msg" id="formMsg" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:620px">
+        <p class="foot-brand">Renovation as a craft.</p>
+        <p>© 2026 Hao Jiang Archline · Archline Project and Management Corp.</p>
+        <p>The concept home and material samples are AI rendered for this preview, not a completed Archline project. Preview built by Airen. Scroll approach: scroll-world (MIT).</p>
+      </div>
+      <nav aria-label="Footer"><a href="https://archlinehaojiang.com" target="_blank" rel="noopener">Current site</a><a href="https://archlinehaojiang.com" target="_blank" rel="noopener">Privacy</a><a href="#top">Back to top</a></nav>
+    </footer>
+  </div>
+</div>
+</main>
+
+<script src="../_shared/seq.js"></script>
+<script>
+const FILM = /*FILM*/{"colors":["#AC9270","#A08667","#92795E","#846D54","#806951","#7F6851","#7B664F","#79634D","#7A634C","#7B644D","#7C654E","#7B644E","#7B644D","#7A634D","#79624C","#76604A","#745D48","#735D47","#735C47","#735D48","#755F4A","#77614C","#7A644F","#816C57","#87725C","#8C7660","#907B64","#947F67","#99836A","#9D886E","#A28D72","#A79176","#AC9679","#B09A7D","#B69F81","#BBA585","#C1AA8A","#C7B08F","#CEB795","#D1BA98","#D0BE9B","#CFBD9B","#C6B492","#9A8A70","#524838","#5B4F3E","#685A48","#5E5242","#5E5344","#76644D","#937E60","#958064","#88765D","#806F5B","#796955","#6B5E4C","#786B59","#6D604D","#6E5E4A","#6A5B46","#6B5C48","#5D5141","#564D3F","#5C5344","#655C4C","#68604F","#685F4F","#655D4C","#5D5446","#5E5344","#6E604C","#6E5F4C","#6D5E4B","#645746","#665846","#6A5B49","#675846","#655746","#655745","#645645"],"lum":[0.41,0.41,0.41,0.41,0.41,0.41,0.42,0.43,0.45,0.48,0.49,0.5,0.51,0.52,0.53,0.53,0.55,0.56,0.58,0.59,0.6,0.61,0.61,0.61,0.6,0.6,0.6,0.6,0.6,0.59,0.59,0.59,0.59,0.59,0.59,0.58,0.58,0.58,0.58,0.57,0.58,0.58,0.59,0.62,0.63,0.57,0.53,0.47,0.34,0.33,0.36,0.44,0.5,0.56,0.58,0.57,0.55,0.54,0.5,0.48,0.43,0.42,0.4,0.4,0.4,0.4,0.39,0.4,0.41,0.42,0.43,0.45,0.47,0.49,0.5,0.51,0.52,0.53,0.54,0.54],"chapters":[[0,0.1],[0.2,0.42],[0.5,0.68],[0.85,2]]}/*END*/;
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const phone = matchMedia('(max-width: 760px), (pointer: coarse) and (max-width: 1100px)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const vid = $('#vid'), poster = $('#poster'), film = $('#film'), water = $('#water'), nav = $('#nav'), root = document.documentElement, stage = $('#stage');
+  const chapters = $$('.chapter'), railBtns = $$('#rail button');
+  const WATER = ['匠', '木', '层', '家'];
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  $$('[data-split]').forEach(h => {
+    let i = 0;
+    const html = h.innerHTML.split('|').map(line => {
+      const tmp = document.createElement('div'); tmp.innerHTML = line; let out = '';
+      const walk = (n, o = '', c = '') => {
+        if (n.nodeType === 3) n.textContent.split(/(\s+)/).forEach(w => {
+          if (!w.trim()) { out += ' '; return; }
+          out += `<span style="display:inline-block;white-space:nowrap">${o}` + [...w].map(ch => `<span class="ch" style="transition-delay:${(i++ * 0.03).toFixed(3)}s">${ch}</span>`).join('') + `${c}</span>`;
+        });
+        else n.childNodes.forEach(k => walk(k, `<${n.tagName.toLowerCase()}>`, `</${n.tagName.toLowerCase()}>`));
+      };
+      tmp.childNodes.forEach(n => walk(n));
+      return `<span class="ln">${out}</span>`;
+    }).join('');
+    h.setAttribute('aria-label', h.textContent.replaceAll('|', ' '));
+    h.innerHTML = html;
+  });
+
+  if (phone) poster.src = 'assets/poster-m.jpg';
+  /* scroll film drawn from an image sequence (smooth on phones; starts coarse and fills in) */
+  const SEQN = 240, SEQFPS = 12, DUR = SEQN / SEQFPS;
+  const seq = reduce ? null : AirenSeq({ el: vid, base: phone ? 'assets/seq/m/' : 'assets/seq/d/', count: SEQN, fps: SEQFPS, onReady: () => poster.classList.add('gone') });
+
+  const hex = h => [1,3,5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const C = FILM.colors.map(hex);
+  const colorAt = p => { const f = p * (C.length - 1), i = Math.floor(f), t = f - i, a = C[i], b = C[Math.min(i + 1, C.length - 1)]; return a.map((v, k) => Math.round(v + (b[k] - v) * t)); };
+  let shown = 0, lastY = scrollY, active = -1, lastKey = '';
+  const prog = () => { const r = film.getBoundingClientRect(); return clamp(-r.top / (film.offsetHeight - innerHeight), 0, 1); };
+  function setChapter(i, near) {
+    if (i === active) return; active = i;
+    chapters.forEach((c, k) => {
+      if (k === i) { c.classList.add('show'); requestAnimationFrame(() => requestAnimationFrame(() => { if (active === k) c.classList.add('on'); })); }
+      else c.classList.remove('show', 'on');
+    });
+    railBtns.forEach((b, k) => b.classList.toggle('on', k === near));
+    water.textContent = WATER[near];
+  }
+  function frame() {
+    shown += (prog() - shown) * 0.16;
+    if (seq) seq.draw(shown * (DUR - 0.05));
+    const [r, g, b] = colorAt(shown), key = (r >> 2) + ',' + (g >> 2) + ',' + (b >> 2);
+    if (key !== lastKey) { lastKey = key; stage.style.setProperty('--bg', `rgb(${r},${g},${b})`); }
+    let idx = -1, near = 0;
+    FILM.chapters.forEach(([a, z], i) => { if (shown >= a - 0.02) { near = i; if (shown <= z) idx = i; } });
+    setChapter(idx, near);
+    const y = scrollY; if (Math.abs(y - lastY) > 6) { nav.classList.toggle('hide', y > lastY && y > 200); lastY = y; }
+    requestAnimationFrame(frame);
+  }
+  if (!reduce) requestAnimationFrame(frame); else { chapters.forEach(c => c.classList.add('show', 'on')); }
+  railBtns.forEach(b => b.addEventListener('click', () => {
+    const [a, z] = FILM.chapters[+b.dataset.go], p = Math.min(1, (a + Math.min(z, 1)) / 2);
+    scrollTo({ top: film.offsetTop + p * (film.offsetHeight - innerHeight), behavior: 'smooth' });
+  }));
+  const grain = $('.grain');
+  new IntersectionObserver(es => es.forEach(e => grain.style.display = e.isIntersecting ? 'none' : 'block'), {threshold:0.02}).observe(stage);
+
+  // ---------- materials, taken apart ----------
+  // id, name, chinese, note, assembled x%, y%, size%, explode angle (deg)
+  const PARTS = [
+    ['oak','White oak','白橡原木','Warm grain for floors, ceilings and joinery',20,22,20,-130],
+    ['microcement','Microcement','微水泥','Seamless floors and walls, no grout lines',50,20,26,-90],
+    ['steel','Blackened steel','黑钢','Slim frames, shelving and stair rails',80,20,30,-50],
+    ['concrete','Board-formed concrete','清水混凝土','Raw texture with the timber grain left in',20,50,26,180],
+    ['glass','Smoked glass','烟灰玻璃','Light through, privacy kept',50,50,24,-10],
+    ['linen','Linen','亚麻','Soft texture to balance hard surfaces',80,50,26,10],
+    ['travertine','Travertine','洞石','Honed stone for baths and counters',20,80,26,135],
+    ['brass','Brushed brass','拉丝黄铜','Small warm accents on handles and fixtures',50,80,30,90],
+    ['slat','Oak slat panel','木格栅吸音板','Warmth on walls and quieter rooms',80,80,26,45],
+  ];
+  const board = $('#board'), mats = $('#materials'), pcount = $('#pcount'), dhint = $('#dhint');
+  const parts = PARTS.map(([id, name, zh, note, x, y, sz, deg], i) => {
+    const d = document.createElement('div'); d.className = 'part'; d.style.setProperty('--s', sz + '%'); d.style.zIndex = 5;
+    d.innerHTML = `<img src="assets/m-${id}.png" alt="${name} sample" loading="lazy">`;
+    const l = document.createElement('div'); l.className = 'plabel'; l.style.zIndex = 20;
+    l.innerHTML = `<b>${name}</b><span class="zh">${zh}</span><small>${note}</small>`;
+    board.append(d); board.append(l);
+    return { d, l, x, y, sz, ang: deg * Math.PI / 180, i };
+  });
+  let matsOn = false, mShown = 0;
+  new IntersectionObserver(es => es.forEach(e => matsOn = e.isIntersecting)).observe(mats);
+  const ease = t => t < 0 ? 0 : t > 1 ? 1 : 1 - Math.pow(1 - t, 3);
+  function matsFrame() {
+    if (matsOn || mShown > 0.001) {
+      const r = mats.getBoundingClientRect(), span = mats.offsetHeight - innerHeight;
+      const target = reduce ? 1 : clamp(-r.top / span, 0, 1);
+      mShown += (target - mShown) * 0.14;
+      const W = board.offsetWidth, small = innerWidth <= 760, R = W * (small ? 0.66 : 0.8), box = board.getBoundingClientRect();
+      let out = 0;
+      parts.forEach(p => {
+        const k = ease((mShown - 0.1 - p.i * 0.045) / 0.32);
+        if (k > 0.5) out++;
+        const ax = p.x / 100 * W, ay = p.y / 100 * W, pw = p.sz / 100 * W;
+        const ex = W / 2 + Math.cos(p.ang) * R, ey = W / 2 + Math.sin(p.ang) * R * (small ? 1 : 0.74);
+        const cx = ax + (ex - ax) * k, cy = ay + (ey - ay) * k - Math.sin(k * Math.PI) * W * 0.1;
+        const sc = 1 - 0.22 * k, rot = (p.i % 2 ? 1 : -1) * 8 * Math.sin(k * Math.PI);
+        p.d.style.transform = `translate(${(cx - pw / 2).toFixed(1)}px,${(cy - pw / 2).toFixed(1)}px) rotate(${rot.toFixed(1)}deg) scale(${sc.toFixed(3)})`;
+        const lk = clamp((k - 0.75) / 0.25, 0, 1), lw = p.l.offsetWidth || 120, half = lw / 2;
+        let lx = clamp(cx, -box.left + 8 + half, innerWidth - box.left - 8 - half); const ly = cy + pw * sc * 0.5 + 8;
+        p.l.style.opacity = lk.toFixed(2);
+        p.l.style.transform = `translate(${(lx - half).toFixed(1)}px,${ly.toFixed(1)}px) translateY(${((1 - lk) * 12).toFixed(1)}px)`;
+      });
+      $('#pbase').style.transform = `rotate(${(-mShown * 8).toFixed(2)}deg) scale(${(1 - mShown * 0.12).toFixed(3)})`;
+      pcount.textContent = out;
+      dhint.style.opacity = mShown > 0.15 ? 0 : 1;
+    }
+    requestAnimationFrame(matsFrame);
+  }
+  requestAnimationFrame(matsFrame);
+
+  // tagline words
+  const tag = $('#tagline'), words = [];
+  [...tag.childNodes].forEach(n => {
+    const acc = n.nodeType === 1 ? n.dataset.a : null, frag = document.createDocumentFragment();
+    n.textContent.split(/(\s+)/).forEach(w => { if (!w.trim()) { frag.append(w); return; } const s = document.createElement('span'); s.className = 'w' + (acc ? ' ' + acc : ''); s.textContent = w; frag.append(s); words.push(s); });
+    n.replaceWith(frag);
+  });
+  let tagOn = false; new IntersectionObserver(es => es.forEach(e => tagOn = e.isIntersecting)).observe(tag);
+  (function lw() { if (tagOn || reduce) { const line = innerHeight * .64; words.forEach(w => w.classList.toggle('lit', reduce || w.getBoundingClientRect().top < line)); } requestAnimationFrame(lw); })();
+
+  $$('.card').forEach(el => el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
+
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches, cur = $('#cur');
+  let cx = innerWidth / 2, cy = innerHeight / 2, tx = cx, ty = cy;
+  addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; cur.classList.toggle('big', !!e.target.closest('a,button,summary,.card,input,textarea')); }, {passive:true});
+  if (fine) (function cl() { if (Math.abs(tx - cx) + Math.abs(ty - cy) > .3) { cx += (tx - cx) * .2; cy += (ty - cy) * .2; cur.style.transform = `translate(${cx}px,${cy}px)`; } requestAnimationFrame(cl); })();
+
+  const f = $('#form'), msg = $('#formMsg');
+  const check = (id, eid, test, text) => { const el = document.getElementById(id), er = document.getElementById(eid); const bad = !test(el.value.trim()); el.setAttribute('aria-invalid', bad); er.textContent = bad ? text : ''; return !bad; };
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const ok = [check('f-name','e-name', v => v.length > 1, 'Add your name so we know who to reply to.'),
+      check('f-email','e-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), 'Enter an email like name@example.com.'),
+      check('f-msg','e-msg', v => v.length > 4, 'Tell us a little about the project.')].every(Boolean);
+    msg.hidden = !ok;
+    if (ok) msg.textContent = 'This is a preview page, so the form is not connected yet. Email archlineconstructioncorp@gmail.com or call 416.939.1569 and Eva will reply within two business days.';
+  });
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+  $$('.reveal').forEach(el => io.observe(el));
+})();
+</script>
+
+</body></html>

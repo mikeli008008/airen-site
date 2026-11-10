@@ -5,45 +5,129 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Work and concepts · Airen</title>
 <meta name="description" content="Sites and concepts built by Airen for local businesses: real client work and design concepts for new industries.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono&display=swap">
-<link rel="stylesheet" href="css/pages.css">
+<meta name="theme-color" content="#FFF8E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFB547'/%3E%3Cpath d='M10 24h44v10a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0Z' fill='%23F2547D'/%3E%3Crect x='16' y='38' width='32' height='16' rx='3' fill='%2322163A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <style>
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-top:40px}
-.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .5s var(--ease)}
-.card:hover{transform:translateY(-3px)}
-.img{aspect-ratio:16/10;background:var(--surface-2)}.img img{width:100%;height:100%;object-fit:cover;display:block}
-.b{padding:16px 20px 20px}.b h2{margin:4px 0 0}.b p{margin:6px 0 0;color:var(--muted);font-size:14px;line-height:20px}
-.k{font-family:"Geist Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)!important}
-.wrap{max-width:1120px}.empty{color:var(--muted)}
+:root{color-scheme:light;--paper:#FFF8E8;--paper-2:#FFEFCF;--ink:#22163A;--ink-2:#4E4366;--palm:#127A55;--leaf:#8CCB5E;--mango:#FFB547;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:18px;line-height:28px;text-decoration:none}
+.brand svg{width:24px;height:24px}
+.back{font-size:14px;line-height:20px;font-weight:600;border:2px solid var(--ink);border-radius:12px;padding:4px 12px;text-decoration:none;background:var(--mango);box-shadow:3px 3px 0 var(--ink)}
+.eyebrow{margin-top:48px;font-size:14px;line-height:20px;font-weight:600;color:var(--palm)}
+h1{margin-top:12px;font-size:60px;line-height:1;letter-spacing:-.02em;font-weight:700;text-wrap:balance}
+.lead{margin-top:16px;font-size:18px;line-height:28px;color:var(--ink-2);max-width:680px;text-wrap:pretty}
+h2.group{margin-top:64px;font-size:30px;line-height:36px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:24px}
+.card{display:flex;flex-direction:column;background:#fff;border:2px solid var(--ink);border-radius:16px;box-shadow:6px 6px 0 var(--ink);text-decoration:none;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.card:hover{transform:translate(-2px,-4px);box-shadow:10px 10px 0 var(--ink)}
+.card:focus-visible{outline:3px solid #1BA9B5;outline-offset:4px}
+.awn{height:24px;border-bottom:2px solid var(--ink);border-radius:14px 14px 0 0;background:repeating-linear-gradient(90deg,var(--c) 0 24px,#fff 24px 48px)}
+.img{margin:16px 16px 0;border:2px solid var(--ink);border-radius:8px;overflow:hidden;aspect-ratio:16/10;background:var(--paper-2)}
+.img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .8s var(--ease)}
+.card:hover .img img{transform:scale(1.04)}
+.b{padding:16px;display:flex;flex-direction:column;gap:4px}
+.tag{align-self:flex-start;font-size:12px;line-height:16px;font-weight:600;border:2px solid var(--ink);border-radius:999px;padding:2px 8px;background:var(--paper-2)}
+.tag.client{background:var(--leaf)}
+.b h3{font-size:20px;line-height:28px;font-weight:600}
+.b p{font-size:14px;line-height:20px;color:var(--ink-2);text-wrap:pretty}
+.empty{color:var(--ink-2)}
+footer{margin-top:96px;padding:32px 0;border-top:2px solid var(--ink);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;line-height:20px}
+footer nav{display:flex;gap:16px}
+@media (max-width:640px){h1{font-size:36px;line-height:40px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header class="top"><a class="brand" href="./"><i></i>Airen</a><a class="back" href="./">Back to the site</a></header>
+<header class="top"><a class="brand" href="./"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FFB547"/><path d="M10 24h44v10a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0Z" fill="#F2547D"/><rect x="16" y="38" width="32" height="16" rx="3" fill="#22163A"/></svg>Airen</a><a class="back" href="./#request">Get my free preview</a></header>
 <main>
-<p class="eyebrow">Work and concepts · 4</p>
+<p class="eyebrow">14 sites so far</p>
 <h1>What we have built</h1>
-<p class="lead">Client sites, plus design concepts we build for new industries so you can see what yours could look like. Concepts use fictional businesses and are marked as such.</p>
+<p class="lead">Client sites, plus design concepts we build for new industries so you can see what yours could look like. Concepts use fictional businesses and say so on the page.</p>
+<h2 class="group">Client sites</h2>
 <div class="grid">
-<a class="card" href="work/landscaper/">
-  <div class="img"><img src="work/landscaper/media/plate.jpg" alt="" loading="lazy"></div>
-  <div class="b"><p class="k">Landscaping · concept</p><h2>Larkhollow Landscape Studio</h2><p>Landscape design and build in west Toronto, redrawn as a field guide folio. Plate I is an engraved block diagram of the garden that draws itself in ink; scrolling cuts it open and lifts the pergola, plants, stone, sand, gravel and fabric apart with a numbered key in real build order, then builds it back. A specimen index of Ontario natives filters by light and season, and the booking form is a yard walk request slip.</p></div>
+<a class="card" href="work/terminal-x/" target="_blank" rel="noopener" style="--c:#F2547D">
+  <div class="awn"></div>
+  <div class="img"><img src="work/terminal-x/assets/poster.jpg" alt="Terminal X Auto Detailing homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag client">Client preview</span><h3>Terminal X Auto Detailing</h3><p>Auto detailing. Markham detailing studio: one continuous film from the wash bay into the seats, the cleaning taken apart, then back out to the pressure wash.</p></div>
 </a>
-<a class="card" href="work/bakery/">
-  <div class="img"><img src="work/bakery/media/poster.jpg" alt="" loading="lazy"></div>
-  <div class="b"><p class="k">Bakery · concept</p><h2>Ninefold Bakehouse</h2><p>Fictional sourdough bakery in Toronto&#x27;s east end. The first screen is a working pre order composer set as a bakery counter: the headline sits behind a large drawn bag and the order controls run along a receipt strip under it; pick a day and loaves and tomorrow&#x27;s bag is drawn with them in it. Then the night: a dough sheet is folded nine times by scroll or by hand, shaped, scored and baked. Every loaf is grown in code from its own seed; tap one on the rack to slice it and see its crumb.</p></div>
+<a class="card" href="https://archlinehaojiang.com/" target="_blank" rel="noopener" style="--c:#FFB547">
+  <div class="awn"></div>
+  <div class="img"><img src="media/archline.jpg" alt="ArchLine Haojiang Renovation homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag client">Live client</span><h3>ArchLine Haojiang Renovation</h3><p>Renovation and design build. Toronto renovation studio. Project gallery, services through permits, and a 3D Showcase where a house opens into its materials as you scroll.</p></div>
 </a>
-<a class="card" href="work/roofer/">
-  <div class="img"><img src="work/roofer/media/poster.jpg" alt="" loading="lazy"></div>
-  <div class="b"><p class="k">Roofing · concept</p><h2>Brindlewick Roofing</h2><p>Fictional residential roofer in east Toronto, redone as a riso printed one object page: an isometric house drawn in three inks. Scrolling lifts the roof off, fans it into an exploded parts diagram, lights each of the seven layers in real install order, puts them back deck first, then rain runs off into the eavestrough. Work order form with a rubber stamp.</p></div>
+<a class="card" href="work/haojiang-3d/" target="_blank" rel="noopener" style="--c:#127A55">
+  <div class="awn"></div>
+  <div class="img"><img src="work/haojiang-3d/assets/poster.jpg" alt="Hao Jiang Archline, 3D Showcase homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag client">Client 3D Showcase</span><h3>Hao Jiang Archline, 3D Showcase</h3><p>Renovation. A warm industrial renovation film: construction site to kitchen to living room, then every material taken apart. Approved by the client.</p></div>
 </a>
-<a class="card" href="work/landscaper-zh/">
-  <div class="img"><img src="work/landscaper/media/poster.jpg" alt="" loading="lazy"></div>
-  <div class="b"><p class="k">Landscaping · concept</p><h2>Larkhollow Landscape Studio, EN / 中文</h2><p>The landscaper concept as one bilingual page: an EN / 中文 switch swaps every word in place, Chinese copy written for Chinese readers, a layer legend in both languages, and a booking form with language and WeChat fields.</p></div>
+<a class="card" href="https://mikeli008008.github.io/daniels-kitchen/" target="_blank" rel="noopener" style="--c:#1BA9B5">
+  <div class="awn"></div>
+  <div class="img"><img src="media/kitchen.jpg" alt="Daniel&#x27;s Kitchen homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag client">Live client</span><h3>Daniel&#x27;s Kitchen</h3><p>Home kitchen. Friday dinners from a Bocuse d&#x27;Or Team Canada chef: weekly menu, order countdown and a 35 second promo video.</p></div>
+</a>
+</div>
+<h2 class="group">Concepts</h2>
+<div class="grid">
+<a class="card" href="work/landscaper/" target="_blank" rel="noopener" style="--c:#127A55">
+  <div class="awn"></div>
+  <div class="img"><img src="work/landscaper/media/plate.jpg" alt="Larkhollow Landscape Studio homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Larkhollow Landscape Studio</h3><p>Landscaping. Landscape design and build in west Toronto, redrawn as a field guide folio. Plate I is an engraved block diagram of the garden that draws itself in ink; scrolling cuts it open and lifts the pergola, plants, stone, sand, gravel and fabric apart with a numbered key in real build order, then builds it back. A specimen index of Ontario natives filters by light and season, and the booking form is a yard walk request slip.</p></div>
+</a>
+<a class="card" href="work/bakery/" target="_blank" rel="noopener" style="--c:#1BA9B5">
+  <div class="awn"></div>
+  <div class="img"><img src="work/bakery/media/poster.jpg" alt="Ninefold Bakehouse homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Ninefold Bakehouse</h3><p>Bakery. Fictional sourdough bakery in Toronto&#x27;s east end. The first screen is a working pre order composer set as a bakery counter: the headline sits behind a large drawn bag and the order controls run along a receipt strip under it; pick a day and loaves and tomorrow&#x27;s bag is drawn with them in it. Then the night: a dough sheet is folded nine times by scroll or by hand, shaped, scored and baked. Every loaf is grown in code from its own seed; tap one on the rack to slice it and see its crumb.</p></div>
+</a>
+<a class="card" href="work/kestrel-movers/" target="_blank" rel="noopener" style="--c:#8CCB5E">
+  <div class="awn"></div>
+  <div class="img"><img src="work/kestrel-movers/poster.jpg" alt="Kestrel Movers homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Kestrel Movers</h3><p>Moving and storage. A 3D toy world of yard, storage, route and delivery that you scroll through, one stop of the move at a time.</p></div>
+</a>
+<a class="card" href="work/ninth-room/" target="_blank" rel="noopener" style="--c:#F9B9C4">
+  <div class="awn"></div>
+  <div class="img"><img src="work/ninth-room/poster.jpg" alt="Ninth Room Gallery homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Ninth Room Gallery</h3><p>Art gallery. Walk a contemporary gallery room by room in 3D, every image drawn in code.</p></div>
+</a>
+<a class="card" href="work/roofer/" target="_blank" rel="noopener" style="--c:#F2547D">
+  <div class="awn"></div>
+  <div class="img"><img src="work/roofer/media/poster.jpg" alt="Brindlewick Roofing homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Brindlewick Roofing</h3><p>Roofing. Fictional residential roofer in east Toronto, redone as a riso printed one object page: an isometric house drawn in three inks. Scrolling lifts the roof off, fans it into an exploded parts diagram, lights each of the seven layers in real install order, puts them back deck first, then rain runs off into the eavestrough. Work order form with a rubber stamp.</p></div>
+</a>
+<a class="card" href="work/landscaper-zh/" target="_blank" rel="noopener" style="--c:#FFB547">
+  <div class="awn"></div>
+  <div class="img"><img src="work/landscaper/media/poster.jpg" alt="Larkhollow Landscape Studio, EN / 中文 homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Larkhollow Landscape Studio, EN / 中文</h3><p>Landscaping. The landscaper concept as one bilingual page: an EN / 中文 switch swaps every word in place, Chinese copy written for Chinese readers, a layer legend in both languages, and a booking form with language and WeChat fields.</p></div>
+</a>
+<a class="card" href="work/paperbolt/" target="_blank" rel="noopener" style="--c:#127A55">
+  <div class="awn"></div>
+  <div class="img"><img src="work/paperbolt/assets/poster.jpg" alt="Paperbolt Studio homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Paperbolt Studio</h3><p>Marketing studio. A fictional Toronto marketing studio: brand, social, ads, websites and video, told through one pinned colour burst film.</p></div>
+</a>
+<a class="card" href="work/velune/" target="_blank" rel="noopener" style="--c:#1BA9B5">
+  <div class="awn"></div>
+  <div class="img"><img src="work/velune/assets/poster.jpg" alt="Velune Cliff Villas homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Velune Cliff Villas</h3><p>Luxury villas and short stays. Twelve fictional cliff villas above the Andaman Sea: a sunset hero film, villas in a triptych, a day at Velune and an availability check.</p></div>
+</a>
+<a class="card" href="work/evas-cafes/" target="_blank" rel="noopener" style="--c:#8CCB5E">
+  <div class="awn"></div>
+  <div class="img"><img src="work/evas-cafes/assets/poster.jpg" alt="Evas Cafes homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Evas Cafes</h3><p>Cafe. A matcha and coffee bar told from bean to cup: a scroll film pours the drinks, then a menu of six with placeholder prices.</p></div>
+</a>
+<a class="card" href="work/lahab-shawarma/" target="_blank" rel="noopener" style="--c:#F9B9C4">
+  <div class="awn"></div>
+  <div class="img"><img src="work/lahab-shawarma/assets/poster.jpg" alt="Lahab Shawarma homepage" loading="lazy" decoding="async"></div>
+  <div class="b"><span class="tag">Concept</span><h3>Lahab Shawarma</h3><p>Restaurant. Shawarma off the fire: scroll the flame, then build your own wrap and watch the order fill in. Demo only, no order is placed.</p></div>
 </a>
 </div>
 </main>
-<footer><span>Airen · Toronto, Ontario, Canada · <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></span><span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="./">Home</a></span></footer>
+<footer><span>Airen, Toronto, building for local businesses worldwide. <a href="mailto:airen.sites@gmail.com">airen.sites@gmail.com</a></span><nav><a href="./">Home</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav></footer>
 </div>
 </body>
 </html>
