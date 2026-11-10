@@ -1,36 +1,10 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
+<title>Airen has moved to airenstudio.com</title>
+<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Page not found · Airen</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono&display=swap">
-<style>
-:root{--bg:#000;--text:#F6F1E7;--muted:#9B9B9B;--amber:#FFB547;--ease:cubic-bezier(.22,1,.36,1);color-scheme:dark}
-*{box-sizing:border-box}html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Geist",system-ui,sans-serif;display:grid;place-items:center;padding:24px;overflow:hidden}
-canvas{position:fixed;inset:0;width:100%;height:100%}
-main{position:relative;text-align:center;max-width:520px}
-.code{font-family:"Geist Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
-h1{font-size:48px;line-height:1;margin:16px 0 0;font-weight:600;letter-spacing:-.02em;background:linear-gradient(90deg,#fff,#9B9B9B);-webkit-background-clip:text;background-clip:text;color:transparent;text-wrap:balance}
-p{color:var(--muted);font-size:18px;line-height:28px;margin:24px 0 32px}
-a{display:inline-flex;padding:12px 24px;border-radius:16px;background:var(--amber);color:#1E1300;font-weight:600;text-decoration:none;transition:transform .5s var(--ease)}
-a:hover{transform:translateY(-2px)}a:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
-</style>
-</head>
-<body>
-<canvas id="c" aria-hidden="true"></canvas>
-<main>
-  <p class="code">404 · signal lost</p>
-  <h1>This light went out</h1>
-  <p>The page you were looking for is not here. The beacon is still on at home.</p>
-  <a href="/airen-site/" id="home">Back to Airen</a>
-</main>
-<script>
-(function(){var h=document.getElementById("home"),m=location.hostname.endsWith("github.io")&&location.pathname.split("/")[1];if(h&&m)h.href="/"+m+"/";})();
-(function(){var c=document.getElementById('c'),x=c.getContext('2d'),w,h,p=[];function s(){w=c.width=innerWidth;h=c.height=innerHeight;p=[];for(var i=0;i<220;i++)p.push({x:Math.random()*w,y:Math.random()*h,v:Math.random()*.3+.05,o:Math.random()*6})}s();addEventListener('resize',s);
-if(matchMedia('(prefers-reduced-motion: reduce)').matches){x.fillStyle='rgba(255,181,71,.5)';p.forEach(function(q){x.fillRect(q.x,q.y,1.5,1.5)});return}
-(function f(t){x.clearRect(0,0,w,h);p.forEach(function(q){q.y+=q.v;if(q.y>h){q.y=0;q.x=Math.random()*w}x.fillStyle='rgba(255,181,71,'+(.2+.5*Math.abs(Math.sin(t/1200+q.o)))+')';x.fillRect(q.x,q.y,1.5,1.5)});requestAnimationFrame(f)})(0)})();
-</script>
-</body>
-</html>
+<link rel="canonical" href="https://airenstudio.com/">
+<script>(function(){var p=location.pathname.replace(/^\/airen-site/,'')||'/';location.replace('https://airenstudio.com'+p+location.search+location.hash);})();</script>
+<meta http-equiv="refresh" content="1;url=https://airenstudio.com/">
+<style>body{font:18px/1.5 system-ui,sans-serif;background:#FFF8E8;color:#22163A;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#127A55}</style>
+</head><body><p>Airen has moved to <a href="https://airenstudio.com/">airenstudio.com</a>.</p></body></html>
